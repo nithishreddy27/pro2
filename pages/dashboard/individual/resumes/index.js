@@ -98,6 +98,12 @@ const templates = [
     image: "https://res.cloudinary.com/de9q0s6tt/image/upload/v1655571130/stockholm_bzrpo0.png",
     heading: "Stockholm",
   },
+  {
+    name: "blue",
+    category: "creative",
+    image: "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531522/my-uploads/ycnqqobfpghxsxdwws9l.jpg",
+    heading: "Blue",
+  },
 ];
 
 function classNames(...classes) {

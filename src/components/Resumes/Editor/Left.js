@@ -29,6 +29,7 @@ export const Left = ({ resumeDetails }) => {
   const { setSidebarOpen, sidebarOpen } = useModelContext();
   const { setResume, layout, structure } = useResumeContext();
   useEffect(() => {
+    console.log("res",resumeDetails)
     setResume(resumeDetails);
   }, [resumeDetails, setResume]);
 

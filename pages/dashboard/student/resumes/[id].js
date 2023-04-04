@@ -18,7 +18,10 @@ import { useModelContext } from "../../../../src/context/ModalContext";
 import { useResumes } from "../../../../src/hooks/useResumes";
 import { getLoginSession } from "../../../../src/lib/auth";
 import { findUser } from "../../../../src/lib/user";
-import Amsterdam from "../../../../src/components/Resumes/Templates/Amsterdam";
+import {Amsterdam} from "../../../../src/components/Resumes/Templates/Amsterdam";
+import {Blue} from "../../../../src/components/Resumes/Templates/Blue";
+import {Casual} from "../../../../src/components/Resumes/Templates/Casual";
+import { Morden } from "../../../../src/components/Resumes/Templates/Morden";
 
 const Templates = {
   noncore: NonCore,
@@ -33,7 +36,10 @@ const Templates = {
   ruby: Ruby,
   harvard: Harvard,
   diamond: Diamond,
-  Amsterdam:Amsterdam
+  amsterdam:Amsterdam,
+  blue:Blue,
+  casual:Casual,
+  morden:Morden
 };
 
 const ResumeSlug = ({ user, id }) => {
