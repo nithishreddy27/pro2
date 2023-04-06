@@ -14,7 +14,6 @@ import axios from "axios";
 import moment from "moment";
 import jwt from "jsonwebtoken";
 import * as XLSX from "xlsx";
-import { Stylish } from "../components/Resumes/Templates/Stylish";
 
 export const handleJobResponse = async (
   job,
@@ -904,6 +903,9 @@ export const editorStructure = {
     "languages",
     "awards",
   ],
+  gengar: ["profile", "objective", "education", "certification", "skills", "languages"],
+  stockholm: ["profile", "objective", "education", "projects", "skills", "languages", "awards"],
+  blue: ["profile", "objective", "education", "projects", "skills", "languages", "awards"],
   pro: ["profile", "education", "projects", "skills"],
   ruby: [
     "profile",
@@ -988,7 +990,88 @@ export const editorStructure = {
     "work",
     "skills",
     "hobbies",
-  ]
+  ],
+
+  dynamo: [
+    "profile",
+    "social",
+    "objective",
+    "education",
+    "skills",
+    "awards",
+    "hobbies",
+    "work",
+    "languages",
+    "layout",
+  ],
+  premium: [
+    "profile",
+    "social",
+    "objective",
+    "education",
+    "projects",
+    "skills",
+    "awards",
+    "work",
+    "certifications",
+    "layout",
+  ],
+  red: [
+    "profile",
+    "social",
+    "objective",
+    "education",
+    "projects",
+    "skills",
+    "awards",
+    "hobbies",
+    "work",
+    "certifications",
+    "languages",
+    "layout",
+  ],
+  tokyo: [
+    "profile",
+    "social",
+    "objective",
+    "education",
+    "projects",
+    "skills",
+    "awards",
+    "hobbies",
+    "work",
+    "certifications",
+    "languages",
+    "layout",
+  ],
+  berlin: [
+    "profile",
+    "social",
+    "objective",
+    "education",
+    "projects",
+    "skills",
+    "awards",
+    "hobbies",
+    "work",
+    "certifications",
+    "languages",
+    "layout",
+  ],
+  madrid: [
+    "profile",
+    "social",
+    "objective",
+    "education",
+    "projects",
+    "skills",
+    "awards",
+    "hobbies",
+    "work",
+    "certifications",
+    "languages",
+    "layout",
+  ],
 };
 
 export const company = [

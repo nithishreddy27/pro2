@@ -18,15 +18,21 @@ import { useModelContext } from "../../../../src/context/ModalContext";
 import { useResumes } from "../../../../src/hooks/useResumes";
 import { getLoginSession } from "../../../../src/lib/auth";
 import { findUser } from "../../../../src/lib/user";
-import {Amsterdam} from "../../../../src/components/Resumes/Templates/Amsterdam";
-import {Blue} from "../../../../src/components/Resumes/Templates/Blue";
-import {Casual} from "../../../../src/components/Resumes/Templates/Casual";
+import { Amsterdam } from "../../../../src/components/Resumes/Templates/Amsterdam";
+import { Berlin } from "../../../../src/components/Resumes/Templates/Berlin";
+import { Tokyo } from "../../../../src/components/Resumes/Templates/Tokyo";
+import { Premium } from "../../../../src/components/Resumes/Templates/Premium";
+import { Red } from "../../../../src/components/Resumes/Templates/Red";
+import { Dynamo } from "../../../../src/components/Resumes/Templates/dynamo";
+import { Madrid } from "../../../../src/components/Resumes/Templates/Madrid";
+import { Amsterdam } from "../../../../src/components/Resumes/Templates/Amsterdam";
+import { Blue } from "../../../../src/components/Resumes/Templates/Blue";
+import { Casual } from "../../../../src/components/Resumes/Templates/Casual";
 import { Morden } from "../../../../src/components/Resumes/Templates/Morden";
 import { Classic } from "../../../../src/components/Resumes/Templates/Classic";
 import { Retro } from "../../../../src/components/Resumes/Templates/Retro";
 import { Stylish } from "../../../../src/components/Resumes/Templates/Stylish";
 import { Assymmetric } from "../../../../src/components/Resumes/Templates/Assymmetric";
-
 
 const Templates = {
   noncore: NonCore,
@@ -41,10 +47,16 @@ const Templates = {
   ruby: Ruby,
   harvard: Harvard,
   diamond: Diamond,
-  amsterdam:Amsterdam,
-  blue:Blue,
-  casual:Casual,
-  morden:Morden,
+  berlin: Berlin,
+  tokyo: Tokyo,
+  premium: Premium,
+  red: Red,
+  dynamo: Dynamo,
+  madrid: Madrid,
+  amsterdam: Amsterdam,
+  blue: Blue,
+  casual: Casual,
+  morden: Morden,
   classic: Classic,
   retro: Retro,
   stylish: Stylish,
@@ -58,11 +70,9 @@ const ResumeSlug = ({ user, id }) => {
   const router = useRouter();
   const { setLoading } = useModelContext();
 
-
-
   const Template = Templates[resume?.layout?.template];
-  console.log("res",resume)
-  
+  console.log("res", resume);
+
   useEffect(() => {
     if (!resumes) return;
     setLoading(false);
