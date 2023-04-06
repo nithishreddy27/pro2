@@ -19,6 +19,12 @@ import { useResumes } from "../../../../src/hooks/useResumes";
 import { getLoginSession } from "../../../../src/lib/auth";
 import { findUser } from "../../../../src/lib/user";
 import Amsterdam from "../../../../src/components/Resumes/Templates/Amsterdam";
+import { Berlin } from "../../../../src/components/Resumes/Templates/Berlin";
+import { Tokyo } from "../../../../src/components/Resumes/Templates/Tokyo";
+import { Premium } from "../../../../src/components/Resumes/Templates/Premium";
+import { Red } from "../../../../src/components/Resumes/Templates/Red";
+import { Dynamo } from "../../../../src/components/Resumes/Templates/dynamo";
+import { Madrid } from "../../../../src/components/Resumes/Templates/Madrid";
 
 const Templates = {
   noncore: NonCore,
@@ -33,7 +39,13 @@ const Templates = {
   ruby: Ruby,
   harvard: Harvard,
   diamond: Diamond,
-  Amsterdam:Amsterdam
+  Amsterdam: Amsterdam,
+  berlin: Berlin,
+  tokyo: Tokyo,
+  premium: Premium,
+  red: Red,
+  dynamo: Dynamo,
+  madrid: Madrid,
 };
 
 const ResumeSlug = ({ user, id }) => {
@@ -43,11 +55,9 @@ const ResumeSlug = ({ user, id }) => {
   const router = useRouter();
   const { setLoading } = useModelContext();
 
-
-
   const Template = Templates[resume?.layout?.template];
-  console.log("res",resume)
-  
+  console.log("res", resume);
+
   useEffect(() => {
     if (!resumes) return;
     setLoading(false);

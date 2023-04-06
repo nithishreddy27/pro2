@@ -23,55 +23,64 @@ const templates = [
   {
     name: "core",
     category: "creative",
-    image: "https://res.cloudinary.com/dj7nomqfd/image/upload/v1649839906/AlbertDera_1_idlokv.jpg",
+    image:
+      "https://res.cloudinary.com/dj7nomqfd/image/upload/v1649839906/AlbertDera_1_idlokv.jpg",
     heading: "Core",
   },
   {
     name: "noncore",
     category: "creative",
-    image: "https://res.cloudinary.com/dj7nomqfd/image/upload/v1649839938/AlbertDera_2_odtnz0.jpg",
+    image:
+      "https://res.cloudinary.com/dj7nomqfd/image/upload/v1649839938/AlbertDera_2_odtnz0.jpg",
     heading: "Non Core",
   },
   {
     name: "onyx",
     category: "simple",
-    image: "https://res.cloudinary.com/dj7nomqfd/image/upload/v1649839356/Onyx_pmuqae.jpg",
+    image:
+      "https://res.cloudinary.com/dj7nomqfd/image/upload/v1649839356/Onyx_pmuqae.jpg",
     heading: "Onyx",
   },
   {
     name: "refined",
     category: "simple",
-    image: "https://res.cloudinary.com/dj7nomqfd/image/upload/v1649839355/Refined_rxujcz.jpg",
+    image:
+      "https://res.cloudinary.com/dj7nomqfd/image/upload/v1649839355/Refined_rxujcz.jpg",
     heading: "Refined",
   },
   {
     name: "tadigital",
     category: "company",
-    image: "https://res.cloudinary.com/dj7nomqfd/image/upload/v1649839355/TAdigital_jfnyrx.jpg",
+    image:
+      "https://res.cloudinary.com/dj7nomqfd/image/upload/v1649839355/TAdigital_jfnyrx.jpg",
     heading: "TA Digital",
   },
   {
     name: "dynamic",
     category: "creative",
-    image: "https://res.cloudinary.com/dj7nomqfd/image/upload/v1649839810/AlbertDera_qupprn.jpg",
+    image:
+      "https://res.cloudinary.com/dj7nomqfd/image/upload/v1649839810/AlbertDera_qupprn.jpg",
     heading: "Dynamic",
   },
   {
     name: "moscow",
     category: "creative",
-    image: "https://res.cloudinary.com/dj7nomqfd/image/upload/v1649931161/AlbertDera_3_mwdbnv.jpg",
+    image:
+      "https://res.cloudinary.com/dj7nomqfd/image/upload/v1649931161/AlbertDera_3_mwdbnv.jpg",
     heading: "Moscow",
   },
   {
     name: "ruby",
     category: "mba",
-    image: "https://res.cloudinary.com/de9q0s6tt/image/upload/v1655570633/ruby_n4oepn.png",
+    image:
+      "https://res.cloudinary.com/de9q0s6tt/image/upload/v1655570633/ruby_n4oepn.png",
     heading: "Ruby",
   },
   {
     name: "gengar",
     category: "mba",
-    image: "https://res.cloudinary.com/de9q0s6tt/image/upload/v1655569593/VastDemo_kkxprw.png",
+    image:
+      "https://res.cloudinary.com/de9q0s6tt/image/upload/v1655569593/VastDemo_kkxprw.png",
     heading: "Gengar",
   },
   // {.
@@ -95,20 +104,65 @@ const templates = [
   {
     name: "stockholm",
     category: "creative",
-    image: "https://res.cloudinary.com/de9q0s6tt/image/upload/v1655571130/stockholm_bzrpo0.png",
+    image:
+      "https://res.cloudinary.com/de9q0s6tt/image/upload/v1655571130/stockholm_bzrpo0.png",
     heading: "Stockholm",
   },
   {
     name: "stockholm",
     category: "creative",
-    image: "https://res.cloudinary.com/de9q0s6tt/image/upload/v1655571130/stockholm_bzrpo0.png",
+    image:
+      "https://res.cloudinary.com/de9q0s6tt/image/upload/v1655571130/stockholm_bzrpo0.png",
     heading: "Stockholm",
   },
   {
     name: "Amsterdam",
     category: "simple",
-    image: "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531310/my-uploads/ua6zasdtiwalneaqtrvj.jpg",
+    image:
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531310/my-uploads/ua6zasdtiwalneaqtrvj.jpg",
     heading: "Amsterdam",
+  },
+  {
+    name: "berlin",
+    category: "simple",
+    image:
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531310/my-uploads/ua6zasdtiwalneaqtrvj.jpg",
+    heading: "Berlin",
+  },
+  {
+    name: "tokyo",
+    category: "simple",
+    image:
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531310/my-uploads/ua6zasdtiwalneaqtrvj.jpg",
+    heading: "Tokyo",
+  },
+  {
+    name: "premium",
+    category: "simple",
+    image:
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531310/my-uploads/ua6zasdtiwalneaqtrvj.jpg",
+    heading: "Premium",
+  },
+  {
+    name: "red",
+    category: "simple",
+    image:
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531310/my-uploads/ua6zasdtiwalneaqtrvj.jpg",
+    heading: "Red",
+  },
+  {
+    name: "dynamo",
+    category: "simple",
+    image:
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531310/my-uploads/ua6zasdtiwalneaqtrvj.jpg",
+    heading: "Dynamo",
+  },
+  {
+    name: "madrid",
+    category: "simple",
+    image:
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531310/my-uploads/ua6zasdtiwalneaqtrvj.jpg",
+    heading: "Madrid",
   },
 ];
 
@@ -119,7 +173,7 @@ function classNames(...classes) {
 const ResumeIndex = ({ user }) => {
   const [tab, setTab] = useState("All Templates");
   const { payment } = usePlan(user?._id);
-  console.log("payment",payment,user?._id)
+  console.log("payment", payment, user?._id);
   const tabs = [
     { name: "All Templates", current: tab === "All Templates" },
     { name: "Simple", current: tab === "Simple" },
@@ -160,17 +214,22 @@ const ResumeIndex = ({ user }) => {
       setForm("resume");
       setTemplate(template);
     } else {
-      await axios.put(`${process.env.NEXT_PUBLIC_HOST_URL}/api/resume/${resume._id}`, {
-        res: {
-          ...resume,
-          layout: {
-            ...resume.layout,
-            template: template,
+      await axios.put(
+        `${process.env.NEXT_PUBLIC_HOST_URL}/api/resume/${resume._id}`,
+        {
+          res: {
+            ...resume,
+            layout: {
+              ...resume.layout,
+              template: template,
+            },
           },
-        },
-      });
+        }
+      );
       await mutate(`/api/resume/user?userId=${user._id}`);
-      router.push(`${process.env.NEXT_PUBLIC_HOST_URL}/dashboard/student/resumes/${resume._id}`);
+      router.push(
+        `${process.env.NEXT_PUBLIC_HOST_URL}/dashboard/student/resumes/${resume._id}`
+      );
     }
   };
 
@@ -191,12 +250,15 @@ const ResumeIndex = ({ user }) => {
     if (!publicResumes) return;
     publicResumes.forEach(async (x) => {
       if (x.public)
-        await axios.put(`${process.env.NEXT_PUBLIC_HOST_URL}/api/resume/${x._id}`, {
-          res: {
-            ...x,
-            public: false,
-          },
-        });
+        await axios.put(
+          `${process.env.NEXT_PUBLIC_HOST_URL}/api/resume/${x._id}`,
+          {
+            res: {
+              ...x,
+              public: false,
+            },
+          }
+        );
     });
     await axios.put(`${process.env.NEXT_PUBLIC_HOST_URL}/api/resume/${id}`, {
       res: {
@@ -213,7 +275,8 @@ const ResumeIndex = ({ user }) => {
     if (template.category === "simple") return true;
     if (!payment) return;
     if (payment?.plan === "Basic") return template.category === "creative";
-    if (payment?.plan === "Essential") return !(template.category === "company");
+    if (payment?.plan === "Essential")
+      return !(template.category === "company");
     if (payment?.plan === "Premium") return true;
     return false;
   };
@@ -222,7 +285,9 @@ const ResumeIndex = ({ user }) => {
     if (!payment) return;
     const plan = payment?.plan;
     return (
-      (plan === "Basic" && count < 2) || (plan === "Essential" && count < 5) || plan === "Premium"
+      (plan === "Basic" && count < 2) ||
+      (plan === "Essential" && count < 5) ||
+      plan === "Premium"
     );
   };
 
@@ -308,17 +373,25 @@ const ResumeIndex = ({ user }) => {
                           blurDataURL="https://www.callcentrehelper.com/images/stories/2022/01/hands-holding-cvs.gif"
                           layout="fill"
                           objectFit="cover"
-                          className={`box-image ${!resume.public ? "rounded-md" : ""}`}
+                          className={`box-image ${
+                            !resume.public ? "rounded-md" : ""
+                          }`}
                           src="https://www.callcentrehelper.com/images/stories/2022/01/hands-holding-cvs.gif"
                           alt=""
                         />
                         <p className="title">{resume.layout.name}</p>
-                        <div className={`overlay ${!resume.public ? "rounded-md" : ""}`} />
+                        <div
+                          className={`overlay ${
+                            !resume.public ? "rounded-md" : ""
+                          }`}
+                        />
                         <div className="button flex items-center justify-between px-10">
                           <svg
                             onClick={() => {
                               setLoading(true);
-                              router.push(`/dashboard/student/resumes/${resume._id}`);
+                              router.push(
+                                `/dashboard/student/resumes/${resume._id}`
+                              );
                             }}
                             stroke="currentColor"
                             fill="currentColor"
@@ -334,7 +407,10 @@ const ResumeIndex = ({ user }) => {
                             <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z" />
                           </svg>
                           <div className="">
-                            <Menu as="div" className="z-40 relative inline-block text-left">
+                            <Menu
+                              as="div"
+                              className="z-40 relative inline-block text-left"
+                            >
                               <div className="flex flex-col items-center">
                                 <Menu.Button className="text-white group-hover:text-gray-400 h-10 w-6">
                                   <div className="flex flex-col items-center">
@@ -357,9 +433,13 @@ const ResumeIndex = ({ user }) => {
                                     <Menu.Item>
                                       {({ active }) => (
                                         <button
-                                          onClick={() => handleEditTemplate(resume)}
+                                          onClick={() =>
+                                            handleEditTemplate(resume)
+                                          }
                                           className={classNames(
-                                            active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                                            active
+                                              ? "bg-gray-100 text-gray-900"
+                                              : "text-gray-700",
                                             "block px-4 py-2 text-sm w-full text-left font-semibold"
                                           )}
                                         >
@@ -370,9 +450,13 @@ const ResumeIndex = ({ user }) => {
                                     <Menu.Item>
                                       {({ active }) => (
                                         <button
-                                          onClick={() => handleDeleteResume(resume._id)}
+                                          onClick={() =>
+                                            handleDeleteResume(resume._id)
+                                          }
                                           className={classNames(
-                                            active ? "bg-gray-100 text-gray-900" : "text-gray-700",
+                                            active
+                                              ? "bg-gray-100 text-gray-900"
+                                              : "text-gray-700",
                                             "block px-4 py-2 text-sm w-full text-left font-semibold"
                                           )}
                                         >
@@ -384,7 +468,12 @@ const ResumeIndex = ({ user }) => {
                                       <Menu.Item>
                                         {({ active }) => (
                                           <button
-                                            onClick={() => handleTogglePublic(resume, resume._id)}
+                                            onClick={() =>
+                                              handleTogglePublic(
+                                                resume,
+                                                resume._id
+                                              )
+                                            }
                                             className={classNames(
                                               active
                                                 ? "bg-gray-100 text-gray-900"
@@ -427,8 +516,9 @@ const ResumeIndex = ({ user }) => {
                     <div className="py-4">
                       <div className="text-center">
                         <p className="mt-2 max-w-2xl mx-auto text-lg text-gray-500">
-                          Placements might be intimidating when you have no formal experience on
-                          resume in corporate world. To make it formal, Provast is here to help you.
+                          Placements might be intimidating when you have no
+                          formal experience on resume in corporate world. To
+                          make it formal, Provast is here to help you.
                         </p>
                         <div className="mt-4">
                           <button
