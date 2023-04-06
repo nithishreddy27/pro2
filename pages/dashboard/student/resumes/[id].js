@@ -39,6 +39,8 @@ import { Casual } from "../../../../src/components/Resumes/Templates/Casual";
 import { Morden } from "../../../../src/components/Resumes/Templates/Morden";
 import { Classic } from "../../../../src/components/Resumes/Templates/Classic";
 import { Retro } from "../../../../src/components/Resumes/Templates/Retro";
+import { Stylish } from "../../../../src/components/Resumes/Templates/Stylish";
+import { Assymmetric } from "../../../../src/components/Resumes/Templates/Assymmetric";
 
 const Templates = {
   noncore: NonCore,
@@ -75,6 +77,8 @@ const Templates = {
   morden: Morden,
   classic: Classic,
   retro: Retro,
+  stylish: Stylish,
+  assymmetric: Assymmetric
 };
 
 const ResumeSlug = ({ user, id }) => {
