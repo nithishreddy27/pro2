@@ -74,7 +74,7 @@ const templates = [
     image: "https://res.cloudinary.com/de9q0s6tt/image/upload/v1655569593/VastDemo_kkxprw.png",
     heading: "Gengar",
   },
-  // {.
+  // {
   //   name: "harvard",
   //   category: "mba",
   //   image: "https://res.cloudinary.com/de9q0s6tt/image/upload/v1655570468/Harvard_ukuxr5.png",
@@ -110,6 +110,31 @@ const templates = [
     image: "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531310/my-uploads/ua6zasdtiwalneaqtrvj.jpg",
     heading: "Amsterdam",
   },
+  {
+    name: "dublin",
+    category: "simple",
+    image: "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531310/my-uploads/ua6zasdtiwalneaqtrvj.jpg",
+    heading: "Dublin"
+  },
+  {
+    name: "square",
+    category: "simple",
+    image: "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531310/my-uploads/ua6zasdtiwalneaqtrvj.jpg",
+    heading: "Square"
+  },
+  {
+    name: "symmetric",
+    category: "simple",
+    image: "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531310/my-uploads/ua6zasdtiwalneaqtrvj.jpg",
+    heading: "Symmetric"
+  },
+  {
+    name: "professional",
+    category: "simple",
+    image: "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531310/my-uploads/ua6zasdtiwalneaqtrvj.jpg",
+    heading: "Professional"
+  }
+
 ];
 
 function classNames(...classes) {

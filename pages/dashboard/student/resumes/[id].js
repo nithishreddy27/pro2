@@ -19,7 +19,10 @@ import { useResumes } from "../../../../src/hooks/useResumes";
 import { getLoginSession } from "../../../../src/lib/auth";
 import { findUser } from "../../../../src/lib/user";
 import Amsterdam from "../../../../src/components/Resumes/Templates/Amsterdam";
-
+import {Dublin} from "../../../../src/components/Resumes/Templates/Dublin";
+import {Square} from "../../../../src/components/Resumes/Templates/Square";
+import {Symmetric} from "../../../../src/components/Resumes/Templates/Symmetric"
+import {Professional} from "../../../../src/components/Resumes/Templates/Professional"
 const Templates = {
   noncore: NonCore,
   core: Core,
@@ -33,7 +36,12 @@ const Templates = {
   ruby: Ruby,
   harvard: Harvard,
   diamond: Diamond,
-  Amsterdam:Amsterdam
+  Amsterdam:Amsterdam,
+  dublin: Dublin,
+  square: Square,
+  symmetric: Symmetric,
+  professional: Professional
+
 };
 
 const ResumeSlug = ({ user, id }) => {
