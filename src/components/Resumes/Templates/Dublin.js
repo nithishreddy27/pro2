@@ -1,6 +1,15 @@
 import Image from "next/image";
 import React from "react";
 import { BsFillSunFill } from "react-icons/bs";
+import { MdDateRange } from "react-icons/md";
+import {FiMail} from "react-icons/fi"
+import { BsTelephone} from "react-icons/bs";
+import {VscDebugBreakpointLog} from "react-icons/vsc";
+import {MdSchool} from "react-icons/md";
+import {FaSquareFull} from "react-icons/fa";
+import {BsFillAwardFill} from "react-icons/bs";
+import {MdWork} from "react-icons/md"
+
 import { useResumeContext } from "../../../context/ResumeContext";
 import { months, rename } from "../../../lib/helper";
 import { MarkdownRenderer } from "../../../lib/MarkdownRenderer";
@@ -38,23 +47,46 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
             <div className="firstone w-[85mm] relative top-[-100px]">
               <div className="personal pt-5">
                 <div className="dob pl-10 pt-3 text-white">
-                  <i className="bx bxs-calendar pr-4 text-lg text-white"></i>
-                  <span className="text-base relative bottom-[3px] text-white">
+                <MdDateRange className="inline"></MdDateRange>
+                  {/* <i className="bx bxs-calendar pr-4 text-lg text-white"></i> */}
+                  <span className="text-base relative top-[2px] left-2 text-white">
                     {profile?.dob}
                   </span>
                 </div>
                 <div className="phone pl-10 pt-3 text-white">
-                  <i className="bx bxs-phone pr-4 text-lg text-white"></i>
-                  <span class="text-base relative bottom-1 text-white">
+                  <BsTelephone className="inline"></BsTelephone>
+                  <span class="text-base relative top-[2px] left-2 text-white">
                     {profile?.phone}
                   </span>
                 </div>
                 <div className="mail pl-10 pt-3 pb-2 text-white">
-                  <i className="bx bxs-envelope pr-4 text-lg text-white"></i>
-                  <span class="text-base relative bottom-1 text-white">
+                <FiMail className="inline"></FiMail>
+                  <span class="text-base relative top-[2px] left-2 text-white">
                     {profile?.email}
                   </span>
                 </div>
+                {social?.filter((soc) => soc?.enabled)?.length > 0 && (
+                <div className="social pl-10 pt-1 pb-2 flex">
+                  {social
+                    ?.filter((soc) => soc?.enabled === true)
+                    .map((item) => (
+                      <div className="pr-2">
+                        <span>
+                          <Link href={item.url}>
+                            <img
+                              src={
+                                "https://www." +
+                                item.network +
+                                ".com/favicon.ico"
+                              }
+                              className="w-5 grayscale-[40%]"
+                            ></img>
+                          </Link>
+                        </span>
+                      </div>
+                    ))}
+                </div>
+              )}
               </div>
               {education?.filter(edu=>edu?.enabled)?.length>0 && (
                 <div className="education">
@@ -62,14 +94,17 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
                   E D U C A T I O N
                 </h2>
                 {education?.filter(edu=>edu?.enabled===true).map(item=>(
+                      
                      <p className="pl-10 pr-5 pt-2 text-sm">
+                      {/* <VscDebugBreakpointLog className="inline text-white"></VscDebugBreakpointLog> */}
+                      <MdSchool className="text-white inline text-lg relative right-1 bottom-[2px]"></MdSchool>
                      <span className="font-medium text-white">
                        {item.institution}
                      </span>
                      <span className="text-white"> in </span>
                      <span className="font-medium text-white">
                        {item.fieldOfStudy}
-                       <br />({item.startDate} to {item.endDate})
+                       <br />({item.startDate.slice(0,4)} - {item.endDate.slice(0,4)})
                      </span>
                      <br />
                      <i className="bx bxs-graduation text-white"></i>
@@ -88,7 +123,7 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
                 </h2>
                 {certifications?.filter(cert=>cert?.enabled===true).map((item) => (
                   <p className="pl-10 pr-5 pt-2 text-sm text-white">
-                    <i className="bx bxs-square text-xs pr-3 text-white"></i>
+                    <FaSquareFull className="inline text-white text-[10px] relative right-1 bottom-[2px]"></FaSquareFull>
                     <span className="text-white">
                       {item.title} from {item.issuer}
                     </span>
@@ -163,10 +198,11 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
                 </h2>
                 {work?.filter(wor=>wor?.enabled===true).map((item) => (
                   <p className="pl-10 pr-5 pt-2 text-sm">
+                    <MdWork className="inline relative bottom-[2px] right-1 text-zinc-700"></MdWork>
                     <span className="font-medium text-sm pr-3">
                       {item.designation} in {item.company}
                     </span>
-                    <br></br>({item.from} to {item.to})<br />
+                    <br></br>({item.from.slice(0,4)} - {item.to.slice(0,4)})<br />
                     <Link href={item.website}>{item.website}</Link>
                     <br></br>
                     <span className="text-sm">{item.summary.data}</span>
@@ -181,8 +217,9 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
                 </h2>
                 {projects?.filter(pro=>pro?.enabled===true).map((item) => (
                   <p className="pl-10 pr-5 pt-1 text-sm">
+                    <FaSquareFull className="inline text-zinc-700 text-[10px] relative right-1 bottom-[2px]"></FaSquareFull>
                     <span className="font-medium pr-3">{item.name}</span> (
-                    {item.from} to {item.to})<br />
+                    {item.from.slice(0,4)} - {item.to.slice(0,4)})<br />
                     <a href={item.website}>{item.website}</a>
                     <br></br>
                     <span className="text-sm">{item.summary.data}</span>
@@ -197,7 +234,7 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
                 </h2>
                 {awards?.filter(awa=>awa?.enabled===true).map((item) => (
                   <p className="pl-10 pr-5 pt-1 text-sm">
-                    <i className="bx bxs-award pr-1"></i>
+                    <BsFillAwardFill className="inline relative right-1 bottom-[2px] text-zinc-700"></BsFillAwardFill>
                     <span className="font-medium">{item.name}</span> from{" "}
                     {item.awarder}
                   </p>
