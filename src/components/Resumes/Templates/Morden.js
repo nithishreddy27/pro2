@@ -11,12 +11,12 @@ export const Morden = ({ componentRef, filter = null }) => {
     "text-xl captialize font-bold text-gray-700 border-b-2 border-black mb-2 pb-1";
   return (
     <div ref={componentRef} className='my-5 w-a4W bg-white mx-auto h-a4H'>
-      <div className='py-2 px-2 h-full' >
+      <div className='py-2 px-2 h-full relative' >
         {console.log("profile",social)}
             <div className="flex">
                         <div className="w-[35%] z-10 bg-slate-800 h-[100] p-5">
                             <div className="mt-44">
-                            <h1 className="text-2xl  tracking-[2px] text-white">
+                            <h1 className="text-[16px]  tracking-[2px] text-white">
                                 CONTACT
                             </h1>
                             <hr className="h-[2px] bg-black my-2" />
@@ -29,18 +29,18 @@ export const Morden = ({ componentRef, filter = null }) => {
                                     className="w-5 h-5"
                                 />
                                 </span>
-                                <h1 className="mx-4 text-white">
+                                <h1 className="mx-4  text-white text-[12px]">
                                 {profile.phone}
                                 </h1>
                             </div>
-                            <div className="flex my-1">
+                            <div className="flex my-1 text-[12px]">
                                 <span>
                                 <img
                                     src="https://www.freeiconspng.com/uploads/icon-email-icon-clip-art-at-clker-com-vector-qafaq-e-mail-icon-trace--0.png"
-                                    className="w-7 h-7"
+                                    className="w-4 h-5"
                                 />
                                 </span>
-                                <h1 className="mx-2 text-white">
+                                <h1 className="mx-4 text-white   ">
                                 {profile.email}
                                 </h1>
                             </div>
@@ -51,7 +51,7 @@ export const Morden = ({ componentRef, filter = null }) => {
                             {social && (
                                 <div>
                                     {social.map((item) => (
-                                <div className="my-3 flex" key={item.network}>
+                                <div className="my-3 flex text-[12px]" key={item.network}>
                                 <span>
                                     <img
                                     src={
@@ -61,7 +61,7 @@ export const Morden = ({ componentRef, filter = null }) => {
                                     }
                                     alt=""
                                     srcset=""
-                                    className="w-5 grayscale-[40%]   "
+                                    className="w-4 grayscale-[40%]   "
                                     />
                                 </span>
 
@@ -76,34 +76,34 @@ export const Morden = ({ componentRef, filter = null }) => {
                             )}
 
 
-                            <h1 className="text-2xl mt-4 tracking-[2px] text-white">
+                            <h1 className="text-[16px] mt-4 tracking-[2px] text-white">
                                 SKILLS
                             </h1>
                             <hr className="h-[2px] bg-black my-2" />
 
                             {skills && (
-                                <div>
+                                <div className="">
                                     {skills.length != 0 && (
                                 <div>
                                 {skills.map((item) => (
                                     <div className="flex" key={item.name}>
-                                    <p className="mx-1   text-white my-2 w-[70%] text-sm">
+                                    <p className="mx-1   text-white my-2 w-[70%] text-sm text-[12px]">
                                         {item.name}
                                     </p>
                                     {item.level == "Beginner" && (
                                         // <p className="text-white"></p>
-                                        <div className="w-[40%] h-2 relative rounded-md left-0 bg-white   mt-5">
+                                        <div className="w-[40%] h-1 relative rounded-md left-0 bg-white   mt-5">
                                         <div className="w-[66%] absolute right-0 bg-black h-2"></div>
                                         </div>
                                     )}
                                     {item.level == "Intermediate" && (
-                                        <div className="w-[40%] h-2 relative rounded-md left-0 bg-white  mt-5">
+                                        <div className="w-[40%] h-1 relative rounded-md left-0 bg-white  mt-5">
                                         <div className="w-[33%] absolute right-0 bg-black h-2"></div>
                                         </div>
                                     )}
                                     {
                                         item.level == "Expert" && (
-                                        <div className="w-[40%] h-2 relative rounded-md  left-0 bg-white  mt-5">
+                                        <div className="w-[40%] h-1 relative rounded-md  left-0 bg-white  mt-5">
                                             <div className="w-[1%] absolute right-0 bg-black h-2"></div>
                                         </div>
                                         )
@@ -122,12 +122,12 @@ export const Morden = ({ componentRef, filter = null }) => {
                                      
                             {hobbies.length != 0 && (
                                 <div className="mt-5">
-                                <h1 className="text-2xl  text-white  tracking-[2px]">
+                                <h1 className="text-[16px]  text-white  tracking-[2px]">
                                     HOBBIES
                                 </h1>
                                 <hr className="h-[2px] my-1" />
                                 {hobbies.map((item) => (
-                                    <p className="my-2 text-white" key={item.name}>
+                                    <p className="my-2 text-white text-[12px]" key={item.name}>
                                     {item.name}
                                     </p>
                                 ))}
@@ -140,12 +140,12 @@ export const Morden = ({ componentRef, filter = null }) => {
                                 <div>
                                     {languages.length != 0 && (
                                 <div className="mt-5">
-                                <h1 className="text-2xl  text-white  tracking-[2px]">
+                                <h1 className="text-[16px]  text-white  tracking-[2px]">
                                     LANGUAGES
                                 </h1>
                                 <hr className="h-[2px] my-1" />
                                 {languages.map((item) => (
-                                    <p className="my-2 text-white" key={item.name}>
+                                    <p className="my-2 text-white text-[12px]" key={item.name}>
                                     {item.name}
                                     </p>
                                 ))}
@@ -159,17 +159,17 @@ export const Morden = ({ componentRef, filter = null }) => {
                                     {awards.length != 0 && (
                                 <>
                                 {" "}
-                                <h1 className="text-2xl  tracking-[2px] text-white mt-5">
+                                <h1 className="text-[16px]  tracking-[2px] text-white mt-5">
                                     AWARADS
                                 </h1>
                                 <hr className="h-[2px] bg-black mt-1 mb-4 " />
                                 {awards.map((item) => (
-                                    <div className="my-2" key={item.name}>
-                                    <span className="font-semibold text-[15px] text-white">
+                                    <div className="my-2 " key={item.name}>
+                                    <span className="font-semibold text-[12px] text-white">
                                         {item.name}
                                     </span>
 
-                                    <p className="mx-4 text-white opacity-60">
+                                    <p className="mx-4 text-[12px] text-white opacity-60">
                                         {item.summary.data.slice(0, 38)}
                                     </p>
                                     </div>
@@ -187,12 +187,12 @@ export const Morden = ({ componentRef, filter = null }) => {
                                     {objective.length != 0 && (
                             <div className="mt-48">
                                 <div className="flex mb-2">
-                                <h1 className="text-xl font-semibold tracking-[1px]">
+                                <h1 className="text-[16px] font-semibold tracking-[1px]">
                                     OBJECTIVE
                                 </h1>
                                 <hr className=" h-[2px] w-[100%] ml-2 mt-3 bg-black" />
                                 </div>
-                                <p className="text-sm">
+                                <p className="text-[12px]">
                                 {objective}
                                 </p>
                             </div>
@@ -205,13 +205,13 @@ export const Morden = ({ componentRef, filter = null }) => {
                                     {work.length != 0 && (
                             <div className="mt-5">
                                 <div className="flex">
-                                <h1 className="text-xl font-semibold tracking-[1px]">
-                                    EMPLOYMENT HISTORY
+                                <h1 className="text-[16px] font-semibold tracking-[1px]">
+                                    WORK
                                 </h1>
                                 <hr className=" h-[2px] w-[100%] ml-2 mt-3 bg-black" />
                                 </div>
                                 {work.map((item) => (
-                                <div className="mt-4" key={item.company}>
+                                <div className="mt-1 text-[12px]" key={item.company}>
                                     <h1 className="font-semibold">
                                     {item.company}{" "}
                                     <span className="font-medium">
@@ -234,13 +234,13 @@ export const Morden = ({ componentRef, filter = null }) => {
                                     {education.length != 0 && (
                             <div className="mt-5">
                                 <div className="flex">
-                                <h1 className="text-xl font-semibold tracking-[1px]">
+                                <h1 className="text-[16px] font-semibold tracking-[1px]">
                                     EDUCATION
                                 </h1>
                                 <hr className=" h-[2px] w-[100%] ml-2 mt-3 bg-black" />
                                 </div>
                                 {education.map((item) => (
-                                <div className="mt-4" key={item.institution}>
+                                <div className="mt-1 text-[12px]" key={item.institution}>
                                     <h1 className="font-semibold">
                                     {item.institution}{" "}
                                     <span className="font-medium">
@@ -265,13 +265,13 @@ export const Morden = ({ componentRef, filter = null }) => {
                                     {projects.length != 0 && (
                             <div className="mt-5">
                                 <div className="flex mb-2">
-                                <h1 className="text-xl font-semibold tracking-[1px]">
+                                <h1 className="text-[16px] font-semibold tracking-[1px]">
                                     PROJECTS
                                 </h1>
                                 <hr className=" h-[2px] w-[100%] ml-2 mt-3 bg-black" />
                                 </div>
                                 {projects.map((item) => (
-                                <div className="mt-4" key={item.name}>
+                                <div className="mt-1 text-[12px]" key={item.name}>
                                     {/* <Link href={item.website}> */}
                                     <h1 className="font-semibold">
                                         {item.name}{" "}
@@ -282,7 +282,7 @@ export const Morden = ({ componentRef, filter = null }) => {
                                     </h1>{" "}
                                     {/* </Link> */}
 
-                                    <span className="ml-5 text-sm">
+                                    <span className="ml-5  ">
                                     {item.summary.data}
                                     </span>
                                 </div>
@@ -298,13 +298,13 @@ export const Morden = ({ componentRef, filter = null }) => {
                                     {certifications.length != 0 && (
                             <div className="mt-2">
                                 <div className="flex mb-2">
-                                <h1 className="text-xl font-semibold tracking-[1px]">
+                                <h1 className="text-[16px] font-semibold tracking-[1px]">
                                     CERTIFICATIONS
                                 </h1>
                                 <hr className=" h-[2px] w-[100%] ml-2 mt-3 bg-black" />
                                 </div>
                                 {certifications.map((item) => (
-                                <p className="my-2" key={item.title}>
+                                <p className="my-2 text-[12px]" key={item.title}>
                                     {item.title}
                                 </p>
                                 ))}

@@ -849,6 +849,7 @@ export const editorStructure = {
   pro: ["profile", "education", "projects", "skills"],
   gengar: ["profile", "objective", "education", "certification", "skills", "languages"],
   stockholm: ["profile", "objective", "education", "projects", "skills", "languages", "awards"],
+  blue: ["profile", "objective", "education", "projects", "skills", "languages", "awards"],
   pro: ["profile", "education", "projects", "skills"],
   ruby: [
     "profile",
