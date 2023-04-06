@@ -15,6 +15,12 @@ import { TAdigital } from "../../src/components/Resumes/Templates/TAdigital";
 import { useResumeContext } from "../../src/context/ResumeContext";
 import { useResume } from "../../src/hooks/useResume";
 import Amsterdam from "../../src/components/Resumes/Templates/Amsterdam";
+import { Berlin } from "../../src/components/Resumes/Templates/Berlin";
+import { Tokyo } from "../../src/components/Resumes/Templates/Tokyo";
+import { Premium } from "../../src/components/Resumes/Templates/Premium";
+import { Red } from "../../src/components/Resumes/Templates/Red";
+import { Dynamo } from "../../src/components/Resumes/Templates/dynamo";
+import { Madrid } from "../../src/components/Resumes/Templates/Madrid";
 
 const Templates = {
   noncore: NonCore,
@@ -29,7 +35,13 @@ const Templates = {
   ruby: Ruby,
   harvard: Harvard,
   diamond: Diamond,
-  amsterdam:Amsterdam
+  amsterdam: Amsterdam,
+  berlin: Berlin,
+  tokyo: Tokyo,
+  premium: Premium,
+  red: Red,
+  dynamo: Dynamo,
+  madrid: Madrid,
 };
 
 const ViewResume = ({ id }) => {
@@ -44,9 +56,9 @@ const ViewResume = ({ id }) => {
   }, [resume]);
 
   return (
-    <div className='flex justify-between bg-gray-800 overflow-auto'>
+    <div className="flex justify-between bg-gray-800 overflow-auto">
       {resume ? (
-        <section className='mx-auto h-screen overflow-auto py-5 w-full'>
+        <section className="mx-auto h-screen overflow-auto py-5 w-full">
           <Template componentRef={componentRef} />
         </section>
       ) : (
