@@ -128,6 +128,19 @@ const templates = [
     image: "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676532396/my-uploads/kejobl0bix99ynkl8snb.jpg",
     heading: "Morden",
   },
+  {
+    name: "classic",
+    category: "creative",
+    image: "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531522/my-uploads/ycnqqobfpghxsxdwws9l.jpg",
+    heading: "Classic",
+  },
+  {
+    name: "retro",
+    category: "creative",
+    image: "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531522/my-uploads/ycnqqobfpghxsxdwws9l.jpg",
+    heading: "Retro",
+  },
+
 ];
 
 function classNames(...classes) {
