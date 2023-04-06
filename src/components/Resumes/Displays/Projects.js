@@ -19,6 +19,8 @@ export const ProjectsDisplay = () => {
     setEditId(id);
   };
   const setEnabled = (val, id) => {
+
+    console.log("inside",val,id)
     let newstate = projects;
     for (let i = 0; i < newstate.length; i++) {
       if (newstate[i]._id === id) {

@@ -23,7 +23,7 @@ export const Blue = ({ componentRef, filter = null }) => {
   const headingClass =
     "text-lg text-center capitalize font-bold text-gray-700 mb-2 pb-1";
   return (
-    <div ref={componentRef} className="w-a4W bg-white mx-auto h-a4H my-5">
+    <div ref={componentRef} className="w-a4W bg-white mx-auto h-a4H my-5 relative">
       {/* <div className='px-14 py-8 h-full' style={{ backgroundColor: `rgba(${r}, ${g}, ${b}, 0.1)` }}>
         <div className='w-full py-2 text-center border-b-2 border-slate-600 '>
           <span className='text-4xl not-italic font-bold text-gray-700 '>
@@ -255,7 +255,7 @@ export const Blue = ({ componentRef, filter = null }) => {
         id="largeResume"
       > */}
         <div
-          className={`h-[55%] w-[10%] bg-sky-200 absolute left-50 rounded-b-full p-5 z-10`}
+          className={`h-[95%] w-[35%] bg-sky-200 absolute left-10 rounded-b-full p-5 z-10`}
         >
           {profile && (
             <>
@@ -273,37 +273,37 @@ export const Blue = ({ componentRef, filter = null }) => {
                   <span>
                     <img
                       src="https://www.freeiconspng.com/uploads/contact-methods-phone-icon-512x512-pixel-3.png"
-                      className="w-5 h-5"
+                      className="w-3 h-3"
                     />
                   </span>
-                  <h1 className="mx-4">{profile.phone}</h1>
+                  <h1 className="mx-4 text-[12px]">{profile.phone}</h1>
                 </div>
                 <div className="flex my-1">
                   <span>
                     <img
                       src="https://www.freeiconspng.com/uploads/black-mail-icon-4.png"
-                      className="w-7 h-7"
+                      className="w-4 h-4"
                     />
                   </span>
-                  <h1 className="mx-2">{profile.email}</h1>
+                  <h1 className="mx-2 text-[12px]">{profile.email}</h1>
                 </div>
               </>
             )}
             {social && (
               <>
                 {social.map((item) => (
-                  <div className="my-3 flex" key={item.network}>
+                  <div className="my-3 flex " key={item.network}>
                     <span>
                       <img
                         src={"https://www." + item.network + ".com/favicon.ico"}
                         alt=""
                         srcset=""
-                        className="w-5 grayscale-[40%]"
+                        className="w-3 grayscale-[40%]"
                       />
                     </span>
 
                     <Link href={item.url}>
-                      <span className="mx-4">{item.username}</span>
+                      <span className="mx-4 text-[12px]">{item.username}</span>
                     </Link>
                   </div>
                 ))}
@@ -335,16 +335,16 @@ export const Blue = ({ componentRef, filter = null }) => {
 
           {skills?.filter((skill)=>skill?.enabled).length>0 && (
             <div>
-               <h1 className="text-2xl font-semibold tracking-[2px] mt-5 heading">
+               <h1 className="text-[16px] font-semibold tracking-[2px] mt-5  heading">
                     SKILLS
                   </h1>
-                  <div className="my-2">
+                  <div className="my-2 text-[12px]">
                                 {skills.map((item) => (
                                   <>
                                     {item.enabled == true && (
                                       <div className="flex" key={item.name}>
                                         <h1 className="">{item.name}</h1>
-                                        <p className="absolute right-5">
+                                        <p className="absolute right-5 ">
                                           {item.level}
                                         </p>
                                       </div>
@@ -359,14 +359,14 @@ export const Blue = ({ componentRef, filter = null }) => {
             <div>
               {languages.length != 0 && (
                 <>
-                <h1 className="text-2xl font-semibold tracking-[2px] mt-5 heading">
+                <h1 className="text-[16px] font-semibold tracking-[2px] mt-5 heading">
                   LANGUAGES
                 </h1>
                 <div className="my-2">
                   {languages.map((item) => (
                     <>
                       {item.enabled == true && (
-                        <div className="flex" key={item.name}>
+                        <div className="flex text-[12px]" key={item.name}>
                           <h1 className="">{item.name}</h1>
                         </div>
                       )}
@@ -382,12 +382,12 @@ export const Blue = ({ componentRef, filter = null }) => {
             <div>
               {hobbies.length != 0 && (
                 <>
-                  <h1 className="text-2xl font-semibold tracking-[2px] mt-5 heading">
+                  <h1 className="text-[16px] font-semibold tracking-[2px] mt-5 heading">
                     HOBBIES
                   </h1>
                   <div className="my-2">
                     {hobbies.map((item) => (
-                      <div className="flex" key={item.name}>
+                      <div className="flex text-[12px]  " key={item.name}>
                         <h1 className="">{item.name}</h1>
                       </div>
                     ))}
@@ -401,14 +401,14 @@ export const Blue = ({ componentRef, filter = null }) => {
             <div>
               {awards.length != 0 && (
                 <>
-                  <h1 className="text-2xl font-semibold tracking-[2px] mt-5 heading">
+                  <h1 className="text-[16px] font-semibold tracking-[2px] mt-5 heading">
                     AWARDS
                   </h1>
-                  <div className="my-2">
+                  <div className="my-2 ">
                     {awards.map((item) => (
-                      <div className="flex" key={item.name}>
+                      <div className="flex text-[12px]" key={item.name}>
                         <span className=" text-[15px] my-1">
-                          {item.name} <span className="">({item.date})</span>
+                          {item.name} <span className="text-[12px]">({item.date})</span>
                         </span>
                       </div>
                     ))}
@@ -429,11 +429,11 @@ export const Blue = ({ componentRef, filter = null }) => {
               {certifications.length != 0 && (
                 <>
                   <div className="mt-4">
-                    <h1 className="text-2xl font-semibold tracking-[2px] heading">
+                    <h1 className="text-[16px] font-semibold tracking-[2px] heading">
                       CERTIFICATIONS
                     </h1>
                     {certifications.map((item) => (
-                      <p className="my-2" key={item.name}>
+                      <p className="my-2 text-[12px]" key={item.name}>
                         {item.title}
                       </p>
                     ))}
@@ -459,10 +459,10 @@ export const Blue = ({ componentRef, filter = null }) => {
               <>
                 {objective != 0 && (
                   <>
-                    <h1 className="text-xl font-bold tracking-[1px] heading">
+                    <h1 className="text-[16px] font-bold tracking-[1px] heading">
                       OBJECTIVE
                     </h1>
-                    <p>{objective}</p>
+                    <p className="text-[12px]">{objective}</p>
                   </>
                 )}
               </>
@@ -472,11 +472,11 @@ export const Blue = ({ componentRef, filter = null }) => {
               <div>
                 {education.length != 0 && (
                   <>
-                    <h1 className="text-xl font-bold tracking-[1px] heading">
+                    <h1 className="text-[16px] mt-2 font-bold tracking-[1px] heading">
                       EDUCATION
                     </h1>
                     {education.map((item) => (
-                      <div className="mt-4" key={item.institution}>
+                      <div className="mt-2 text-[12px]" key={item.institution}>
                         <h1 className="font-semibold">
                           {item.institution}{" "}
                           <span className="font-medium">
@@ -499,11 +499,11 @@ export const Blue = ({ componentRef, filter = null }) => {
               <div>
                 {work.length != 0 && (
                   <>
-                    <h1 className="text-xl font-bold tracking-[1px] mt-4 heading">
+                    <h1 className="text-[16px] font-bold tracking-[1px] mt-4 heading">
                       WORK
                     </h1>
                     {work.map((item) => (
-                      <div className="mt-4" key={item.company}>
+                      <div className="mt-2 text-[12px]" key={item.company}>
                         <h1 className="font-semibold">
                           {item.company}{" "}
                           <span className="font-medium">
@@ -528,11 +528,11 @@ export const Blue = ({ componentRef, filter = null }) => {
               <div>
                 {projects.length != 0 && (
                   <div>
-                    <h1 className="text-xl font-bold tracking-[1px] mt-4 heading">
+                    <h1 className="text-[16px] font-bold tracking-[1px] mt-4 heading">
                       PROJECTS
                     </h1>
                     {projects.map((item) => (
-                      <div className="mt-4" key={item.name}>
+                      <div className="mt-2 text-[12px]" key={item.name}>
                         {/* <Link href={item.website}> */}
                         <h1 className="font-semibold">
                           {item.name}{" "}
