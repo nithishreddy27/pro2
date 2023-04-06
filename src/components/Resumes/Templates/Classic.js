@@ -456,7 +456,7 @@ export const Classic = ({ componentRef, filter = null }) => {
               {/* NETWORK */}
               
               <div className="m-4">
-              {social && (
+              {profile && (
               
                 <>
                   <h1 className="bg-gray-800 tracking-widest text-white mt-1 p-1 text-center rounded-md heading">

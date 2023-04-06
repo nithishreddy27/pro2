@@ -4,7 +4,7 @@ import { rename, months } from "../../../lib/helper";
 import { MarkdownRenderer } from "../../../lib/MarkdownRenderer";
 import Link from "next/link";
 
-export const Blue = ({ componentRef, filter = null }) => {
+export const Stylish = ({ componentRef, filter = null }) => {
   const {
     profile,
     social,
@@ -23,7 +23,10 @@ export const Blue = ({ componentRef, filter = null }) => {
   const headingClass =
     "text-lg text-center capitalize font-bold text-gray-700 mb-2 pb-1";
   return (
-    <div ref={componentRef} className="w-a4W bg-white mx-auto h-a4H my-5 relative">
+    <div
+      ref={componentRef}
+      className="w-a4W  mx-auto h-a4H my-5 relative  bg-zinc-800"
+    >
       {/* <div className='px-14 py-8 h-full' style={{ backgroundColor: `rgba(${r}, ${g}, ${b}, 0.1)` }}>
         <div className='w-full py-2 text-center border-b-2 border-slate-600 '>
           <span className='text-4xl not-italic font-bold text-gray-700 '>
@@ -254,308 +257,262 @@ export const Blue = ({ componentRef, filter = null }) => {
         className="bg-slate-50 w-[210mm] scale-[0.4] sm:scale-[0.7] md:scale-[0.9] md:mt-[-50px] lg:scale-[0.8] lg:mt-[-80px] xl:scale-[0.9] xl:mt-[-10px] sm:mt-[-100px] mx-[-210px] mt-[-250px] h-[285mm] max-h-[285mm] min-w-[210mm] object-cover overflow-hidden drop-shadow-2xl flex flex-row"
         id="largeResume"
       > */}
-        <div
-          className={`h-[95%] w-[35%] bg-sky-200 absolute left-10 rounded-b-full p-5 z-10`}
-        >
+
+      <div className="flex px-5">
+        <div className="flex-col mt-[5%] py-3 pl-1 w-[40%] bg-white rounded-xl ">
+          {/* image */}
           {profile && (
-            <>
+            <div className=" flex text-black   justify-around ">
               <img
                 src={profile.image}
                 alt=""
-                className="rounded-full h-40 mb-5 mx-auto"
+                className="w-[60%] h-[50%] rounded-full mb-3"
               />
-            </>
-          )}
-          <>
-            {profile && (
-              <>
-                <div className="flex">
-                  <span>
-                    <img
-                      src="https://www.freeiconspng.com/uploads/contact-methods-phone-icon-512x512-pixel-3.png"
-                      className="w-3 h-3"
-                    />
-                  </span>
-                  <h1 className="mx-4 text-[12px]">{profile.phone}</h1>
-                </div>
-                <div className="flex my-1">
-                  <span>
-                    <img
-                      src="https://www.freeiconspng.com/uploads/black-mail-icon-4.png"
-                      className="w-4 h-4"
-                    />
-                  </span>
-                  <h1 className="mx-2 text-[12px]">{profile.email}</h1>
-                </div>
-              </>
-            )}
-            {social && (
-              <>
-                {social.map((item) => (
-                  <div className="my-3 flex " key={item.network}>
-                    <span>
-                      <img
-                        src={"https://www." + item.network + ".com/favicon.ico"}
-                        alt=""
-                        srcset=""
-                        className="w-3 grayscale-[40%]"
-                      />
-                    </span>
-
-                    <Link href={item.url}>
-                      <span className="mx-4 text-[12px]">{item.username}</span>
-                    </Link>
-                  </div>
-                ))}
-              </>
-            )}
-          </>
-
-          {/* {skills && (
-            <div>
-              {skills.length != 0 && (
-                <>
-                  <h1 className="text-2xl font-semibold tracking-[2px] mt-5 heading">
-                    SKILLS
-                  </h1>
-
-                  <div className="my-2">
-                    {skills.map((item) => (
-                      <div className="flex" key={item.name}>
-                        <h1 className="">{item.name}</h1>
-                        <p className="absolute right-5">{item.level}</p>
-                      </div>
-                    ))}
-                  </div>
-                </>
-              )}
-            </div>
-          )} */}
-
-
-          {skills?.filter((skill)=>skill?.enabled).length>0 && (
-            <div>
-               <h1 className="text-[16px] font-semibold tracking-[2px] mt-5  heading">
-                    SKILLS
-                  </h1>
-                  <div className="my-2 text-[12px]">
-                                {skills.map((item) => (
-                                  <>
-                                    {item.enabled == true && (
-                                      <div className="flex" key={item.name}>
-                                        <h1 className="">{item.name}</h1>
-                                        <p className="absolute right-5 ">
-                                          {item.level}
-                                        </p>
-                                      </div>
-                                    )}
-                                  </>
-                                ))}
-                              </div>
             </div>
           )}
+          {/* name */}
+          {profile && (
+            <div className="flex-col bg-zinc-200 py-2">
+              <span className=" text-[20px] font-extrabold pl-3 tracking-wide font-serif ">
+                {profile.firstName} {profile.lastName}
+              </span>
+              <p className="  text-[16px] pl-3 tracking-wider font-thin ">
+                {profile.role}
+              </p>
+            </div>
+          )}
+          {/* network */}
+          {profile && (
+            <div className="py-1 px-2 text-black pt-2">
+              <p className="text-[16px] font-bold tracking-wider font-serif px-4 py-2">
+                NETWORK
+              </p>
 
-          {languages?.filter((language)=>language?.enabled).length>0 && (
+              <div className="text-[14px] px-2">
+                <div className="px-2">
+                  <p>{profile.phone}</p>
+                  <p> {profile.email}</p>
+                </div>
+              </div>
+            </div>
+          )}
+          {/* skills */}
+          {skills?.filter((skill) => skill?.enabled).length > 0 && (
+            <div className="py-1 px-2 text-black">
+              <p className="text-[16px] font-bold tracking-wider font-serif px-4 py-2">
+                SKILLS
+              </p>
+              {skills.map((item) => (
+                <div className="text-[14px] px-2">
+                  <span className="">
+                    <li>
+                      {item.name} - {item.level}
+                    </li>
+                  </span>
+                  <p>{item.enabled}</p>
+                </div>
+              ))}
+            </div>
+          )}
+          {/* languages */}
+          {languages?.filter((language) => language?.enabled).length > 0 && (
+            <div className="py-1 px-2 text-black">
+              <p className="text-[16px] font-bold tracking-wider font-serif px-4 py-2">
+                LANGUAGES
+              </p>
+              {languages.map((item) => (
+                <div className="text-[14px] px-2">
+                  <li>
+                    {item.name} : {item.fluency}
+                  </li>
+                  <p>{item.enabled}</p>
+                </div>
+              ))}
+            </div>
+          )}
+          {/* hobbies */}
+          {hobbies && (
             <div>
-              {languages.length != 0 && (
-                <>
-                <h1 className="text-[16px] font-semibold tracking-[2px] mt-5 heading">
-                  LANGUAGES
-                </h1>
-                <div className="my-2">
-                  {languages.map((item) => (
+              {hobbies.length != 0 && (
+                <div className="py-1 px-2 text-black">
+                  <p className="text-[16px] font-bold tracking-wider font-serif px-4 py-2">
+                    HOBBIES
+                  </p>
+                  {hobbies.map((item) => (
                     <>
-                      {item.enabled == true && (
-                        <div className="flex text-[12px]" key={item.name}>
-                          <h1 className="">{item.name}</h1>
+                      {item.enabled && (
+                        <div key={item.name} className="text-[14px] px-2">
+                          <li>{item.name}</li>
+                          <p>{item.enabled}</p>
                         </div>
                       )}
                     </>
                   ))}
                 </div>
-              </>
               )}
             </div>
           )}
 
-          {hobbies && (
-            <div>
-              {hobbies.length != 0 && (
-                <>
-                  <h1 className="text-[16px] font-semibold tracking-[2px] mt-5 heading">
-                    HOBBIES
-                  </h1>
-                  <div className="my-2">
-                    {hobbies.map((item) => (
-                      <div className="flex text-[12px]  " key={item.name}>
-                        <h1 className="">{item.name}</h1>
-                      </div>
-                    ))}
-                  </div>
-                </>
-              )}
-            </div>
-          )}
-
+          {/* awards */}
           {awards && (
             <div>
               {awards.length != 0 && (
-                <>
-                  <h1 className="text-[16px] font-semibold tracking-[2px] mt-5 heading">
-                    AWARDS
-                  </h1>
-                  <div className="my-2 ">
-                    {awards.map((item) => (
-                      <div className="flex text-[12px]" key={item.name}>
-                        <span className=" text-[15px] my-1">
-                          {item.name} <span className="text-[12px]">({item.date.slice(0,4)})</span>
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </>
-              )}
-            </div>
-          )}
-          {/* <div className="mt-4">
-            <h1 className="text-2xl font-semibold tracking-[2px]">HOBBIES</h1>
-            {hobbies.map((item) => (
-              <p className="my-2">{item.name}</p>
-            ))}
-          </div> */}
+          <div className="py-1 px-2 text-black">
+            <p className="text-[16px] font-bold tracking-wider font-serif px-4 py-2">
+              AWARDS
+            </p>
+            {awards.map((item) => (
+              <div className="text-[14px] px-2 font-semibold ">
+                <li>
+                  {item.name}
+                  <p className="px-4 font-mono text-[12px] font-normal">[{item.date.slice(0,4)}]</p>
+                  <p className="px-4 font-normal">{item.awarder}</p>
 
-          {certifications && (
-            <div>
-              {certifications.length != 0 && (
-                <>
-                  <div className="mt-4">
-                    <h1 className="text-[16px] font-semibold tracking-[2px] heading">
-                      CERTIFICATIONS
-                    </h1>
-                    {certifications.map((item) => (
-                      <p className="my-2 text-[12px]" key={item.name}>
-                        {item.title}
-                      </p>
-                    ))}
-                  </div>
-                </>
+                  <p>{item.summary.enabled}</p>
+                  <p>{item.enabled}</p>
+                </li>
+              </div>
+            ))}
+          </div>
               )}
-            </div>
+              </div>
           )}
         </div>
-        <div
-          className={`w-[100%] h-36 bg-sky-100 top-10 relative z-1 rounded-l-full  p-10`}
-        >
-          {profile && (
-            <>
-              <h1 className="text-3xl ml-[50%] font-bold tracking-widest">
-                {profile.firstName} <span>{profile.lastName}</span>
-              </h1>
-              <h1 className="ml-[58%] my-2 tracking-widest">{profile.role}</h1>
-            </>
-          )}
-          <div className="absolute mt-10  left-[330px] w-[57%] h-[100%] text-black">
+        <div className="flex w-[60%] mt-[4%] ml-3 mr-3">
+          <div className="flex-col">
+            {/* profile */}
             {objective && (
-              <>
+              <div>
                 {objective != 0 && (
-                  <>
-                    <h1 className="text-[16px] font-bold tracking-[1px] heading">
-                      OBJECTIVE
-                    </h1>
-                    <p className="text-[12px]">{objective}</p>
-                  </>
+            <div>
+              <p className=" text-white font-semibold text-[16px] tracking-wider  p-1  mt-3 ">
+                PROFILE
+              </p>
+              <hr></hr>
+              <p className="text-[12px] text-white p-1 pt-4">{objective}</p>
+            </div>
                 )}
-              </>
+                </div>
             )}
-
+            {/* education */}
             {education && (
               <div>
                 {education.length != 0 && (
-                  <>
-                    <h1 className="text-[16px] mt-2 font-bold tracking-[1px] heading">
-                      EDUCATION
-                    </h1>
-                    {education.map((item) => (
-                      <div className="mt-2 text-[12px]" key={item.institution}>
-                        <h1 className="font-semibold">
-                          {item.institution}{" "}
-                          <span className="font-medium">
-                            ({item.startDate.slice(0, 4)}-
-                            {item.endDate.slice(0, 4)})
-                          </span>{" "}
-                        </h1>
-
-                        <p className="ml-5">{item.typeOfDegree}</p>
-                        <p className="ml-5 my-1">{item.summary.data}</p>
-                        <p className="ml-5">GPA-{item.gpa}</p>
-                      </div>
-                    ))}
-                  </>
+            <div className="p-1">
+              <p className=" text-white font-semibold text-[16px] tracking-wider  p-1  mt-3 ">
+                EDUCATION
+              </p>
+              <hr></hr>
+              {education.map((item) => (
+                <div className="text-[12px] p-2 text-white">
+                  <p className="font-semibold text-[14px] relative text-white">
+                    {item.institution}
+                    <span className="text-white absolute text-[11px] right-0">
+                      [ {item.startDate.slice(0,4)} ] - [ {item.endDate.slice(0,4)} ]
+                    </span>
+                  </p>
+                  <p className="text-white">{item.fieldOfStudy}</p>
+                  <p className="text-white">
+                    {item.typeOfDegree} - {item.gpa}
+                  </p>
+                  <p className="text-white">{item.summary.enabled}</p>
+                  <p className="text-white">{item.enabled}</p>
+                </div>
+              ))}
+            </div>
                 )}
-              </div>
+                </div>
             )}
-
+            {/* Internship */}
             {work && (
               <div>
                 {work.length != 0 && (
-                  <>
-                    <h1 className="text-[16px] font-bold tracking-[1px] mt-4 heading">
-                      INTERNSHIP
-                    </h1>
-                    {work.map((item) => (
-                      <div className="mt-2 text-[12px]" key={item.company}>
-                        <h1 className="font-semibold">
-                          {item.company}{" "}
-                          <span className="font-medium">
-                            ({item.from.slice(0, 10)}] - [{item.to.slice(0, 10)})
-                          </span>{" "}
-                        </h1>
+            <div className="p-1">
+              <p className="text-white font-semibold text-[16px] tracking-wider p-1 mt-3 ">
+                INTERNSHIP
+              </p>
+              <hr></hr>
+              {work.map((item) => (
+                <div className="text-[12px] p-2 text-white">
+                  <p className="text-white text-[14px] relative ">
+                    <p href={item.website}>
+                      {item.company} - {item.designation}
+                    </p>
+                    <span className="absolute right-0 text-[10px] top-1 text-white">
+                      [{item.from.slice(0,10)}] - [{item.to.slice(0,10)}]
+                    </span>
+                  </p>
 
-                        <span className="ml-5 tracking-wider font-semibold">
-                          {item.designation}
-                        </span>
-                        <span className="ml-5 text-sm">
-                          {item.summary.data}
-                        </span>
-                      </div>
-                    ))}
-                  </>
+                  <p className="px-4  font-normal"></p>
+                  <p className="text-[12px] text-white">{item.summary.data}</p>
+                  <p>{item.summary.enabled}</p>
+                </div>
+              ))}
+            </div>
                 )}
-              </div>
+                </div>
             )}
-
+            {/* projects */}
             {projects && (
               <div>
                 {projects.length != 0 && (
-                  <div>
-                    <h1 className="text-[16px] font-bold tracking-[1px] mt-4 heading">
-                      PROJECTS
-                    </h1>
-                    {projects.map((item) => (
-                      <div className="mt-2 text-[12px]" key={item.name}>
-                        {/* <Link href={item.website}> */}
-                        <h1 className="font-semibold">
-                          {item.name}{" "}
-                          <span className="font-medium">
-                            ({item.from.slice(0, 4)}-{item.to.slice(0, 4)})
-                          </span>{" "}
-                        </h1>{" "}
-                        {/* </Link> */}
-                        <span className="ml-5 tracking-wider font-semibold">
-                          {item.designation}
-                        </span>
-                        <span className="ml-5 text-sm">
-                          {item.summary.data}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
+            <div className="p-1">
+              <p className=" text-white font-semibold text-[16px] tracking-wider  p-1  mt-3 ">
+                PROJECTS
+              </p>
+              <hr></hr>
+              {projects.map((item) => (
+                <div className="text-[12px] p-2 text-white">
+                  <Link href={item.website}>
+                    <p className="relative font-bold text-white tracking-wider">
+                      {item.name}
+                      <span className="absolute right-0 text-[10px] text-white">
+                        [{item.from.slice(0,10)}] - [{item.to.slice(0,10)}]
+                      </span>
+                    </p>
+                  </Link>
+
+                  <p className="text-[12px] text-white">{item.summary.data}</p>
+                  <p>{item.summary.enabled}</p>
+                  <p>{item.enabled}</p>
+                </div>
+              ))}
+            </div>
                 )}
+                </div>
+            )}
+            {/* certification */}
+            {certifications && (
+            <div>
+              {certifications.length != 0 && (
+            <div className="p-1">
+              <p className=" text-white font-semibold text-[16px] tracking-wider  p-1  mt-3 ">
+                CERTIFICATION
+              </p>
+              <hr></hr>
+              {certifications.map((item) => (
+                <div className="text-[12px] p-2 text-white">
+                  <p className="font-semibold  text-white">{item.title}</p>
+
+                  <p className=" text-white relative">
+                    {item.issuer}
+                    <span className="absolute right-0 text-[12px] text-white">
+                      [{item.date}]
+                    </span>
+                  </p>
+                  <p className="text-[12px] text-white">{item.summary.data}</p>
+                  <p>{item.summary.enabled}</p>
+                  <p>{item.enabled}</p>
+                </div>
+              ))}
+            </div>
+              )}
               </div>
             )}
           </div>
         </div>
       </div>
+    </div>
     // </div>
   );
 };
