@@ -19,6 +19,8 @@ import { useResumes } from "../../../../src/hooks/useResumes";
 import { getLoginSession } from "../../../../src/lib/auth";
 import { findUser } from "../../../../src/lib/user";
 import Amsterdam from "../../../../src/components/Resumes/Templates/Amsterdam";
+import { Blue } from "../../../../src/components/Resumes/Templates/Blue";
+import Casual from "../../../../src/components/Resumes/Templates/Casual";
 
 const Templates = {
   noncore: NonCore,
@@ -33,7 +35,9 @@ const Templates = {
   ruby: Ruby,
   harvard: Harvard,
   diamond: Diamond,
-  amsterdam:Amsterdam
+  amsterdam:Amsterdam,
+  blue:Blue,
+  casual:Casual
 };
 
 const ResumeSlug = ({ user, id }) => {
