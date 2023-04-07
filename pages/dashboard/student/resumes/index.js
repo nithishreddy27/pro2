@@ -223,7 +223,7 @@ const templates = [
     heading: "Retro",
   },
   {
-    name: "chrono",
+    name: "stylish",
     category: "creative",
     image: 
       "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531522/my-uploads/ycnqqobfpghxsxdwws9l.jpg",
@@ -242,6 +242,13 @@ const templates = [
     image: 
       "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531522/my-uploads/ycnqqobfpghxsxdwws9l.jpg",
     heading: "Vertical",
+  },
+  {
+    name: "chrono",
+    category: "creative",
+    image: 
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531522/my-uploads/ycnqqobfpghxsxdwws9l.jpg",
+    heading: "Chrono",
   },
 
   //   image:

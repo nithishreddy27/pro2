@@ -63,12 +63,13 @@ export const Retro = ({ componentRef, filter = null }) => {
         )}
 
         <div className="relative flex">
-          <div className="bg-gradient-to-t   from-gray-300 w-[40%]">
+          <div className=" bg-gradient-to-t  from-gray-300 w-[40%]">
             <div className=" ">
               <div className="flex px-3 py-1">
-                {/* skills */}
+                 <div className="">
+                   {/* skills */}
                 {skills?.filter((skill) => skill?.enabled).length > 0 && (
-                  <div className="">
+                <>
                     {skills.length != 0 && (
                       <div className="py-1">
                         <p className="text-black px-2 font-bold tracking-wider text-[16px] heading">
@@ -90,8 +91,11 @@ export const Retro = ({ componentRef, filter = null }) => {
                         ))}
                       </div>
                     )}
+                    </>
+                )}
+                    
                     {/* Languages */}
-                    {languages.length != 0 && (
+                    {languages?.filter((language)=>language?.enabled).length>0 && (
                       <div>
                         {languages.length != 0 && (
                           <div className="py-1">
@@ -115,7 +119,7 @@ export const Retro = ({ componentRef, filter = null }) => {
                       </div>
                     )}
                     {/* awards */}
-                    {awards && (
+                    {awards?.filter((awards) => awards?.enabled).length > 0 && (
                       <div>
                         {awards.length != 0 && (
                           <div className="py-1">
@@ -158,7 +162,7 @@ export const Retro = ({ componentRef, filter = null }) => {
                     )}
 
                     {/* hobbies */}
-                    {hobbies && (
+                {hobbies?.filter((hobbies) => hobbies?.enabled).length > 0 && (
                       <div>
                         {hobbies.length != 0 && (
                           <div className="py-1">
@@ -181,7 +185,8 @@ export const Retro = ({ componentRef, filter = null }) => {
                     )}
 
                     {/* projects */}
-                    {projects && (
+                    {projects?.filter((projects) => projects?.enabled).length > 0 && (
+
                       <div>
                         {projects.length != 0 && (
                           <div className=" py-1">
@@ -223,13 +228,13 @@ export const Retro = ({ componentRef, filter = null }) => {
                       </div>
                     )}
                   </div>
-                )}
+                
               </div>
             </div>
           </div>
           <div className="w-[70%] py-2 px-3">
             {/* education */}
-            {education && (
+            {education?.filter((education) => education?.enabled).length > 0 && (
               <div>
                 {education.length != 0 && (
                   <div className="py-1 ">
@@ -267,7 +272,7 @@ export const Retro = ({ componentRef, filter = null }) => {
             )}
 
             {/* internship */}
-            {work && (
+            {work?.filter((work) => work?.enabled).length > 0 && (
               <div>
                 {work.length != 0 && (
                   <>
@@ -306,7 +311,7 @@ export const Retro = ({ componentRef, filter = null }) => {
             )}
             {/* certification */}
 
-            {certifications && (
+            {certifications?.filter((certifications) => certifications?.enabled).length > 0 && (
               <div>
                 {certifications.length != 0 && (
                   <>
@@ -316,6 +321,8 @@ export const Retro = ({ componentRef, filter = null }) => {
                       </p>
                       <hr className=""></hr>
                       {certifications.map((item) => (
+                        <>
+                         {item.enabled && (
                         <div
                           key={item.title}
                           className="text-[12px] p-2 text-black"
@@ -332,6 +339,8 @@ export const Retro = ({ componentRef, filter = null }) => {
                           <p>{item.summary.enabled}</p>
                           <p>{item.enabled}</p>
                         </div>
+                         )}
+                         </>
                       ))}
                     </div>
                   </>
@@ -339,41 +348,7 @@ export const Retro = ({ componentRef, filter = null }) => {
               </div>
             )}
 
-            {/* projects */}
-            {projects && (
-              <div>
-                {projects.length != 0 && (
-                  <div className="py-1">
-                    <p className="text-black font-bold tracking-wider  px-3 py-1 text-[16px]   ">
-                      PROJECTS
-                    </p>
-                    <hr></hr>
-                    {projects.map((item) => (
-                      <>
-                      {item.enabled && (
-                      <div className="text-[12px] p-2 text-black">
-                        <p className="relative font-semibold text-[14px]">
-                          {item.name}
-                          <span className="absolute right-0 font-normal text-[10px]">
-                            {" "}
-                            [{item.from.slice(0, 4)}-{item.to.slice(0, 4)}]
-                          </span>
-                        </p>
-                        <p href={item.website}>
-                          <p className="text-[12px]">{item.name}</p>
-                          <p className="text-[12px]">{item.summary.data}</p>
-                        </p>
-
-                        <p>{item.summary.enabled}</p>
-                        <p>{item.enabled}</p>
-                      </div>
-                      )}
-                      </>
-                    ))}
-                  </div>
-                )}
-              </div>
-            )}
+           
           </div>
         </div>
       </div>

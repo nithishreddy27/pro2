@@ -905,7 +905,7 @@ export const editorStructure = {
   ],
   gengar: ["profile", "objective", "education", "certification", "skills", "languages"],
   stockholm: ["profile", "objective", "education", "projects", "skills", "languages", "awards"],
-  blue: ["profile", "objective", "education", "projects", "skills", "languages", "awards"],
+  blue: ["profile", "objective", "work","education", "projects","certification", "skills", "languages", "awards"],
   pro: ["profile", "education", "projects", "skills"],
   ruby: [
     "profile",
@@ -1144,19 +1144,32 @@ export const editorStructure = {
    "work",
    "certifications",
    "awards",
-
+    "layout",
   ],
   vertical: [
-    "skills",
+    "profile",
     "social",
-    "awards",
-    "hobbies",
     "objective",
-    "work",
     "education",
     "awards",
- 
+   "work",
+    "skills",
+   "hobbies",
+    "layout",
    ],
+   casual:[
+    "profile",
+    "skills",
+    "social",
+    "languages",
+    "objective",
+    "education",
+    "work",
+    "certifications",
+    "awards",
+     "layout",
+   ]
+  
    
 
 };
