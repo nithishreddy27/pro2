@@ -83,7 +83,7 @@ const templates = [
       "https://res.cloudinary.com/de9q0s6tt/image/upload/v1655569593/VastDemo_kkxprw.png",
     heading: "Gengar",
   },
-  // {.
+  // {
   //   name: "harvard",
   //   category: "mba",
   //   image: "https://res.cloudinary.com/de9q0s6tt/image/upload/v1655570468/Harvard_ukuxr5.png",
@@ -123,45 +123,69 @@ const templates = [
     heading: "Amsterdam",
   },
   {
+    name: "dublin",
+    category: "simple",
+    image: "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531851/my-uploads/st8babi7iq8xd21eiifu.jpg",
+    heading: "Dublin"
+  },
+  {
+    name: "square",
+    category: "simple",
+    image: "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676532184/my-uploads/g1gz7ny0o7vgsxytstz9.jpg",
+    heading: "Square"
+  },
+  {
+    name: "symmetric",
+    category: "simple",
+    image: "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676532244/my-uploads/lrhc1q9zjuifo25s33ud.jpg",
+    heading: "Symmetric"
+  },
+  {
+    name: "professional",
+    category: "simple",
+    image: "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676532461/my-uploads/deo9sjwmcd5yjy1dpohu.jpg",
+    heading: "Professional"
+  },{
+
     name: "berlin",
     category: "simple",
     image:
-      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531310/my-uploads/ua6zasdtiwalneaqtrvj.jpg",
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531445/my-uploads/owrsuxnstpp6tfo8eh0t.jpg",
     heading: "Berlin",
   },
   {
     name: "tokyo",
     category: "simple",
     image:
-      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531310/my-uploads/ua6zasdtiwalneaqtrvj.jpg",
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676532733/my-uploads/mjuspndgbg61efydxuqt.jpg",
     heading: "Tokyo",
   },
   {
     name: "premium",
     category: "simple",
     image:
-      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531310/my-uploads/ua6zasdtiwalneaqtrvj.jpg",
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531979/my-uploads/yw5riineixmd3ge6vvxi.jpg",
     heading: "Premium",
   },
   {
     name: "red",
     category: "simple",
     image:
-      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531310/my-uploads/ua6zasdtiwalneaqtrvj.jpg",
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676532615/my-uploads/wov8dxf0hsqztexpqavq.jpg",
     heading: "Red",
   },
   {
     name: "dynamo",
     category: "simple",
     image:
-      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531310/my-uploads/ua6zasdtiwalneaqtrvj.jpg",
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531910/my-uploads/fqwop6gcit0nfnjkqr1q.jpg",
     heading: "Dynamo",
   },
   {
     name: "madrid",
     category: "simple",
     image:
-      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531310/my-uploads/ua6zasdtiwalneaqtrvj.jpg",
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676532323/my-uploads/otdhpdprnu0n9emoiuof.jpg",
     heading: "Madrid",
   },
   {
@@ -179,28 +203,27 @@ const templates = [
     heading: "Casual",
   },
   {
-    name: "morden",
+    name: "modren",
     category: "creative",
-    image:
-      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676532396/my-uploads/kejobl0bix99ynkl8snb.jpg",
-    heading: "Morden",
+    image: "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676532396/my-uploads/kejobl0bix99ynkl8snb.jpg",
+    heading: "Modren",
   },
   {
     name: "classic",
     category: "creative",
     image:
-      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531522/my-uploads/ycnqqobfpghxsxdwws9l.jpg",
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531785/my-uploads/xs2lpkoshbhtafogkmu6.jpg",
     heading: "Classic",
   },
   {
     name: "retro",
     category: "creative",
     image:
-      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531522/my-uploads/ycnqqobfpghxsxdwws9l.jpg",
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676532563/my-uploads/kqxpazcozuh2mwxydo39.jpg",
     heading: "Retro",
   },
   {
-    name: "stylish",
+    name: "chrono",
     category: "creative",
     image: 
       "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531522/my-uploads/ycnqqobfpghxsxdwws9l.jpg",
@@ -214,6 +237,17 @@ const templates = [
     heading: "Assymmetric",
   },
 
+  //   image:
+  //     "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531522/my-uploads/ycnqqobfpghxsxdwws9l.jpg",
+  //   heading: "Chrono",
+  // },
+  // {
+  //   name: "vertical",
+  //   category: "creative",
+  //   image:
+  //     "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531522/my-uploads/ycnqqobfpghxsxdwws9l.jpg",
+  //   heading: "Vertical",
+  // },
 ];
 
 function classNames(...classes) {
