@@ -64,7 +64,7 @@ export const Amsterdam = ({ componentRef }) => {
                     </div>
 
                     <div className="flex">
-                      <div className="w-[40%] h-auto bg-gray-200">
+                      <div className="w-[40%] h-[297mm] bg-gray-200">
                         <div className="mt-56 mx-10 flex flex-col">
                           <div>
                             <h4 className="font-bold tracking-[4px] text-[16px] heading">
@@ -82,16 +82,19 @@ export const Amsterdam = ({ componentRef }) => {
                             </div>
                            )}
                           </div>
-                          {education && (
-                            <div>
-                               {education.length != 0 && (
+
+
+
+
+                          
+{education?.filter((edu)=>edu?.enabled).length >0 && (
                             <>
                               <h4 className="font-bold tracking-[4px] text-[16px]  mt-4 heading">
                                 EDUCATION
                               </h4>
                               <hr className="w-[100%] h-1 bg-black my-2" />
 
-                              {education.map((item) => (
+                              {education?.filter((edu)=>edu?.enabled === true).map((item)=>(
                                 <div
                                   className="flex flex-col text-[12px] "
                                   key={item.institution}
@@ -115,105 +118,129 @@ export const Amsterdam = ({ componentRef }) => {
                               ))}
                             </>
                           )}
-                            </div>
-                          )}
-                        </div>
-                        {skills && (
-                          <div className="mx-10 flex flex-col mt-4">
-                          {skills.length != 0 && (
-                            <>
-                              <h4 className="font-bold text-[16px]  tracking-[4px] heading">
-                                SKILLS
-                              </h4>
-                              <hr className="w-[100%] h-1 bg-black my-2" />
-                              {skills.map((item) => (
-                                <>
-                                  <div className="flex justify-between text-[12px] ">
-                                    <span
-                                      className="font-semibold mt-1"
-                                      key={item.name}
-                                    >
-                                      {item.name}
-                                    </span>
-                                    <span className=" mt-1 mb-3 ">
-                                      {item.level}
-                                    </span>
-                                  </div>
-                                </>
-                              ))}
-                            </>
-                          )}
-                        </div>
-                        )}
-                        {awards && (
-                          <div className="mx-10 flex flex-col mt-4 ">
-                          {awards.length != 0 && (
-                            <>
-                              <h4 className="font-bold tracking-[4px] heading text-[16px] ">
-                                AWARDS
-                              </h4>
-                              <hr className="w-[100%] h-1 bg-black my-2" />
-                              {awards.map((item) => (
-                                <div className="text-[12px] ">
-                                  <p
-                                    className="font-semibold mt-1 "
-                                    key={item.name}
-                                  >
-                                    {item.name}({item.date.slice(0,4)})
-                                  </p>
-                                  <span className="mb-3">{item.awarder}</span>
-                                </div>
-                              ))}
-                            </>
-                          )}
-                        </div>
-                        )}
+                            {/* </div> */}
+                              
+                        </div> 
                         
 
-                        {hobbies && (
-                          <div className="mx-10 flex flex-col mt-4 ">
-                          {hobbies.length != 0 && (
-                            <>
-                              <h4 className="font-bold tracking-[4px] text-[16px]  heading">
-                                HOBBIES
-                              </h4>
-                              <hr className="w-[100%] h-1 bg-black my-2" />
-                              {hobbies.map((item) => (
-                                <div className="text-[12px] ">
-                                  <span className="font-semibold mt-1">
-                                    {item.name}
-                                  </span>
-                                </div>
-                              ))}
-                            </>
-                          )}
-                        </div>
-                        )}
+
+                        
+<div className="mx-10 flex flex-col  ">
+
+{skills?.filter((skill)=>skill?.enabled).length >0 && (
+  <div>
+<h4 className="font-bold tracking-[4px] text-[16px]  heading">
+      SKILLS
+      </h4>
+      <hr className="w-[100%] h-1 bg-black my-2" />
+  {skills?.filter((skill)=>skill?.enabled === true).map((item)=>(
+    <div className="flex justify-between text-[12px] ">
+    <span
+      className="font-semibold mt-1"
+      key={item.name}
+    >
+      {item.name}
+    </span>
+    <span className=" mt-1 mb-3 ">
+      {item.level}
+    </span>
+  </div>
+  ))}
+  </div>
+)}
+</div>
 
 
-                        {languages && (
-                          <div className="mx-10 flex flex-col mt-4">
-                          {languages.length != 0 && (
-                            <>
-                              <h4 className="font-bold tracking-[4px] text-[16px]  heading">
+
+                         <div className="mx-10 flex flex-col  ">
+
+{awards?.filter((award)=>award?.enabled).length >0 && (
+  <div>
+<h4 className="font-bold tracking-[4px] text-[16px]  heading">
+      AWARDS
+      </h4>
+      <hr className="w-[100%] h-1 bg-black my-2" />
+  {awards?.filter((award)=>award?.enabled === true).map((item)=>(
+    <div className="text-[12px] ">
+    <p
+      className="font-semibold mt-1 "
+      key={item.name}
+    >
+      {item.name}({item.date.slice(0,4)})
+    </p>
+    <span className="mb-3">{item.awarder}</span>
+  </div>
+  ))}
+  </div>
+)}
+</div>
+
+
+
+                         
+                        
+
+
+                        <div className="mx-10 flex flex-col  ">
+
+{hobbies?.filter((hobby)=>hobby?.enabled).length >0 && (
+  <div>
+<h4 className="font-bold tracking-[4px] text-[16px]  heading">
+        HOBBIES
+      </h4>
+      <hr className="w-[100%] h-1 bg-black my-2" />
+  {hobbies?.filter((hobby)=>hobby?.enabled === true).map((item)=>(
+    <div className="text-[12px] ">
+    <span className="font-semibold mt-1">
+      {item.name}
+    </span>
+  </div>
+  ))}
+  </div>
+)}
+</div>
+
+<div className="mx-10 flex flex-col  ">
+
+                        {languages?.filter((language)=>language?.enabled).length >0 && (
+                          <div>
+ <h4 className="font-bold tracking-[4px] text-[16px]  heading">
                                 LANGUAGES
                               </h4>
                               <hr className="w-[100%] h-1 bg-black my-2" />
-                              {languages.map((item) => (
-                                <div className="text-[12px] ">
+                          {languages?.filter((language)=>language?.enabled === true).map((item)=>(
+                            <div className="text-[12px] ">
+                            <span
+                              className="font-semibold mt-1"
+                              key={item.name}
+                            >
+                              {item.name}
+                            </span>
+                          </div> 
+                          ))}
+                          </div>
+                        )}
+                        </div>
+{/* {languages?.filter((lang) => lang?.enabled)?.length > 0 && (
+                <div>
+                  <h1 className="text-red-700 text-[16px] font-semibold mt-2 mb-1">
+                    Languages
+                  </h1>
+                  {languages
+                    ?.filter((lang) => lang?.enabled === true)
+                    .map((item) => ())})} */}
+                       
+                        
+
+{/* 
+                       <div className="text-[12px] ">
                                   <span
                                     className="font-semibold mt-1"
                                     key={item.name}
                                   >
                                     {item.name}
                                   </span>
-                                </div>
-                              ))}
-                            </>
-                          )}
-                        </div>
-                        )}
-                        
+                                </div> */}
                       </div>
                       <div className="w-[60%] h-auto mt-52 mx-10">
                         {objective && (
@@ -230,38 +257,47 @@ export const Amsterdam = ({ componentRef }) => {
                           </div>
                         )}
 
-                        {projects && (
-                          <div>
-                            {projects.length != 0 && (
+
+
+
+
+                        {projects?.filter((project)=>project?.enabled).length >0 && (
                           <>
                             <h2 className="font-bold tracking-[4px] text-[16px]  heading">
                               PROJECTS
                             </h2>
                             <hr className="w-[100%] h-1 bg-black my-1" />
 
-                            {projects.map((item) => (
-                              <div className="text-[12px] ">
-                                <div className="my-4">
-                                  <span className="text-black text-[16px]  font-bold mt-3">
-                                    {item.name} ({" "}
-                                    <span className="text-black font-semibold">
-                                      {item.from.slice(0,4)} to {item.to.slice(0,4)}
-                                    </span>{" "}
-                                    ){" "}
-                                  </span>
+                            {projects?.filter((project)=>project?.enabled === true).map((item)=>(
 
-                                  <p className="ml-4 mt-2">
-                                    {item.summary.data}
-                                  </p>
+                              
+                              <>
+                              {console.log("pro",item)}
+                                {item.enabled && (
+                                  <div className="text-[12px] ">
+                                  <div className="my-4">
+                                    <span className="text-black text-[16px]  font-bold mt-3">
+                                      {item.name} ({" "}
+                                      <span className="text-black font-semibold">
+                                        {item.from.slice(0,4)} to {item.to.slice(0,4)}
+                                      </span>{" "}
+                                      ){" "}
+                                    </span>
+  
+                                    <p className="ml-4 mt-2">
+                                      {item.summary.data}
+                                    </p>
+                                  </div>
                                 </div>
-                              </div>
+                                )}
+                              </>
                             ))}
                           </>
                         )}
-                          </div>
-                        )}
+                          
 
-                        {work && (
+                          {work?.filter((wo)=>wo?.enabled).length >0 && (
+
                           <div>
                             {work.length != 0 && (
                           <>
@@ -269,7 +305,8 @@ export const Amsterdam = ({ componentRef }) => {
                               WORK
                             </h2>
                             <hr className="w-[100%] h-1 bg-black my-1" />
-                            {work.map((item) => (
+                            {work?.filter((wo)=>wo?.enabled === true).map((item)=>(
+
                               <div className="text-[12px] ">
                                 <div
                                   className="flex flex-col"
@@ -295,7 +332,8 @@ export const Amsterdam = ({ componentRef }) => {
                           </div>
                         )}
 
-                        {certifications && (
+{certifications?.filter((certificate)=>certificate?.enabled).length >0 && (
+
                           <div>
                             {certifications.length != 0 && (
                           <>
@@ -303,7 +341,8 @@ export const Amsterdam = ({ componentRef }) => {
                               CERTIFICATIONS
                             </h2>
                             <hr className="w-[100%] h-1 bg-black my-1" />
-                            {certifications.map((item) => (
+                            {certifications?.filter((certificate)=>certificate?.enabled === true).map((item)=>(
+                            
                               <div className="text-[12px] ">
                                 <div className="flex flex-col" key={item.title}>
                                   {/* <span className="text-black font-bold mt-3" >{item.name}</span> */}
