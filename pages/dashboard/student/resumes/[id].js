@@ -18,21 +18,22 @@ import { useModelContext } from "../../../../src/context/ModalContext";
 import { useResumes } from "../../../../src/hooks/useResumes";
 import { getLoginSession } from "../../../../src/lib/auth";
 import { findUser } from "../../../../src/lib/user";
-import { Amsterdam } from "../../../../src/components/Resumes/Templates/Amsterdam";
 import { Berlin } from "../../../../src/components/Resumes/Templates/Berlin";
 import { Tokyo } from "../../../../src/components/Resumes/Templates/Tokyo";
 import { Premium } from "../../../../src/components/Resumes/Templates/Premium";
 import { Red } from "../../../../src/components/Resumes/Templates/Red";
 import { Dynamo } from "../../../../src/components/Resumes/Templates/dynamo";
 import { Madrid } from "../../../../src/components/Resumes/Templates/Madrid";
-//import { Amsterdam } from "../../../../src/components/Resumes/Templates/Amsterdam";
 import { Blue } from "../../../../src/components/Resumes/Templates/Blue";
 import { Casual } from "../../../../src/components/Resumes/Templates/Casual";
-import { Morden } from "../../../../src/components/Resumes/Templates/Morden";
+import { Modren } from "../../../../src/components/Resumes/Templates/Modren";
 import { Classic } from "../../../../src/components/Resumes/Templates/Classic";
 import { Retro } from "../../../../src/components/Resumes/Templates/Retro";
 import { Chrono } from "../../../../src/components/Resumes/Templates/Chrono";
-import { Vertical } from "../../../../src/components/Resumes/Templates/Vertical";
+import { Stylish } from "../../../../src/components/Resumes/Templates/Stylish";
+import { Assymmetric } from "../../../../src/components/Resumes/Templates/Assymmetric";
+
+ import { Vertical } from "../../../../src/components/Resumes/Templates/Vertical";
 
 
 
@@ -58,7 +59,7 @@ const Templates = {
   amsterdam: Amsterdam,
   blue: Blue,
   casual: Casual,
-  morden: Morden,
+  modren: Modren,
   classic: Classic,
   retro: Retro,
   chrono:Chrono,

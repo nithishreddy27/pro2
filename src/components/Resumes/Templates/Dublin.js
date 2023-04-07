@@ -138,7 +138,7 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
                     S K I L L S
                   </h2>
                   {skills?.filter(skill=>skill?.enabled===true).map(item=>(
-                <span className="pr-2 text-sm text-white">
+                <span className="pr-3 text-sm text-white">
                     {item.name}{" "}
                 </span>
                   ))}

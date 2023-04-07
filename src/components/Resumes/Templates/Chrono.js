@@ -13,7 +13,6 @@ export const Chrono = ({ componentRef, filter = null }) => {
     awards,
     certifications,
     projects,
-    work,
     skills,
     hobbies,
     languages,
@@ -330,7 +329,6 @@ export const Chrono = ({ componentRef, filter = null }) => {
                     </div>
                  ))}
                 </div>
-              // </div>
           )}
 
         <div className="col-span-3">

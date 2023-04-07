@@ -931,6 +931,18 @@ export const editorStructure = {
     "awards",
     "hobbies",
   ],
+  modren: [
+    "profile",
+    "objective",
+    "education",
+    "projects",
+    "skills",
+    "languages",
+    "certifications",
+    "work",
+    "awards",
+    "hobbies",
+  ],
   diamond: ["profile", "objective", "education", "skills", "languages", "work"],
   
   dublin:[ "profile",
@@ -944,6 +956,9 @@ export const editorStructure = {
   "work",
   "awards",
   "hobbies"],
+
+
+
   square:[ "profile",
   "social",
   "objective",
@@ -955,6 +970,8 @@ export const editorStructure = {
   "work",
   "awards",
   "hobbies"],
+
+
   symmetric:[ "profile",
   "social",
   "objective",
