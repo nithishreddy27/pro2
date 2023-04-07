@@ -40,7 +40,7 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
             <div className="photobg bg-slate-300 w-[150px] h-[150px] relative top-16 left-16"></div>
             <div className="photo">
               <img
-                src="https://th.bing.com/th/id/R.3f1e3fb67a36a4f0e88e267a39fc5fe4?rik=SWNFXn5k1gxRFA&riu=http%3a%2f%2fthispix.com%2fwp-content%2fuploads%2f2015%2f06%2fpassport-026.jpg&ehk=MqDfVA9i8hE5HdOOiYBteZYzQTs1TxhQivfpM8mk9EA%3d&risl=&pid=ImgRaw&r=0"
+                src={profile?.image}
                 className="w-[150px] h-[150px] relative top-[-95px] left-[75px]"
               ></img>
             </div>
@@ -90,7 +90,7 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
               </div>
               {education?.filter(edu=>edu?.enabled)?.length>0 && (
                 <div className="education">
-                <h2 className="text-center text-base font-sans font-bold text-zinc-200">
+                <h2 className="text-center text-base heading font-sans font-bold text-zinc-200">
                   E D U C A T I O N
                 </h2>
                 {education?.filter(edu=>edu?.enabled===true).map(item=>(
@@ -118,7 +118,7 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
               )}
               {certifications?.filter(cert=>cert?.enabled)?.length>0 && (
                 <div className="certifications">
-                <h2 className="text-center text-base font-sans font-bold pt-3 text-zinc-200 ">
+                <h2 className="text-center text-base heading font-sans font-bold pt-3 text-zinc-200 ">
                   C E R T I F I C A T I O N S
                 </h2>
                 {certifications?.filter(cert=>cert?.enabled===true).map((item) => (
@@ -134,7 +134,7 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
               {skills?.filter(skill=>skill?.enabled)?.length>0 && (
                 <div className="skills">
                 <div className="pl-10">
-                  <h2 className="text-center text-base font-sans font-bold pt-5 pb-1 text-zinc-300">
+                  <h2 className="text-center text-base heading font-sans font-bold pt-5 pb-1 text-zinc-300">
                     S K I L L S
                   </h2>
                   {skills?.filter(skill=>skill?.enabled===true).map(item=>(
@@ -148,7 +148,7 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
               {hobbies?.filter(hob=>hob?.enabled)?.length>0 && (
                 <div className="hobbies">
                 <div className="pl-10">
-                  <h2 className="text-center text-base font-sans font-bold pt-5 pb-1 text-zinc-300">
+                  <h2 className="text-center text-base heading font-sans font-bold pt-5 pb-1 text-zinc-300">
                     H O B B I E S
                   </h2>
                   {hobbies?.filter(hob=>hob?.enabled===true).map((item) => (
@@ -162,7 +162,7 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
               {languages?.filter(lang=>lang?.enabled)?.length>0 && (
                 <div className="languages">
                 <div className="pl-10">
-                  <h2 className="text-center text-base font-sans font-bold pt-5 pb-1 text-zinc-300">
+                  <h2 className="text-center text-base heading font-sans font-bold pt-5 pb-1 text-zinc-300">
                     L A N G U A G E S
                   </h2>
                   {languages?.filter(lang=>lang?.enabled===true).map((item) => (
@@ -186,14 +186,14 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
               </div>
             </div>
             <div className="career-objective">
-              <h2 className="text-center text-base font-sans font-bold pt-3">
+              <h2 className="text-center text-base heading font-sans font-bold pt-3">
                 C A R E E R O B J E C T I V E
               </h2>
               <p className="pl-10 pr-5 pt-2 text-sm">{objective}</p>
             </div>
             {work?.filter(wor=>wor?.enabled)?.length>0 && (
                 <div className="experience">
-                <h2 className="text-center text-base font-sans font-bold pt-5">
+                <h2 className="text-center text-base heading font-sans font-bold pt-5">
                   E X P E R I E N C E
                 </h2>
                 {work?.filter(wor=>wor?.enabled===true).map((item) => (
@@ -212,7 +212,7 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
             )}
             {projects?.filter(pro=>pro?.enabled)?.length>0 && (
                 <div className="projects">
-                <h2 className="text-center text-base font-sans font-bold pt-2">
+                <h2 className="text-center text-base heading font-sans font-bold pt-2 heading">
                   P R O J E C T S
                 </h2>
                 {projects?.filter(pro=>pro?.enabled===true).map((item) => (
@@ -229,7 +229,7 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
             )}
             {awards?.filter(awa=>awa?.enabled)?.length>0 && (
                 <div className="awards">
-                <h2 className="text-center text-base font-sans font-bold pt-2">
+                <h2 className="text-center text-base heading font-sans font-bold pt-2">
                   A W A R D S
                 </h2>
                 {awards?.filter(awa=>awa?.enabled===true).map((item) => (
@@ -242,6 +242,14 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
               </div>
             )}
           </div>
+          <style jsx> 
+            {`
+              .heading{
+                color:rgba(${r},${g},${b},${a})
+              }
+            
+            `}
+    </style>
     </div>
   );
 });

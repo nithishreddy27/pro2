@@ -252,6 +252,14 @@ export const Berlin = ({ componentRef }) => {
             )}
           </div>
         </div>
+        <style jsx> 
+    {`
+      .heading{
+        color:rgba(${r},${g},${b},${a})
+      }
+    
+    `}
+    </style>
       </div>
     </>
   );
