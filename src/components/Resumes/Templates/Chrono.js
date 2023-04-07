@@ -4,7 +4,7 @@ import { rename, months } from "../../../lib/helper";
 import { MarkdownRenderer } from "../../../lib/MarkdownRenderer";
 import Link from "next/link";
 
-export const Assymmetric = ({ componentRef, filter = null }) => {
+export const Chrono = ({ componentRef, filter = null }) => {
   const {
     profile,
     social,
@@ -23,10 +23,7 @@ export const Assymmetric = ({ componentRef, filter = null }) => {
   const headingClass =
     "text-lg text-center capitalize font-bold text-gray-700 mb-2 pb-1";
   return (
-    <div
-      ref={componentRef}
-      className="w-a4W bg-white mx-auto h-a4H my-5 relative"
-    >
+    <div ref={componentRef} className="w-a4W bg-white mx-auto h-a4H my-5">
       {/* <div className='px-14 py-8 h-full' style={{ backgroundColor: `rgba(${r}, ${g}, ${b}, 0.1)` }}>
         <div className='w-full py-2 text-center border-b-2 border-slate-600 '>
           <span className='text-4xl not-italic font-bold text-gray-700 '>
@@ -257,292 +254,157 @@ export const Assymmetric = ({ componentRef, filter = null }) => {
         className="bg-slate-50 w-[210mm] scale-[0.4] sm:scale-[0.7] md:scale-[0.9] md:mt-[-50px] lg:scale-[0.8] lg:mt-[-80px] xl:scale-[0.9] xl:mt-[-10px] sm:mt-[-100px] mx-[-210px] mt-[-250px] h-[285mm] max-h-[285mm] min-w-[210mm] object-cover overflow-hidden drop-shadow-2xl flex flex-row"
         id="largeResume"
       > */}
-      <div className="flex gap-3 m-7 p-4">
-        <div className="w-[35%] pl-3">
-          {profile && (
-            <>
-              <img
-                src={profile.image}
-                alt=""
-                className="w-[35mm] h-[30mm] rounded-full my-2"
-              />
-            </>
-          )}
 
-          {/* network */}
-          {profile && (
-            <div className="py-3">
-              <h1 className="text-[16px] font-bold">NETWORK</h1>
-              <div className="pl-2 text-[12px]">
-                <p className="">{profile.phone}</p>
-                <p className="">{profile.email}</p>
-              </div>
-            </div>
-          )}
+      <div className="grid grid-cols-5">
+        <div className="col-span-2 border-2 border-solid border-black h-auto ml-5 mt-20">
+          <img
+            className=" pt-4 w-52 absolute top-0 ml-10 border-2  border-gray-600 z-10"
+            //src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpl60g6oKVerEKPde2ClN4-6ASK4Ds4KzlM0Y1N-K_bCgOCMBYZ019WUgRLOfNAqyyhnY&usqp=CAU"
+            src={profile?.image}
+            alt="ProfilePhoto"
+          />
 
-          {/* hobbies */}
-          {hobbies && (
+          <div>
+            <h1 className="text-black mt-36 ml-16  font-medium text-3xl">
+              {profile?.firstName}
+            </h1>
+            <h1 className="text-black ml-16 font-medium text-3xl">
+              {profile?.lastName}
+            </h1>
+            <h6 className="font-normal text-lg ml-16 pt-2">
+              {profile?.role}
+            </h6>
+          </div>
+          <div>
+            <h1 className="font-semibold text-lg ml-16 pt-4 p-1 text-[16px]">Contact</h1>
+            <li className="font-medium ml-20 text-[12px]">{profile?.email}</li>
+            <li className="font-medium ml-20 text-[12px]">{profile?.phone}</li>
+            <li className="font-medium ml-20 text-[12px]">{profile?.dob}</li>
+          </div>
+          {skill?.filter((skill)=>skill?.enabled)?.length>0&&(
             <div>
-              {hobbies.length != 0 && (
-                <div className="py-1">
-                  <p className="text-[16px] font-bold">HOBBIES</p>
-                  {hobbies.map((item) => (
-                    <>
-                      {item.enabled && (
-                        <div key={item.name} className="text-[12px]">
-                          <p>{item.name}</p>
-                          <p>{item.enabled}</p>
-                        </div>
-                      )}
-                    </>
-                  ))}
+                <h1 className="font-semibold text-lg ml-16 pt-4 text-[16px]">Skills</h1>
+               {skill?.filter(skill=>skill?.enabled===true).map((item)=>(
+                <div>
+                    <h1 className="font-medium ml-16 p-2 text-[12px] ">{item.name}</h1>
+                    <h1 className=" ml-16 px-2 text-[12px]">{item.level}</h1>
+                  </div>
+               ))}
+              </div>
+          )}
+         {social?.filter((social)=>social?.enabled)?.length>0&&(
+            <div>
+                <h1 className="font-semibold  text-lg ml-16 pt-4 text-[16px]">
+                  Social Network
+                </h1>
+               {social?.filter(social=>social?.enabled===true).map((item)=>(
+                <div className="ml-20 my-4 flex text-[12px]">
+                    <img
+                      src={"https://www." + item.network + ".com/favicon.ico"}
+                      alt=""
+                      className="w-5 h-5"
+                    />
+                    <Link href={item.url}>
+                      <h1 className="ml-4 text-[12px]">{item.username}</h1>
+                    </Link>
+                  </div>
+               ))}
+              </div>
+         )}
+          {hobbies?.filter((hobbies)=>hobbies?.enabled)?.length>0 &&(
+            <div>
+                <h1 className="font-bold  text-lg ml-16 pt-2 text-[16px]">Hobbies</h1>
+               {hobbies?.filter(hobbies=>hobbies?.enabled===true).map((item)=>(
+                <div>
+                    <h1 className="px-20 font-medium text-sm p-1 text-[12px]">{item.name}</h1>
+                  </div>
+               ))}
+              </div>
+          )}
+          {languages?.filter((languages)=>languages?.enabled)?.length>0&&(
+            <div>
+                <h1 className="font-bold  text-lg ml-16 pt-2">Languages</h1>
+                 {languages?.filter(languages=>languages?.enabled===true).map((item)=>(
+                     <div>
+                      <h1 className="px-20 font-medium text-sm p-1">{item.name}</h1>
+                    </div>
+                 ))}
                 </div>
-              )}
-            </div>
           )}
 
-          {/* skills */}
-          {skills?.filter((skill) => skill?.enabled).length > 0 && (
-            <div className="py-1">
-              <p className="text-[16px] font-bold">SKILLS</p>
-              {skills.map((item) => (
-                <>
-                  {item.enabled == true && (
-                    <div key={item.name}>
-                      <span className="text-[12px]">
-                        {item.name} - {item.level}
-                      </span>
-                      <p>{item.enabled}</p>
-                    </div>
-                  )}
-                </>
+        <div className="col-span-3">
+        {objective && (
+            <div>
+                <h1 className="font-medium text-xl ml-8 mt-20 text-[16px]">About</h1>
+                <p className="ml-1 p-4 pt-1 text-[12px]">{resume.objective}</p>
+              </div>
+        )}
+          {education?.filter((education)=>education?.enabled)?.length>0&&(
+            <div className="p-2 px-0">
+                <h1 className="font-medium text-xl ml-8 text-[16px] ">Education</h1>
+               {education?.filter(education=>education?.enabled===true).map((item)=>(
+                <div>
+                    <h1 className="font-medium ml-8 text-[12px]">{item.institution}</h1>
+                    <h6 className="text-xs font-medium  ml-80 text-[12px]">
+                      {item.startDate} - {item.endDate}
+                    </h6>
+                    <li className="ml-14 font-semibold text-[12px]">{item.fieldOfStudy}</li>
+                  </div>
+               ))}
+              </div>
+          )}
+         {work?.filter((work)=>Work?.enabled)?.length>0 &&(
+            <div className="p-2 px-0">
+                <h1 className="font-medium text-xl ml-8 pt-2 text-[16px]">
+                  Work Experience
+                </h1>
+               {work?.filter(work=>work?.enabled===true).map((item)=>(
+                <div className="p-1">
+                    <h1 className="font-medium ml-8 text-lg text-[12px]">{item.company}</h1>
+                    <h2 className="font-medium text-xs ml-80 text-[12px]">
+                      {item.from} - {item.to}
+                    </h2>
+                    <li className="ml-14 list-disc font-semibold text-[12px]">
+                      {item.designation}
+                    </li>
+                    <li className="ml-14 list-disc font-semibold text-[12px]">
+                      {item.website}
+                    </li>
+                  </div>
+               ))}
+              </div>
+         )}
+        {certifications?.filter((certifications)=>certifications.enabled)?.length>0 &&(
+            <div>
+                <h1 className="font-medium text-xl ml-8 pt-2 text-[16px] ">
+                  Certifications
+                </h1>
+             {certifications?.filter(certifications=>certifications?.enabled===true).map((item)=>(
+                <div>
+                    <h1 className="ml-8 text-normal font-semibold text-[12px]">
+                      {item.title}
+                    </h1>
+                    <li className="ml-12 text-sm font-medium text-[12px]">{item.issuer}</li>
+                  </div>
+             ))}
+              </div>
+            )}
+     {awards?.filter((awards)=>awards.enabled)?.length>0 &&(
+        <div>
+            <h1 className="font-medium text-xl ml-8 pt-2 text-[16px]">
+                Awards
+              </h1>
+              {awards?.filter(awards=>awards?.enabled===true).map((item)=>(
+                <div>
+                    <h1 className="ml-8 text-normal font-semibold text-[12px]">
+                      {item.name}
+                    </h1>
+                    <li className="ml-12 text-sm font-medium text-[12px]">{item.awarder}</li>
+                  </div>
               ))}
             </div>
-          )}
-          {/* languages */}
-          {languages?.filter((language) => language?.enabled).length > 0 && (
-            <div>
-              {languages.length != 0 && (
-                <div className="py-1">
-                  <p className="text-[16px] font-bold">LANGUAGES</p>
-                  {languages.length != 0 &&
-                    languages.filter((languages) => languages.enabled).length >
-                      0 && (
-                      <div className="">
-                        {languages.map((item) => (
-                          <>
-                            {item.enabled && (
-                              <div key={item.name} className="pt-2">
-                                <p className="text-[12px]">
-                                  {item.name} - {item.fluency}
-                                </p>
-                                <p>{item.enabled}</p>
-                              </div>
-                            )}
-                          </>
-                        ))}
-                      </div>
-                    )}
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* internship */}
-          {work && (
-            <div>
-              {work.length != 0 && (
-                <div className="py-1">
-                  <p className="text-[16px] font-bold pb-1">INTERNSHIP</p>
-                  {work.map((item) => (
-                    <>
-                      {item.enabled && (
-                        <div key={item.company} className="">
-                          <li className="relative font-bold text-gray-800 text-[14px] tracking-wider">
-                            {item.company}
-                          </li>
-                          <p>
-                            <span className=" text-[12px]">
-                              [ {item.from.slice(0, 10)}] - [
-                              {item.to.slice(0, 10)}]
-                            </span>
-                          </p>
-
-                          <p className="text-[12px]">{item.designation}</p>
-                          <p className="pl-1 text-[12px]">
-                            {item.summary.data}
-                          </p>
-                          <p>{item.summary.enabled}</p>
-                        </div>
-                      )}
-                    </>
-                  ))}
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* awards */}
-          {awards && (
-            <div>
-              {awards.length != 0 && (
-                <div className="pb-1">
-                  <p className="text-black font-bold tracking-wider  px-2 py-1 ">
-                    AWARDS:
-                  </p>
-                  {awards.map((item) => (
-                    <>
-                      {item.enabled && (
-                        <div key={item.name} className="text-[12px]">
-                          <li className="font-bold text-gray-700">
-                            {item.name}
-                          </li>
-                          <span className="pl-2">
-                            [{item.date.slice(0, 4)}]
-                          </span>
-                          <p className="pl-2">{item.awarder}</p>
-                          <p className="pl-2 text-[12px]">
-                            {item.summary.data}
-                          </p>
-                          <p>{item.summary.enabled}</p>
-                          <p>{item.enabled}</p>
-                        </div>
-                      )}
-                    </>
-                  ))}
-                </div>
-              )}
-            </div>
-          )}
-        </div>
-
-        <div className="w-[65%] pr-4 pl-3 ">
-          {profile && (
-            <div className="py-4">
-              <p className="font-bold text-center text-[20px]  font-sans tracking-widest ">
-                {profile.firstName} {profile.lastName}
-              </p>
-              <p className="text-black font-thin text-[16px] tracking-widest text-center  ">
-                {profile.role}
-              </p>
-            </div>
-          )}
-          <div className=" bg-gray-200 rounded-xl p-1 my-2">
-            {objective && (
-              <>
-                {objective != 0 && (
-                  <>
-                    <p className=" text-black font-semibold text-[16px] px-3 py-1 tracking-wid  ">
-                      PROFILE
-                    </p>
-                    <p className="text-[12px] text-black px-2 pb-2 ">
-                      {objective}
-                    </p>
-                  </>
-                )}
-              </>
-            )}
-          </div>
-
-          {/* education */}
-          {education && (
-            <div>
-              {education.length != 0 && (
-                <div className="bg-gray-200 rounded-xl p-1 my-2">
-                  <p className="text-black font-semibold text-[16px] px-3 py-1 tracking-wid">
-                    EDUCATION
-                  </p>
-                  {education.map((item) => (
-                    <>
-                    {item.enabled && (
-                    <div
-                      key={item.institution}
-                      className="text-[12px] p-1 pl-3"
-                    >
-                      <p className="relative font-bold text-gray-800 text-[14px]">
-                        {item.institution}
-                        <span className="absolute right-1 font-normal text-[12px]">
-                          [{item.startDate.slice(0, 4)}] - [
-                          {item.endDate.slice(0, 4)}]
-                        </span>
-                      </p>
-                      <p className="">{item.fieldOfStudy}</p>
-
-                      <p>
-                        {item.typeOfDegree} - {item.gpa}
-                      </p>
-                      <p>{item.summary.enabled}</p>
-                      <p>{item.enabled}</p>
-                    </div>
-                    )}
-                    </>
-                  ))}
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* project */}
-          {projects && (
-            <div>
-              {projects.length != 0 && (
-                <div className="bg-gray-200 rounded-xl p-1 my-2">
-                  <p className="text-black font-semibold text-[16px] px-3 py-1 tracking-wider">
-                    PROJECTS
-                  </p>
-
-                  {projects.map((item) => (
-                    <>
-                    {item.enabled && (
-                    <div key={item.name} className=" text-black pl-3 ">
-                      <p className="font-bold relative text-gray-800 text-[14px]  tracking-wider">
-                        {item.name}
-
-                        <span className="absolute right-2 font-normal text-[10px]">
-                          [{item.from.slice(0, 7)} ] - [ {item.to.slice(0, 7)} ]
-                        </span>
-                      </p>
-                      <p className="text-[12px] pr-1">{item.summary.data}</p>
-                      <p>{item.summary.enabled}</p>
-                      <p>{item.enabled}</p>
-                      <p className="p-2"> </p>
-                    </div>
-                    )}
-                    </>
-                  ))}
-                </div>
-              )}
-            </div>
-          )}
-
-          {certifications && (
-            <div>
-              {certifications.length != 0 && (
-                <div className="bg-gray-200 rounded-xl p-1 my-2 pb-2 ">
-                  <p className=" text-black font-semibold text-[16px] px-3 py-1 tracking-wider ">
-                    CERTIFICATION
-                  </p>
-
-                  {certifications.map((item) => (
-                    <div key={item.title} className="pt-4 text-black mx-3 ">
-                      <p className="font-bold  text-gray-800 text-[14px]  tracking-wider">
-                        {item.title}
-                      </p>
-                      <p className="font-bold relative text-gray-600 text-[13px]  tracking-wider">
-                        {item.issuer}
-                        <span className="absolute right-0 font-normal text-[10px]">
-                          [ {item.date.slice(0, 10)} ]
-                        </span>
-                      </p>
-                      <p className="text-[12px] pr-1">{item.summary.data}</p>
-                      <p>{item.summary.enabled}</p>
-                      <p>{item.enabled}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          )}
+           
+     )}
         </div>
       </div>
     </div>
