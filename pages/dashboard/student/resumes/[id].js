@@ -25,7 +25,6 @@ import { Premium } from "../../../../src/components/Resumes/Templates/Premium";
 import { Red } from "../../../../src/components/Resumes/Templates/Red";
 import { Dynamo } from "../../../../src/components/Resumes/Templates/dynamo";
 import { Madrid } from "../../../../src/components/Resumes/Templates/Madrid";
-import { Amsterdam } from "../../../../src/components/Resumes/Templates/Amsterdam";
 import { Blue } from "../../../../src/components/Resumes/Templates/Blue";
 import { Casual } from "../../../../src/components/Resumes/Templates/Casual";
 import { Morden } from "../../../../src/components/Resumes/Templates/Morden";
