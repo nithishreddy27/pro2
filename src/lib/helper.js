@@ -165,7 +165,9 @@ export const applyFilters = (filter, jobs, setJobs) => {
     let foundInDesig = job.designation.roles.some((ele) =>
       ele.toLowerCase().includes(filter.keyword.toLowerCase())
     );
-    let foundInCompany = job.company.toLowerCase().includes(filter.keyword.toLowerCase());
+    let foundInCompany = job.company
+      .toLowerCase()
+      .includes(filter.keyword.toLowerCase());
     if (!foundInCompany && !foundInDesig) return false;
     return true;
   });
@@ -322,14 +324,17 @@ export const getJobs = (jobs, userDetails, status) => {
     eligible: [],
   };
   jobs.forEach((job) => {
-    const response = job.eligible.filter((x) => x.rollnumber === userDetails.rollNumber.value);
+    const response = job.eligible.filter(
+      (x) => x.rollnumber === userDetails.rollNumber.value
+    );
     var flag =
       job.typeOfPost === "Off-Campus" ||
       (job.college === userDetails.college &&
         (job.typeOfPost === "On-Campus" || response.length > 0));
     if (flag) {
       studentJobs.eligible.add(job);
-      if (response.length === 0 || response[0].status === null) studentJobs.pending.add(job);
+      if (response.length === 0 || response[0].status === null)
+        studentJobs.pending.add(job);
       else if (response[0].status === false) studentJobs.rejected.add(job);
       else studentJobs.applied.add(job);
     }
@@ -783,7 +788,8 @@ export const errors = {
   OAuthAccountNotLinked:
     "To confirm your identity, sign in with the same account you used originally.",
   EmailSignin: "Check your email address.",
-  CredentialsSignin: "Sign in failed. Check the details you provided are correct.",
+  CredentialsSignin:
+    "Sign in failed. Check the details you provided are correct.",
   default: "Unable to sign in.",
 };
 
@@ -791,13 +797,21 @@ export const rename = (name) => {
   if (!name) return name;
   var separateWord = name.toLowerCase().split(" ");
   for (var i = 0; i < separateWord.length; i++) {
-    separateWord[i] = separateWord[i].charAt(0).toUpperCase() + separateWord[i]?.substring(1);
+    separateWord[i] =
+      separateWord[i].charAt(0).toUpperCase() + separateWord[i]?.substring(1);
   }
   return separateWord.join(" ");
 };
 
 export const editorStructure = {
-  dynamic: ["profile", "objective", "education", "projects", "skills", "languages"],
+  dynamic: [
+    "profile",
+    "objective",
+    "education",
+    "projects",
+    "skills",
+    "languages",
+  ],
   core: [
     "profile",
     "education",
@@ -844,9 +858,51 @@ export const editorStructure = {
     "hobbies",
     "social",
   ],
-  refined: ["profile", "education", "projects", "certification", "awards", "skills", "languages"],
-  tadigital: ["profile", "objective", "education", "projects", "skills", "languages", "awards"],
+  refined: [
+    "profile",
+    "education",
+    "projects",
+    "certification",
+    "awards",
+    "skills",
+    "languages",
+  ],
+  tadigital: [
+    "profile",
+    "objective",
+    "education",
+    "projects",
+    "skills",
+    "languages",
+    "awards",
+  ],
   pro: ["profile", "education", "projects", "skills"],
+  gengar: [
+    "profile",
+    "objective",
+    "education",
+    "certification",
+    "skills",
+    "languages",
+  ],
+  stockholm: [
+    "profile",
+    "objective",
+    "education",
+    "projects",
+    "skills",
+    "languages",
+    "awards",
+  ],
+  blue: [
+    "profile",
+    "objective",
+    "education",
+    "projects",
+    "skills",
+    "languages",
+    "awards",
+  ],
   gengar: ["profile", "objective", "education", "certification", "skills", "languages"],
   stockholm: ["profile", "objective", "education", "projects", "skills", "languages", "awards"],
   blue: ["profile", "objective", "education", "projects", "skills", "languages", "awards"],
@@ -888,7 +944,9 @@ export const editorStructure = {
     "hobbies",
   ],
   diamond: ["profile", "objective", "education", "skills", "languages", "work"],
-  amsterdam:[ "profile",
+  
+  dublin:[ "profile",
+  "social",
   "objective",
   "education",
   "projects",
@@ -897,7 +955,180 @@ export const editorStructure = {
   "certifications",
   "work",
   "awards",
-  "hobbies"]
+  "hobbies"],
+  square:[ "profile",
+  "social",
+  "objective",
+  "education",
+  "projects",
+  "skills",
+  "languages",
+  "certifications",
+  "work",
+  "awards",
+  "hobbies"],
+  symmetric:[ "profile",
+  "social",
+  "objective",
+  "education",
+  "projects",
+  "skills",
+  "languages",
+  "certifications",
+  "work",
+  "awards",
+  "hobbies"],
+  professional:[ "profile",
+  "social",
+  "objective",
+  "education",
+  "projects",
+  "skills",
+  "languages",
+  "certifications",
+  "work",
+  "awards",
+  "hobbies"],
+  amsterdam: [
+    "profile",
+    "objective",
+    "education",
+    "projects",
+    "skills",
+    "languages",
+    "certifications",
+    "work",
+    "awards",
+    "hobbies",
+  ],
+  assymmetric: [
+    "profile",
+    "objective",
+    "education",
+    "awards",
+    "certifications",
+    "projects",
+    "work",
+    "skills",
+    "hobbies",
+    "languages",
+  ],
+  stylish: [
+    "profile",
+    "objective",
+    "education",
+    "awards",
+    "certifications",
+    "projects",
+    "work",
+    "skills",
+    "hobbies",
+    "languages",
+  ],
+  retro: [
+    "profile",
+    "objective",
+    "education",
+    "awards",
+    "certifications",
+    "projects",
+    "work",
+    "skills",
+    "hobbies",
+    "languages",
+  ],
+  classic: [
+    "profile",
+    "objective",
+    "education",
+    "awards",
+    "certifications",
+    "projects",
+    "work",
+    "skills",
+    "hobbies",
+  ],
+
+  dynamo: [
+    "profile",
+    "social",
+    "objective",
+    "education",
+    "skills",
+    "awards",
+    "hobbies",
+    "work",
+    "languages",
+    "layout",
+  ],
+  premium: [
+    "profile",
+    "social",
+    "objective",
+    "education",
+    "projects",
+    "skills",
+    "awards",
+    "work",
+    "certifications",
+    "layout",
+  ],
+  red: [
+    "profile",
+    "social",
+    "objective",
+    "education",
+    "projects",
+    "skills",
+    "awards",
+    "hobbies",
+    "work",
+    "certifications",
+    "languages",
+    "layout",
+  ],
+  tokyo: [
+    "profile",
+    "social",
+    "objective",
+    "education",
+    "projects",
+    "skills",
+    "awards",
+    "hobbies",
+    "work",
+    "certifications",
+    "languages",
+    "layout",
+  ],
+  berlin: [
+    "profile",
+    "social",
+    "objective",
+    "education",
+    "projects",
+    "skills",
+    "awards",
+    "hobbies",
+    "work",
+    "certifications",
+    "languages",
+    "layout",
+  ],
+  madrid: [
+    "profile",
+    "social",
+    "objective",
+    "education",
+    "projects",
+    "skills",
+    "awards",
+    "hobbies",
+    "work",
+    "certifications",
+    "languages",
+    "layout",
+  ],
 };
 
 export const company = [
@@ -935,7 +1166,8 @@ export const trim_json = (resume) => {
   delete resume["public"];
   delete resume["layout"];
   Object.keys(resume).forEach((key) => {
-    if (resume[key] instanceof Array) resume[key].forEach((record) => delete record["_id"]);
+    if (resume[key] instanceof Array)
+      resume[key].forEach((record) => delete record["_id"]);
   });
   return resume;
 };
