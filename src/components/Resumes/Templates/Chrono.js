@@ -281,10 +281,10 @@ export const Chrono = ({ componentRef, filter = null }) => {
             <li className="font-medium ml-20 text-[12px]">{profile?.phone}</li>
             <li className="font-medium ml-20 text-[12px]">{profile?.dob}</li>
           </div>
-          {skill?.filter((skill)=>skill?.enabled)?.length>0&&(
+          {skills?.filter((skills)=>skills?.enabled)?.length>0&&(
             <div>
                 <h1 className="font-semibold text-lg ml-16 pt-4 text-[16px]">Skills</h1>
-               {skill?.filter(skill=>skill?.enabled===true).map((item)=>(
+               {Skills?.filter(skills=>skills?.enabled===true).map((item)=>(
                 <div>
                     <h1 className="font-medium ml-16 p-2 text-[12px] ">{item.name}</h1>
                     <h1 className=" ml-16 px-2 text-[12px]">{item.level}</h1>
@@ -330,14 +330,14 @@ export const Chrono = ({ componentRef, filter = null }) => {
                     </div>
                  ))}
                 </div>
-              </div>
+              // </div>
           )}
 
         <div className="col-span-3">
         {objective && (
             <div>
                 <h1 className="font-medium text-xl ml-8 mt-20 text-[16px]">About</h1>
-                <p className="ml-1 p-4 pt-1 text-[12px]">{resume.objective}</p>
+                <p className="ml-1 p-4 pt-1 text-[12px]">{objective}</p>
               </div>
         )}
           {education?.filter((education)=>education?.enabled)?.length>0&&(
@@ -354,7 +354,7 @@ export const Chrono = ({ componentRef, filter = null }) => {
                ))}
               </div>
           )}
-         {work?.filter((work)=>Work?.enabled)?.length>0 &&(
+         {work?.filter((work)=>work?.enabled)?.length>0 &&(
             <div className="p-2 px-0">
                 <h1 className="font-medium text-xl ml-8 pt-2 text-[16px]">
                   Work Experience
@@ -409,6 +409,6 @@ export const Chrono = ({ componentRef, filter = null }) => {
         </div>
       </div>
     </div>
-    // </div>
+     </div>
   );
 };

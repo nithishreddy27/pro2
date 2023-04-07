@@ -237,6 +237,7 @@ const templates = [
       "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531522/my-uploads/ycnqqobfpghxsxdwws9l.jpg",
     heading: "Vertical",
   },
+ 
 ];
 
 function classNames(...classes) {

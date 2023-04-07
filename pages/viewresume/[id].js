@@ -49,6 +49,7 @@ const Templates = {
   madrid: Madrid,
   chrono:Chrono,
   vertical:Vertical,
+  
 };
 
 const ViewResume = ({ id }) => {
