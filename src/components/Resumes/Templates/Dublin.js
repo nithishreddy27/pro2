@@ -40,7 +40,7 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
             <div className="photobg bg-slate-300 w-[150px] h-[150px] relative top-16 left-16"></div>
             <div className="photo">
               <img
-                src="https://th.bing.com/th/id/R.3f1e3fb67a36a4f0e88e267a39fc5fe4?rik=SWNFXn5k1gxRFA&riu=http%3a%2f%2fthispix.com%2fwp-content%2fuploads%2f2015%2f06%2fpassport-026.jpg&ehk=MqDfVA9i8hE5HdOOiYBteZYzQTs1TxhQivfpM8mk9EA%3d&risl=&pid=ImgRaw&r=0"
+                src={profile?.image}
                 className="w-[150px] h-[150px] relative top-[-95px] left-[75px]"
               ></img>
             </div>
