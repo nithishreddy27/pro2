@@ -281,7 +281,7 @@ export const Chrono = ({ componentRef, filter = null }) => {
             <li className="font-medium ml-20 text-[12px]">{profile?.phone}</li>
             <li className="font-medium ml-20 text-[12px]">{profile?.dob}</li>
           </div>
-          {skill?.filter((skill)=>skill?.enabled)?.length>0&&(
+          {skills?.filter((skill)=>skill?.enabled)?.length>0&&(
             <div>
                 <h1 className="font-semibold text-lg ml-16 pt-4 text-[16px]">Skills</h1>
                {skill?.filter(skill=>skill?.enabled===true).map((item)=>(
