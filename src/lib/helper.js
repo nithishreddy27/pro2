@@ -956,6 +956,9 @@ export const editorStructure = {
   "work",
   "awards",
   "hobbies"],
+
+
+
   square:[ "profile",
   "social",
   "objective",
@@ -967,6 +970,8 @@ export const editorStructure = {
   "work",
   "awards",
   "hobbies"],
+
+
   symmetric:[ "profile",
   "social",
   "objective",

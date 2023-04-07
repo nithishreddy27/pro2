@@ -224,7 +224,7 @@ export const Amsterdam = ({ componentRef }) => {
                               OBJECTIVE
                             </h2>
                             <hr className="w-[100%] h-1 bg-black my-1" />
-                            <p className="my-4">{profile.objective}</p>
+                            <p className="my-4">{objective}</p>
                           </>
                         )}
                           </div>

@@ -18,13 +18,7 @@ import { useModelContext } from "../../../../src/context/ModalContext";
 import { useResumes } from "../../../../src/hooks/useResumes";
 import { getLoginSession } from "../../../../src/lib/auth";
 import { findUser } from "../../../../src/lib/user";
-<<<<<<< HEAD
-import {Amsterdam} from "../../../../src/components/Resumes/Templates/Amsterdam";
-import {Blue} from "../../../../src/components/Resumes/Templates/Blue";
-import {Casual} from "../../../../src/components/Resumes/Templates/Casual";
-import { Modren } from "../../../../src/components/Resumes/Templates/Modren";
-=======
-import { Amsterdam } from "../../../../src/components/Resumes/Templates/Amsterdam";
+// import { Amsterdam } from "../../../../src/components/Resumes/Templates/Amsterdam";
 import { Berlin } from "../../../../src/components/Resumes/Templates/Berlin";
 import { Tokyo } from "../../../../src/components/Resumes/Templates/Tokyo";
 import { Premium } from "../../../../src/components/Resumes/Templates/Premium";
@@ -34,14 +28,13 @@ import { Madrid } from "../../../../src/components/Resumes/Templates/Madrid";
 import { Amsterdam } from "../../../../src/components/Resumes/Templates/Amsterdam";
 import { Blue } from "../../../../src/components/Resumes/Templates/Blue";
 import { Casual } from "../../../../src/components/Resumes/Templates/Casual";
-import { Morden } from "../../../../src/components/Resumes/Templates/Morden";
+import { Modren } from "../../../../src/components/Resumes/Templates/Modren";
 import { Classic } from "../../../../src/components/Resumes/Templates/Classic";
 import { Retro } from "../../../../src/components/Resumes/Templates/Retro";
 import { Chrono } from "../../../../src/components/Resumes/Templates/Chrono";
-import { Vertical } from "../../../../src/components/Resumes/Templates/Vertical";
+// import { Vertical } from "../../../../src/components/Resumes/Templates/Vertical";
 
 
->>>>>>> 9f23a7f22e539706a1463c562867aabf15ecdbfd
 
 const Templates = {
   noncore: NonCore,
@@ -56,12 +49,6 @@ const Templates = {
   ruby: Ruby,
   harvard: Harvard,
   diamond: Diamond,
-<<<<<<< HEAD
-  amsterdam:Amsterdam,
-  blue:Blue,
-  casual:Casual,
-  modren:Modren
-=======
   berlin: Berlin,
   tokyo: Tokyo,
   premium: Premium,
@@ -71,12 +58,11 @@ const Templates = {
   amsterdam: Amsterdam,
   blue: Blue,
   casual: Casual,
-  morden: Morden,
+  modren: Modren,
   classic: Classic,
   retro: Retro,
   chrono:Chrono,
-  vertical:Vertical,
->>>>>>> 9f23a7f22e539706a1463c562867aabf15ecdbfd
+  // vertical:Vertical,
 };
 
 const ResumeSlug = ({ user, id }) => {
