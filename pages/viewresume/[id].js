@@ -21,6 +21,11 @@ import { Premium } from "../../src/components/Resumes/Templates/Premium";
 import { Red } from "../../src/components/Resumes/Templates/Red";
 import { Dynamo } from "../../src/components/Resumes/Templates/dynamo";
 import { Madrid } from "../../src/components/Resumes/Templates/Madrid";
+import { Chrono } from "../../src/components/Resumes/Templates/Chrono";
+import { Vertical } from "../../src/components/Resumes/Templates/Vertical";
+
+
+
 
 const Templates = {
   noncore: NonCore,
@@ -42,6 +47,8 @@ const Templates = {
   red: Red,
   dynamo: Dynamo,
   madrid: Madrid,
+  chrono:Chrono,
+  vertical:Vertical,
 };
 
 const ViewResume = ({ id }) => {
