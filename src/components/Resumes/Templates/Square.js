@@ -39,7 +39,7 @@ export const Square = React.forwardRef(function NonCore({ componentRef }) {
         <div className="photo">
           <div className="px-20 pt-10 pb-5">
             <img
-              src="https://th.bing.com/th/id/R.3f1e3fb67a36a4f0e88e267a39fc5fe4?rik=SWNFXn5k1gxRFA&riu=http%3a%2f%2fthispix.com%2fwp-content%2fuploads%2f2015%2f06%2fpassport-026.jpg&ehk=MqDfVA9i8hE5HdOOiYBteZYzQTs1TxhQivfpM8mk9EA%3d&risl=&pid=ImgRaw&r=0"
+              src={profile?.image}
               className="w-[100px] h-[100px]"
             ></img>
           </div>
