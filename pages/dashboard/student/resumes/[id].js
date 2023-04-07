@@ -32,6 +32,7 @@ import { Retro } from "../../../../src/components/Resumes/Templates/Retro";
 import { Chrono } from "../../../../src/components/Resumes/Templates/Chrono";
 import { Stylish } from "../../../../src/components/Resumes/Templates/Stylish";
 import { Assymmetric } from "../../../../src/components/Resumes/Templates/Assymmetric";
+import { Amsterdam } from "../../../../src/components/Resumes/Templates/Amsterdam";
 
 // import { Vertical } from "../../../../src/components/Resumes/Templates/Vertical";
 

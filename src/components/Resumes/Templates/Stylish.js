@@ -114,7 +114,7 @@ export const Stylish = ({ componentRef, filter = null }) => {
              </div>
           )}
           {/* hobbies */}
-          {hobbies && (
+          {hobbies?.filter((hobbie) => hobbie?.enabled).length > 0 && (
             <div>
               {hobbies.length != 0 && (
                 <div className="py-1 px-2 text-black">
@@ -137,7 +137,7 @@ export const Stylish = ({ componentRef, filter = null }) => {
           )}
 
           {/* awards */}
-          {awards && (
+          {awards?.filter((award) => award?.enabled).length > 0 && (
             <div>
               {awards.length != 0 && (
                 <div className="py-1 px-2 text-black">
@@ -186,7 +186,7 @@ export const Stylish = ({ componentRef, filter = null }) => {
               </div>
             )}
             {/* education */}
-            {education && (
+            {education?.filter((education) => education?.enabled).length > 0 && (
               <div>
                 {education.length != 0 && (
                   <div className="p-1">
@@ -220,7 +220,7 @@ export const Stylish = ({ componentRef, filter = null }) => {
               </div>
             )}
             {/* Internship */}
-            {work && (
+            {work?.filter((work) => work?.enabled).length > 0 && (
               <div>
                 {work.length != 0 && (
                   <div className="p-1">
@@ -256,7 +256,7 @@ export const Stylish = ({ componentRef, filter = null }) => {
               </div>
             )}
             {/* projects */}
-            {projects && (
+            {projects?.filter((project) => project?.enabled).length > 0 && (
               <div>
                 {projects.length != 0 && (
                   <div className="p-1">
@@ -291,7 +291,7 @@ export const Stylish = ({ componentRef, filter = null }) => {
               </div>
             )}
             {/* certification */}
-            {certifications && (
+            {certifications?.filter((certification) => certification?.enabled).length > 0 && (
               <div>
                 {certifications.length != 0 && (
                   <div className="p-1">
@@ -300,6 +300,8 @@ export const Stylish = ({ componentRef, filter = null }) => {
                     </p>
                     <hr></hr>
                     {certifications.map((item) => (
+                      <>
+                      {item.enabled && (
                       <div className="text-[12px] p-2 text-white">
                         <p className="font-semibold  text-white">
                           {item.title}
@@ -317,6 +319,8 @@ export const Stylish = ({ componentRef, filter = null }) => {
                         <p>{item.summary.enabled}</p>
                         <p>{item.enabled}</p>
                       </div>
+                      )}
+                      </>
                     ))}
                   </div>
                 )}
