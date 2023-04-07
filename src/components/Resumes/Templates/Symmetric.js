@@ -100,7 +100,7 @@ export const Symmetric = React.forwardRef(function NonCore({ componentRef }) {
             {education?.filter((edu) => edu?.enabled)?.length > 0 && (
               <div className="education border-b-2  border-gray-500 px-6">
                 <div className="pb-1">
-                  <h2 className="text-center text-base font-serif font-bold underline pt-2">
+                  <h2 className="text-center text-base font-serif font-bold heading underline pt-2">
                     E D U C A T I O N
                   </h2>
                   {education
@@ -126,7 +126,7 @@ export const Symmetric = React.forwardRef(function NonCore({ componentRef }) {
             {certifications?.filter((cert) => cert?.enabled)?.length > 0 && (
               <div className="certifications  border-b-2 border-gray-500 px-6">
                 <div className="pb-1">
-                  <h2 className="text-center text-base font-serif font-bold underline pt-2 pb-2">
+                  <h2 className="text-center text-base font-serif font-bold heading underline pt-2 pb-2">
                     C E R T I F I C A T I O N S
                   </h2>
                   {certifications
@@ -145,7 +145,7 @@ export const Symmetric = React.forwardRef(function NonCore({ componentRef }) {
             {skills?.filter((skill) => skill?.enabled)?.length > 0 && (
               <div className="skills border-b-2 border-gray-500 px-6">
                 <div className=" pb-1">
-                  <h2 className="text-center text-base font-serif font-bold underline pt-2 pb-2">
+                  <h2 className="text-center text-base font-serif font-bold heading underline pt-2 pb-2">
                     S K I L L S
                   </h2>
                   {skills
@@ -160,7 +160,7 @@ export const Symmetric = React.forwardRef(function NonCore({ componentRef }) {
             {awards?.filter((awa) => awa?.enabled)?.length > 0 && (
               <div className="awards  border-b-2 border-gray-500 px-6">
                 <div className=" ">
-                  <h2 className="text-center text-base font-serif font-bold underline pt-2 pb-2">
+                  <h2 className="text-center text-base font-serif font-bold heading underline pt-2 pb-2">
                     A W A R D S
                   </h2>
                   {awards
@@ -180,7 +180,7 @@ export const Symmetric = React.forwardRef(function NonCore({ componentRef }) {
             {languages?.filter((lang) => lang?.enabled)?.length > 0 && (
               <div className="languages   border-gray-500 px-6">
                 <div className=" pb-1">
-                  <h2 className="text-center text-base font-serif font-bold underline pt-2 pb-2">
+                  <h2 className="text-center text-base font-serif font-bold heading underline pt-2 pb-2">
                     L A N G U A G E S
                   </h2>
                   {languages
@@ -194,7 +194,7 @@ export const Symmetric = React.forwardRef(function NonCore({ componentRef }) {
           </div>
           <div className="side2 w-[132mm]">
             <div className="career-objective border-b-2 border-gray-500 pl-[-24px] mr-5">
-              <h2 className="text-center text-base font-serif font-bold underline pt-[85px]">
+              <h2 className="text-center text-base font-serif font-bold heading underline pt-[85px]">
                 C A R E E R O B J E C T I V E
               </h2>
               <p className="pl-10 pr-5 pt-2 pb-3 text-sm">{objective}</p>
@@ -202,7 +202,7 @@ export const Symmetric = React.forwardRef(function NonCore({ componentRef }) {
             </div>
             {work?.filter((wor) => wor?.enabled)?.length > 0 && (
               <div className="experience border-b-2 border-gray-500 pl-[-24px] mr-5">
-                <h2 className="text-center text-base font-serif font-bold underline pt-3">
+                <h2 className="text-center text-base font-serif font-bold heading underline pt-3">
                   E X P E R I E N C E
                 </h2>
                 <div className="pb-2">
@@ -226,7 +226,7 @@ export const Symmetric = React.forwardRef(function NonCore({ componentRef }) {
             )}
             {projects?.filter((pro) => pro?.enabled)?.length > 0 && (
               <div className="projects border-gray-500 border-b-2 pl-[-24px] mr-5">
-                <h2 className="text-center text-base font-serif font-bold underline pt-3">
+                <h2 className="text-center text-base font-serif font-bold heading underline pt-3">
                   P R O J E C T S
                 </h2>
                 <div className="pb-2">
@@ -248,7 +248,7 @@ export const Symmetric = React.forwardRef(function NonCore({ componentRef }) {
             )}
             {hobbies?.filter((hob) => hob?.enabled)?.length > 0 && (
               <div className="hobbies border-gray-500   pl-[-25.5px] mr-5">
-                <h2 className="text-center text-base font-serif font-bold underline pt-1">
+                <h2 className="text-center text-base font-serif font-bold heading underline pt-1">
                   H O B B I E S
                 </h2>
                 <div className="pl-10">
@@ -263,6 +263,14 @@ export const Symmetric = React.forwardRef(function NonCore({ componentRef }) {
           </div>
         </div>
       </div>
+      <style jsx> 
+            {`
+              .heading{
+                color:rgba(${r},${g},${b},${a})
+              }
+            
+            `}
+    </style>
     </div>
   );
 });

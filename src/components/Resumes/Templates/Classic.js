@@ -355,6 +355,14 @@ export const Classic = ({ componentRef, filter = null }) => {
           </div>
         </div>
       </div>
+      <style jsx> 
+    {`
+      .heading{
+        color:rgba(${r},${g},${b},${a})
+      }
+    
+    `}
+    </style>
     </div>
     // </div>
   );

@@ -38,7 +38,7 @@ export const Dynamo = ({ componentRef }) => {
             />
           </div>
           <div className="mt-48">
-            <h1 className="text-[16px] font-semibold tracking-[2px]">
+            <h1 className="text-[16px] font-semibold heading tracking-[2px]">
               CONTACT
             </h1>
             <hr className="h-[2px] bg-black my-1" />
@@ -89,7 +89,7 @@ export const Dynamo = ({ componentRef }) => {
           </div>
           {skills?.filter((skill) => skill?.enabled)?.length > 0 && (
             <div className="mt-4">
-              <h1 className="text-[16px] font-semibold tracking-[2px]">
+              <h1 className="text-[16px] font-semibold heading tracking-[2px]">
                 SKILLS
               </h1>
               <hr className="h-[2px] bg-black my-1" />
@@ -103,7 +103,7 @@ export const Dynamo = ({ componentRef }) => {
 
           {awards?.filter((awa) => awa?.enabled)?.length > 0 && (
             <div>
-              <h1 className="text-[16px] font-semibold tracking-[2px]">
+              <h1 className="text-[16px] font-semibold heading tracking-[2px]">
                 AWARADS
               </h1>
               <hr className="h-[2px] bg-black my-1" />
@@ -124,7 +124,7 @@ export const Dynamo = ({ componentRef }) => {
           )}
           {languages?.filter((lang) => lang?.enabled)?.length > 0 && (
             <div className="mt-4">
-              <h1 className="text-[16px] font-semibold tracking-[2px]">
+              <h1 className="text-[16px] font-semibold heading tracking-[2px]">
                 LANGUAGES
               </h1>
               <hr className="h-[2px] bg-black my-1" />
@@ -137,7 +137,7 @@ export const Dynamo = ({ componentRef }) => {
           )}
           {hobbies?.filter((hob) => hob?.enabled)?.length > 0 && (
             <div className="mt-4">
-              <h1 className="text-[16px] font-semibold tracking-[2px]">
+              <h1 className="text-[16px] font-semibold heading tracking-[2px]">
                 HOBBIES
               </h1>
               <hr className="h-[2px] bg-black my-1" />
@@ -165,7 +165,7 @@ export const Dynamo = ({ componentRef }) => {
           <div className="mt-12">
             {objective && (
               <div>
-                <h1 className="text-[16px] font-bold tracking-[1px]">
+                <h1 className="text-[16px] font-bold heading tracking-[1px]">
                   OBJECTIVE
                 </h1>
                 <hr className="h-[2px] bg-black my-1" />
@@ -174,7 +174,7 @@ export const Dynamo = ({ componentRef }) => {
             )}
             {work?.filter((work) => work?.enabled)?.length > 0 && (
               <div className="ml-1 mt-1">
-                <h1 className="text-[16px] font-bold tracking-[1px] mt-5">
+                <h1 className="text-[16px] font-bold tracking-[1px] heading mt-5">
                   WORK
                 </h1>
                 <hr className="h-[2px] bg-black my-1" />
@@ -204,7 +204,7 @@ export const Dynamo = ({ componentRef }) => {
             )}
             {education?.filter((edu) => edu?.enabled)?.length > 0 && (
               <div className="ml-1 mt-1">
-                <h1 className="text-[16px] font-bold tracking-[1px] mt-3">
+                <h1 className="text-[16px] font-bold tracking-[1px] heading mt-3">
                   EDUCACTION
                 </h1>
                 <hr className="h-[2px] bg-black my-1" />
@@ -240,6 +240,14 @@ export const Dynamo = ({ componentRef }) => {
             )}
           </div>
         </div>
+        <style jsx> 
+            {`
+              .heading{
+                color:rgba(${r},${g},${b},${a})
+              }
+            
+            `}
+    </style>
       </div>
     </>
   );

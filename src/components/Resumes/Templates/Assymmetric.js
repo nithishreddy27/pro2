@@ -325,6 +325,14 @@ export const Assymmetric = ({ componentRef, filter = null }) => {
           )}
         </div>
       </div>
+      <style jsx> 
+    {`
+      .heading{
+        color:rgba(${r},${g},${b},${a})
+      }
+    
+    `}
+    </style>
     </div>
     // </div>
   );

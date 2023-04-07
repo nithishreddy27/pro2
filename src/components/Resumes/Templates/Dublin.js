@@ -212,7 +212,7 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
             )}
             {projects?.filter(pro=>pro?.enabled)?.length>0 && (
                 <div className="projects">
-                <h2 className="text-center text-base font-sans font-bold pt-2">
+                <h2 className="text-center text-base font-sans font-bold pt-2 heading">
                   P R O J E C T S
                 </h2>
                 {projects?.filter(pro=>pro?.enabled===true).map((item) => (
@@ -242,6 +242,14 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
               </div>
             )}
           </div>
+          <style jsx> 
+            {`
+              .heading{
+                color:rgba(${r},${g},${b},${a})
+              }
+            
+            `}
+    </style>
     </div>
   );
 });

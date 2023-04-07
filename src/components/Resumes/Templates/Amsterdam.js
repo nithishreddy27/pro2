@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useResumeContext } from "../../../context/ResumeContext";
 import { months, rename } from "../../../lib/helper";
 import { MarkdownRenderer } from "../../../lib/MarkdownRenderer";
@@ -20,6 +20,14 @@ export const Amsterdam = ({ componentRef }) => {
     layout,
   } = useResumeContext();
   console.log(profile);
+
+  const { r, g, b, a } = layout?.color || { r: "0", g: "0", b: "0", a: "0" };
+
+
+
+ 
+
+
   return (
     <>
       <div
@@ -27,6 +35,11 @@ export const Amsterdam = ({ componentRef }) => {
         style={{ fontFamily: layout?.font }}
         className={`w-a4W bg-white mx-auto h-a4H my-5 relative`}
       >
+
+        <div>
+        {console.log("inside")}
+        
+        </div>
         <div className="absolute left-44 top-5 border-[3px] border-gray-500 h-40 w-96 bg-white text-center">
           {profile && (
             <>
@@ -79,7 +92,7 @@ export const Amsterdam = ({ componentRef }) => {
                             </div>
                            )}
                           </div>
-
+                          
 
 
 
@@ -365,7 +378,14 @@ export const Amsterdam = ({ componentRef }) => {
                         
                       </div>
                     </div>
-
+                    <style jsx> 
+    {`
+      .heading{
+        color:rgba(${r},${g},${b},${a})
+      }
+    
+    `}
+    </style>
      
       </div>
     </>

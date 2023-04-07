@@ -16,7 +16,7 @@ export const Modren = ({ componentRef, filter = null }) => {
             <div className=" flex">
                         <div className="w-[35%] z-10 h-a4H bg-slate-800  p-2">
                             <div className="mt-44">
-                            <h1 className="text-[16px]  tracking-[2px] text-white">
+                            <h1 className="text-[16px]  heading  tracking-[2px] text-white">
                                 CONTACT
                             </h1>
                             <hr className="h-[2px] bg-black my-2" />
@@ -84,7 +84,7 @@ export const Modren = ({ componentRef, filter = null }) => {
 
                             {skills?.filter((skill)=>skill?.enabled).length >0 && (
                                 <div className="">
-                                    <h1 className="text-[16px] mt-4 tracking-[2px] text-white">
+                                    <h1 className="text-[16px] mt-4  heading tracking-[2px] text-white">
                                         SKILLS
                                     </h1>
                                     <hr className="h-[2px] bg-black my-2" />
@@ -131,7 +131,7 @@ export const Modren = ({ componentRef, filter = null }) => {
                                      
                             {hobbies.length != 0 && (
                                 <div className="mt-5">
-                                <h1 className="text-[16px]  text-white  tracking-[2px]">
+                                <h1 className="text-[16px]  text-white  heading  tracking-[2px]">
                                     HOBBIES
                                 </h1>
                                 <hr className="h-[2px] my-1" />
@@ -155,7 +155,7 @@ export const Modren = ({ componentRef, filter = null }) => {
                                 <div>
                                     {languages.length != 0 && (
                                 <div className="mt-5">
-                                <h1 className="text-[16px]  text-white  tracking-[2px]">
+                                <h1 className="text-[16px]  text-white  heading  tracking-[2px]">
                                     LANGUAGES
                                 </h1>
                                 <hr className="h-[2px] my-1" />
@@ -180,7 +180,7 @@ export const Modren = ({ componentRef, filter = null }) => {
                                     {awards.length != 0 && (
                                 <>
                                 {" "}
-                                <h1 className="text-[16px]  tracking-[2px] text-white mt-5">
+                                <h1 className="text-[16px]  tracking-[2px] heading  text-white mt-5">
                                     AWARADS
                                 </h1>
                                 <hr className="h-[2px] bg-black mt-1 mb-4 " />
@@ -211,7 +211,7 @@ export const Modren = ({ componentRef, filter = null }) => {
                                     {objective.length != 0 && (
                             <div className="mt-48">
                                 <div className="flex mb-2">
-                                <h1 className="text-[16px] font-semibold tracking-[1px]">
+                                <h1 className="text-[16px] font-semibold heading  tracking-[1px]">
                                     OBJECTIVE
                                 </h1>
                                 <hr className=" h-[2px] w-[100%] ml-2 mt-3 bg-black" />
@@ -229,7 +229,7 @@ export const Modren = ({ componentRef, filter = null }) => {
                                     {work.length != 0 && (
                             <div className="mt-5">
                                 <div className="flex">
-                                <h1 className="text-[16px] font-semibold tracking-[1px]">
+                                <h1 className="text-[16px] font-semibold heading  tracking-[1px]">
                                     WORK
                                 </h1>
                                 <hr className=" h-[2px] w-[100%] ml-2 mt-3 bg-black" />
@@ -260,7 +260,7 @@ export const Modren = ({ componentRef, filter = null }) => {
                                     {education.length != 0 && (
                             <div className="mt-5">
                                 <div className="flex">
-                                <h1 className="text-[16px] font-semibold tracking-[1px]">
+                                <h1 className="text-[16px] font-semibold heading  tracking-[1px]">
                                     EDUCATION
                                 </h1>
                                 <hr className=" h-[2px] w-[100%] ml-2 mt-3 bg-black" />
@@ -296,7 +296,7 @@ export const Modren = ({ componentRef, filter = null }) => {
                                     {projects.length != 0 && (
                             <div className="mt-5">
                                 <div className="flex mb-2">
-                                <h1 className="text-[16px] font-semibold tracking-[1px]">
+                                <h1 className="text-[16px] font-semibold heading  tracking-[1px]">
                                     PROJECTS
                                 </h1>
                                 <hr className=" h-[2px] w-[100%] ml-2 mt-3 bg-black" />
@@ -333,7 +333,7 @@ export const Modren = ({ componentRef, filter = null }) => {
                                     {certifications.length != 0 && (
                             <div className="mt-2">
                                 <div className="flex mb-2">
-                                <h1 className="text-[16px] font-semibold tracking-[1px]">
+                                <h1 className="text-[16px] font-semibold  heading  tracking-[1px]">
                                     CERTIFICATIONS
                                 </h1>
                                 <hr className=" h-[2px] w-[100%] ml-2 mt-3 bg-black" />
@@ -388,6 +388,14 @@ export const Modren = ({ componentRef, filter = null }) => {
                   )}
           
       </div>
+      <style jsx> 
+            {`
+              .heading{
+                color:rgba(${r},${g},${b},${a})
+              }
+            
+            `}
+    </style>
     </div>
   );
 };

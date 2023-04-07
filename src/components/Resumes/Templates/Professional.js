@@ -105,7 +105,7 @@ export const Professional = React.forwardRef(function NonCore({ componentRef }) 
               {education?.filter((edu)=>edu?.enabled)?.length>0 && (
                 <div className="education mx-3">
                 <div className="pb-2">
-                  <h2 className="text-center text-base font-serif font-semibold pt-3 pb-1 border-b-[4px] border-black">
+                  <h2 className="text-center text-base font-serif font-semibold heading  pt-3 pb-1 border-b-[4px] border-black">
                     E D U C A T I O N
                   </h2>
                   <div className="py-2">
@@ -129,7 +129,7 @@ export const Professional = React.forwardRef(function NonCore({ componentRef }) 
               {certifications?.filter((cert)=>cert?.enabled)?.length>0 && (
                 <div className="certifications mx-3">
                 <div className="pb-2">
-                  <h2 className="text-center text-base font-serif font-semibold border-b-[4px] border-black pt-2 pb-1">
+                  <h2 className="text-center text-base font-serif font-semibold heading  border-b-[4px] border-black pt-2 pb-1">
                     C E R T I F I C A T I O N S
                   </h2>
                   <div className="py-2">
@@ -147,7 +147,7 @@ export const Professional = React.forwardRef(function NonCore({ componentRef }) 
               {skills?.filter((skill)=>skill?.enabled)?.length>0 && (
                 <div className="skills mx-3">
                 <div className="">
-                  <h2 className="text-center text-base font-serif font-semibold pt-1 pb-1 border-b-[4px] border-black">
+                  <h2 className="text-center text-base font-serif font-semibold  heading pt-1 pb-1 border-b-[4px] border-black">
                     S K I L L S
                   </h2>
                   <div className="pt-1 pl-5 py-2">
@@ -161,7 +161,7 @@ export const Professional = React.forwardRef(function NonCore({ componentRef }) 
               {hobbies?.filter(hob=>hob?.enabled)?.length>0 && (
                 <div className="hobbies mx-3">
                 <div className=" pb-5">
-                  <h2 className="text-center text-base font-serif font-semibold pt-1 pb-1 border-b-[4px] border-black">
+                  <h2 className="text-center text-base font-serif font-semibold  heading pt-1 pb-1 border-b-[4px] border-black">
                     H O B B I E S
                   </h2>
                   <div className="pt-1 pl-5">
@@ -176,7 +176,7 @@ export const Professional = React.forwardRef(function NonCore({ componentRef }) 
             <div className="fourth w-[480px]">
               {work?.filter((wor)=>wor?.enabled)?.length>0 && (
                 <div className="experience mx-3">
-                <h2 className="text-center text-base font-serif font-semibold pt-5 border-b-[4px] mx-1 border-black">
+                <h2 className="text-center text-base font-serif font-semibold  heading pt-5 border-b-[4px] mx-1 border-black">
                   E X P E R I E N C E
                 </h2>
                 <div className="pb-1 py-2">
@@ -197,7 +197,7 @@ export const Professional = React.forwardRef(function NonCore({ componentRef }) 
               )}
               {projects?.filter((pro)=>pro?.enabled)?.length>0 && (
                 <div className="projects mx-3">
-                <h2 className="text-center text-base font-serif font-semibold pt-3 border-b-[4px] mx-1 border-black">
+                <h2 className="text-center text-base font-serif font-semibold  heading pt-3 border-b-[4px] mx-1 border-black">
                   P R O J E C T S
                 </h2>
                 <div className="py-2">
@@ -216,7 +216,7 @@ export const Professional = React.forwardRef(function NonCore({ componentRef }) 
               )}
               {awards?.filter((awa)=>awa?.enabled)?.length>0 && (
                 <div className="awards mx-3">
-                <h2 className="text-center text-base font-serif font-semibold pt-1 border-b-[4px] mx-1 border-black">
+                <h2 className="text-center text-base font-serif font-semibold  heading pt-1 border-b-[4px] mx-1 border-black">
                   A W A R D S
                 </h2>
                 {awards?.filter(awa=>awa?.enabled===true).map((item) => (
@@ -232,7 +232,7 @@ export const Professional = React.forwardRef(function NonCore({ componentRef }) 
               {languages?.filter((lang)=>lang?.enabled)?.length>0 && (
                 <div className="languages mx-3">
                 <div className="">
-                  <h2 className="text-center text-base font-serif font-semibold pt-1 pb-1 border-b-[4px] mx-1 border-black">
+                  <h2 className="text-center text-base font-serif font-semibold heading  pt-1 pb-1 border-b-[4px] mx-1 border-black">
                     L A N G U A G E S
                   </h2>
                   <div className="pt-1 pl-10">
@@ -246,6 +246,14 @@ export const Professional = React.forwardRef(function NonCore({ componentRef }) 
             </div>
           </div>
         </div>
+        <style jsx> 
+            {`
+              .heading{
+                color:rgba(${r},${g},${b},${a})
+              }
+            
+            `}
+    </style>
     </div>
   );
 });

@@ -55,7 +55,7 @@ export const Stylish = ({ componentRef, filter = null }) => {
           {/* network */}
           {profile && (
             <div className="py-1 px-2 text-black pt-2">
-              <p className="text-[16px] font-bold tracking-wider font-serif px-4 py-2">
+              <p className="text-[16px] font-bold tracking-wider heading font-serif px-4 py-2">
                 NETWORK
               </p>
 
@@ -70,7 +70,7 @@ export const Stylish = ({ componentRef, filter = null }) => {
           {/* skills */}
           {skills?.filter((skill) => skill?.enabled).length > 0 && (
             <div className="py-1 px-2 text-black">
-              <p className="text-[16px] font-bold tracking-wider font-serif px-4 py-2">
+              <p className="text-[16px] font-bold tracking-wider heading font-serif px-4 py-2">
                 SKILLS
               </p>
               {skills.map((item) => (
@@ -94,7 +94,7 @@ export const Stylish = ({ componentRef, filter = null }) => {
              <div>
              {languages.length != 0 && (
             <div className="py-1 px-2 text-black">
-              <p className="text-[16px] font-bold tracking-wider font-serif px-4 py-2">
+              <p className="text-[16px] font-bold tracking-wider heading font-serif px-4 py-2">
                 LANGUAGES
               </p>
               {languages.map((item) => (
@@ -118,7 +118,7 @@ export const Stylish = ({ componentRef, filter = null }) => {
             <div>
               {hobbies.length != 0 && (
                 <div className="py-1 px-2 text-black">
-                  <p className="text-[16px] font-bold tracking-wider font-serif px-4 py-2">
+                  <p className="text-[16px] font-bold tracking-wider heading font-serif px-4 py-2">
                     HOBBIES
                   </p>
                   {hobbies.map((item) => (
@@ -141,7 +141,7 @@ export const Stylish = ({ componentRef, filter = null }) => {
             <div>
               {awards.length != 0 && (
                 <div className="py-1 px-2 text-black">
-                  <p className="text-[16px] font-bold tracking-wider font-serif px-4 py-2">
+                  <p className="text-[16px] font-bold tracking-wider heading font-serif px-4 py-2">
                     AWARDS
                   </p>
                   {awards.map((item) => (
@@ -174,7 +174,7 @@ export const Stylish = ({ componentRef, filter = null }) => {
               <div>
                 {objective != 0 && (
                   <div>
-                    <p className=" text-white font-semibold text-[16px] tracking-wider  p-1  mt-3 ">
+                    <p className=" text-white font-semibold text-[16px] heading tracking-wider  p-1  mt-3 ">
                       PROFILE
                     </p>
                     <hr></hr>
@@ -190,7 +190,7 @@ export const Stylish = ({ componentRef, filter = null }) => {
               <div>
                 {education.length != 0 && (
                   <div className="p-1">
-                    <p className=" text-white font-semibold text-[16px] tracking-wider  p-1  mt-3 ">
+                    <p className=" text-white font-semibold text-[16px] heading tracking-wider  p-1  mt-3 ">
                       EDUCATION
                     </p>
                     <hr></hr>
@@ -224,7 +224,7 @@ export const Stylish = ({ componentRef, filter = null }) => {
               <div>
                 {work.length != 0 && (
                   <div className="p-1">
-                    <p className="text-white font-semibold text-[16px] tracking-wider p-1 mt-3 ">
+                    <p className="text-white font-semibold text-[16px] heading tracking-wider p-1 mt-3 ">
                       INTERNSHIP
                     </p>
                     <hr></hr>
@@ -260,7 +260,7 @@ export const Stylish = ({ componentRef, filter = null }) => {
               <div>
                 {projects.length != 0 && (
                   <div className="p-1">
-                    <p className=" text-white font-semibold text-[16px] tracking-wider  p-1  mt-3 ">
+                    <p className=" text-white font-semibold text-[16px] heading tracking-wider  p-1  mt-3 ">
                       PROJECTS
                     </p>
                     <hr></hr>
@@ -295,7 +295,7 @@ export const Stylish = ({ componentRef, filter = null }) => {
               <div>
                 {certifications.length != 0 && (
                   <div className="p-1">
-                    <p className=" text-white font-semibold text-[16px] tracking-wider  p-1  mt-3 ">
+                    <p className=" text-white font-semibold text-[16px] heading tracking-wider  p-1  mt-3 ">
                       CERTIFICATION
                     </p>
                     <hr></hr>
@@ -329,6 +329,14 @@ export const Stylish = ({ componentRef, filter = null }) => {
           </div>
         </div>
       </div>
+      <style jsx> 
+            {`
+              .heading{
+                color:rgba(${r},${g},${b},${a})
+              }
+            
+            `}
+    </style>
     </div>
     // </div>
   );
