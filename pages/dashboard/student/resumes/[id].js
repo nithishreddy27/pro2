@@ -18,7 +18,6 @@ import { useModelContext } from "../../../../src/context/ModalContext";
 import { useResumes } from "../../../../src/hooks/useResumes";
 import { getLoginSession } from "../../../../src/lib/auth";
 import { findUser } from "../../../../src/lib/user";
-import { Amsterdam } from "../../../../src/components/Resumes/Templates/Amsterdam";
 import { Berlin } from "../../../../src/components/Resumes/Templates/Berlin";
 import { Tokyo } from "../../../../src/components/Resumes/Templates/Tokyo";
 import { Premium } from "../../../../src/components/Resumes/Templates/Premium";
