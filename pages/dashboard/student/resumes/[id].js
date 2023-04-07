@@ -24,13 +24,15 @@ import { Premium } from "../../../../src/components/Resumes/Templates/Premium";
 import { Red } from "../../../../src/components/Resumes/Templates/Red";
 import { Dynamo } from "../../../../src/components/Resumes/Templates/dynamo";
 import { Madrid } from "../../../../src/components/Resumes/Templates/Madrid";
-import { Amsterdam } from "../../../../src/components/Resumes/Templates/Amsterdam";
 import { Blue } from "../../../../src/components/Resumes/Templates/Blue";
 import { Casual } from "../../../../src/components/Resumes/Templates/Casual";
 import { Modren } from "../../../../src/components/Resumes/Templates/Modren";
 import { Classic } from "../../../../src/components/Resumes/Templates/Classic";
 import { Retro } from "../../../../src/components/Resumes/Templates/Retro";
 import { Chrono } from "../../../../src/components/Resumes/Templates/Chrono";
+import { Stylish } from "../../../../src/components/Resumes/Templates/Stylish";
+import { Assymmetric } from "../../../../src/components/Resumes/Templates/Assymmetric";
+
 // import { Vertical } from "../../../../src/components/Resumes/Templates/Vertical";
 
 
@@ -61,6 +63,8 @@ const Templates = {
   classic: Classic,
   retro: Retro,
   chrono:Chrono,
+  assymmetric: Assymmetric,
+  stylish: Stylish,
   // vertical:Vertical,
 };
 

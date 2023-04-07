@@ -287,10 +287,14 @@ export const Assymmetric = ({ componentRef, filter = null }) => {
                 <div className="py-1">
                   <p className="text-[16px] font-bold">HOBBIES</p>
                   {hobbies.map((item) => (
-                    <div key={item.name} className="text-[12px]">
-                      <p>{item.name}</p>
-                      <p>{item.enabled}</p>
-                    </div>
+                    <>
+                      {item.enabled && (
+                        <div key={item.name} className="text-[12px]">
+                          <p>{item.name}</p>
+                          <p>{item.enabled}</p>
+                        </div>
+                      )}
+                    </>
                   ))}
                 </div>
               )}
@@ -302,12 +306,16 @@ export const Assymmetric = ({ componentRef, filter = null }) => {
             <div className="py-1">
               <p className="text-[16px] font-bold">SKILLS</p>
               {skills.map((item) => (
-                <div key={item.name}>
-                  <span className="text-[12px]">
-                    {item.name} - {item.level}
-                  </span>
-                  <p>{item.enabled}</p>
-                </div>
+                <>
+                  {item.enabled == true && (
+                    <div key={item.name}>
+                      <span className="text-[12px]">
+                        {item.name} - {item.level}
+                      </span>
+                      <p>{item.enabled}</p>
+                    </div>
+                  )}
+                </>
               ))}
             </div>
           )}
@@ -347,23 +355,27 @@ export const Assymmetric = ({ componentRef, filter = null }) => {
                 <div className="py-1">
                   <p className="text-[16px] font-bold pb-1">INTERNSHIP</p>
                   {work.map((item) => (
-                    <div key={item.company} className="">
-                      
-                        <li className="relative font-bold text-gray-800 text-[14px] tracking-wider">
-                          {item.company}
-                        </li>
-                        <p>
-                          <span className=" text-[12px]">
-                            [ {item.from.slice(0, 10)}] - [
-                            {item.to.slice(0, 10)}]
-                          </span>
-                        </p>
-                      
+                    <>
+                      {item.enabled && (
+                        <div key={item.company} className="">
+                          <li className="relative font-bold text-gray-800 text-[14px] tracking-wider">
+                            {item.company}
+                          </li>
+                          <p>
+                            <span className=" text-[12px]">
+                              [ {item.from.slice(0, 10)}] - [
+                              {item.to.slice(0, 10)}]
+                            </span>
+                          </p>
 
-                      <p className="text-[12px]">{item.designation}</p>
-                      <p className="pl-1 text-[12px]">{item.summary.data}</p>
-                      <p>{item.summary.enabled}</p>
-                    </div>
+                          <p className="text-[12px]">{item.designation}</p>
+                          <p className="pl-1 text-[12px]">
+                            {item.summary.data}
+                          </p>
+                          <p>{item.summary.enabled}</p>
+                        </div>
+                      )}
+                    </>
                   ))}
                 </div>
               )}
@@ -379,14 +391,24 @@ export const Assymmetric = ({ componentRef, filter = null }) => {
                     AWARDS:
                   </p>
                   {awards.map((item) => (
-                    <div key={item.name} className="text-[12px]">
-                      <li className="font-bold text-gray-700">{item.name}</li>
-                      <span className="pl-2">[{item.date.slice(0,4)}]</span>
-                      <p className="pl-2">{item.awarder}</p>
-                      <p className="pl-2 text-[12px]">{item.summary.data}</p>
-                      <p>{item.summary.enabled}</p>
-                      <p>{item.enabled}</p>
-                    </div>
+                    <>
+                      {item.enabled && (
+                        <div key={item.name} className="text-[12px]">
+                          <li className="font-bold text-gray-700">
+                            {item.name}
+                          </li>
+                          <span className="pl-2">
+                            [{item.date.slice(0, 4)}]
+                          </span>
+                          <p className="pl-2">{item.awarder}</p>
+                          <p className="pl-2 text-[12px]">
+                            {item.summary.data}
+                          </p>
+                          <p>{item.summary.enabled}</p>
+                          <p>{item.enabled}</p>
+                        </div>
+                      )}
+                    </>
                   ))}
                 </div>
               )}
@@ -431,6 +453,8 @@ export const Assymmetric = ({ componentRef, filter = null }) => {
                     EDUCATION
                   </p>
                   {education.map((item) => (
+                    <>
+                    {item.enabled && (
                     <div
                       key={item.institution}
                       className="text-[12px] p-1 pl-3"
@@ -450,6 +474,8 @@ export const Assymmetric = ({ componentRef, filter = null }) => {
                       <p>{item.summary.enabled}</p>
                       <p>{item.enabled}</p>
                     </div>
+                    )}
+                    </>
                   ))}
                 </div>
               )}
@@ -466,12 +492,14 @@ export const Assymmetric = ({ componentRef, filter = null }) => {
                   </p>
 
                   {projects.map((item) => (
+                    <>
+                    {item.enabled && (
                     <div key={item.name} className=" text-black pl-3 ">
                       <p className="font-bold relative text-gray-800 text-[14px]  tracking-wider">
                         {item.name}
 
                         <span className="absolute right-2 font-normal text-[10px]">
-                          [{item.from.slice(0,7)} ] - [ {item.to.slice(0,7)} ]
+                          [{item.from.slice(0, 7)} ] - [ {item.to.slice(0, 7)} ]
                         </span>
                       </p>
                       <p className="text-[12px] pr-1">{item.summary.data}</p>
@@ -479,6 +507,8 @@ export const Assymmetric = ({ componentRef, filter = null }) => {
                       <p>{item.enabled}</p>
                       <p className="p-2"> </p>
                     </div>
+                    )}
+                    </>
                   ))}
                 </div>
               )}
@@ -501,7 +531,7 @@ export const Assymmetric = ({ componentRef, filter = null }) => {
                       <p className="font-bold relative text-gray-600 text-[13px]  tracking-wider">
                         {item.issuer}
                         <span className="absolute right-0 font-normal text-[10px]">
-                          [ {item.date.slice(0,10)} ]
+                          [ {item.date.slice(0, 10)} ]
                         </span>
                       </p>
                       <p className="text-[12px] pr-1">{item.summary.data}</p>
