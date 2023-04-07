@@ -123,6 +123,8 @@ export const Retro = ({ componentRef, filter = null }) => {
                               AWARDS
                             </p>
                             {awards.map((item) => (
+                              <>
+                              {item.enabled && (
                               <div key={item.name} className="ml-2">
                                 <li className="">
                                   <span className="text-[14px] font-semibold">
@@ -147,6 +149,8 @@ export const Retro = ({ componentRef, filter = null }) => {
                                   </div>
                                 </li>
                               </div>
+                              )}
+                              </>
                             ))}
                           </div>
                         )}
@@ -162,10 +166,14 @@ export const Retro = ({ componentRef, filter = null }) => {
                               HOBBIES
                             </p>
                             {hobbies.map((item) => (
+                              <>
+                              {item.enabled && (
                               <div className="ml-2" key={item.name}>
                                 <li className="text-[12px]">{item.name}</li>
                                 <p>{item.enabled}</p>
                               </div>
+                              )}
+                              </>
                             ))}
                           </div>
                         )}
@@ -182,6 +190,8 @@ export const Retro = ({ componentRef, filter = null }) => {
                             </p>
 
                             {projects.map((item) => (
+                              <>
+                              {item.enabled && (
                               <div key={item.name} className="py-1">
                                 <div className=" ml-2 text-black ">
                                   <p className="tracking-wide text-[14px] font-semibold">
@@ -205,6 +215,8 @@ export const Retro = ({ componentRef, filter = null }) => {
                                   <p className="p-2"> </p>
                                 </div>
                               </div>
+                              )}
+                              </>
                             ))}
                           </div>
                         )}
@@ -226,6 +238,8 @@ export const Retro = ({ componentRef, filter = null }) => {
                     </p>
                     <hr></hr>
                     {education.map((item) => (
+                       <>
+                       {item.enabled && (
                       <div
                         key={item.institution}
                         className="text-[12px] p-2  text-black "
@@ -244,6 +258,8 @@ export const Retro = ({ componentRef, filter = null }) => {
                         <p>{item.summary.enabled}</p>
                         <p>{item.enabled}</p>
                       </div>
+                       )}
+                       </>
                     ))}
                   </div>
                 )}
@@ -261,6 +277,8 @@ export const Retro = ({ componentRef, filter = null }) => {
                       </p>
                       <hr></hr>
                       {work.map((item) => (
+                        <>
+                        {item.enabled && (
                         <div
                           key={item.company}
                           className="text-[12px] p-2 text-black "
@@ -278,6 +296,8 @@ export const Retro = ({ componentRef, filter = null }) => {
                           <p>{item.summary.enabled}</p>
                           <p>{item.enabled}</p>
                         </div>
+                        )}
+                        </>
                       ))}
                     </div>
                   </>
@@ -329,6 +349,8 @@ export const Retro = ({ componentRef, filter = null }) => {
                     </p>
                     <hr></hr>
                     {projects.map((item) => (
+                      <>
+                      {item.enabled && (
                       <div className="text-[12px] p-2 text-black">
                         <p className="relative font-semibold text-[14px]">
                           {item.name}
@@ -345,6 +367,8 @@ export const Retro = ({ componentRef, filter = null }) => {
                         <p>{item.summary.enabled}</p>
                         <p>{item.enabled}</p>
                       </div>
+                      )}
+                      </>
                     ))}
                   </div>
                 )}

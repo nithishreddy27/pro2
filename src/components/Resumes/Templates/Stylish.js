@@ -145,6 +145,8 @@ export const Stylish = ({ componentRef, filter = null }) => {
                     AWARDS
                   </p>
                   {awards.map((item) => (
+                    <>
+                    {item.enabled && (
                     <div className="text-[14px] px-2 font-semibold ">
                       <li>
                         {item.name}
@@ -157,6 +159,8 @@ export const Stylish = ({ componentRef, filter = null }) => {
                         <p>{item.enabled}</p>
                       </li>
                     </div>
+                    )}
+                    </>
                   ))}
                 </div>
               )}
@@ -191,6 +195,8 @@ export const Stylish = ({ componentRef, filter = null }) => {
                     </p>
                     <hr></hr>
                     {education.map((item) => (
+                      <>
+                      {item.enabled && (
                       <div className="text-[12px] p-2 text-white">
                         <p className="font-semibold text-[14px] relative text-white">
                           {item.institution}
@@ -206,6 +212,8 @@ export const Stylish = ({ componentRef, filter = null }) => {
                         <p className="text-white">{item.summary.enabled}</p>
                         <p className="text-white">{item.enabled}</p>
                       </div>
+                      )}
+                      </>
                     ))}
                   </div>
                 )}
@@ -221,6 +229,8 @@ export const Stylish = ({ componentRef, filter = null }) => {
                     </p>
                     <hr></hr>
                     {work.map((item) => (
+                      <>
+                      {item.enabled && (
                       <div className="text-[12px] p-2 text-white">
                         <p className="text-white text-[14px] relative ">
                           <p href={item.website}>
@@ -239,6 +249,7 @@ export const Stylish = ({ componentRef, filter = null }) => {
                         <p>{item.summary.enabled}</p>
                         <p>{item.enabled}</p>
                       </div>
+                      )}</>
                     ))}
                   </div>
                 )}
@@ -254,6 +265,8 @@ export const Stylish = ({ componentRef, filter = null }) => {
                     </p>
                     <hr></hr>
                     {projects.map((item) => (
+                      <>
+                      {item.enabled && (
                       <div className="text-[12px] p-2 text-white">
                         <Link href={item.website}>
                           <p className="relative font-bold text-white tracking-wider">
@@ -271,6 +284,7 @@ export const Stylish = ({ componentRef, filter = null }) => {
                         <p>{item.summary.enabled}</p>
                         <p>{item.enabled}</p>
                       </div>
+                      )}</>
                     ))}
                   </div>
                 )}
