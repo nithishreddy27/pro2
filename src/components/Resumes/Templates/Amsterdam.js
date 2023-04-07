@@ -25,7 +25,7 @@ export const Amsterdam = ({ componentRef }) => {
       <div
         ref={componentRef}
         style={{ fontFamily: layout?.font }}
-        className={`w-a4W bg-white mx-auto h-a4H my-5`}
+        className={`w-a4W bg-white mx-auto h-a4H my-5 relative`}
       >
         {/* <div className="p-7 h-full bg-gradient-to-b from-purple-100 to-pink-50">
           <div className="flex items-start justify-between">
@@ -236,10 +236,10 @@ export const Amsterdam = ({ componentRef }) => {
             </div>
           )}
         </div> */}
-<div
+{/* <div
                     className="bg-slate-50 w-[210mm] scale-[0.4] sm:scale-[0.7] md:scale-[0.9] md:mt-[-50px] lg:scale-[0.8] lg:mt-[-80px] xl:scale-[0.9] xl:mt-[-10px] sm:mt-[-100px] mx-[-210px] mt-[-250px] h-auto min-w-[210mm] object-cover overflow-auto drop-shadow-2xl flex flex-row"
                     id="largeResume"
-                  >
+                  > */}
                     <div className="absolute left-44 top-5 border-[3px] border-gray-500 h-40 w-96 bg-white text-center">
                       {profile && (
                         <>
@@ -255,7 +255,7 @@ export const Amsterdam = ({ componentRef }) => {
                         {social.length != 0 && (
                           <>
                             {social.map((item) => (
-                              <div className="mx-5 mt-1" key={item.network}>
+                              <div className="mx-5 mt-1 text-[12px]" key={item.network}>
                                 <span className="">
                                   <Link href={item.url}>
                                     <img
@@ -280,40 +280,40 @@ export const Amsterdam = ({ componentRef }) => {
                       <div className="w-[40%] h-auto bg-gray-200">
                         <div className="mt-56 mx-10 flex flex-col">
                           <div>
-                            <h4 className="font-bold tracking-[4px] heading">
+                            <h4 className="font-bold tracking-[4px] text-[16px] heading">
                               CONTACTS
                             </h4>
                             <hr className="w-[100%] h-1 bg-black my-2" />
                            {profile && (
-                            <>
+                            <div className="text-[12px]">
                              <p className="font-semibold my-2 ">
                               {profile.email}
                             </p>
                             <p className="font-semibold my-2">
                               {profile.phone}
                             </p>
-                            </>
+                            </div>
                            )}
                           </div>
                           {education && (
                             <div>
                                {education.length != 0 && (
                             <>
-                              <h4 className="font-bold tracking-[4px] mt-4 heading">
+                              <h4 className="font-bold tracking-[4px] text-[16px]  mt-4 heading">
                                 EDUCATION
                               </h4>
                               <hr className="w-[100%] h-1 bg-black my-2" />
 
                               {education.map((item) => (
                                 <div
-                                  className="flex flex-col"
+                                  className="flex flex-col text-[12px] "
                                   key={item.institution}
                                 >
                                   <span className="text-black font-semibold mt-4">
                                     {item.institution}
                                   </span>
                                   <span className="mb-2 font-semibold">
-                                    ({item.startDate} {item.endDate})
+                                    ({item.startDate.slice(0,4)} - {item.endDate.slice(0,4)})
                                   </span>
 
                                   <span className="font-semibold">
@@ -321,7 +321,7 @@ export const Amsterdam = ({ componentRef }) => {
                                   </span>
                                   <span className="">{item.fieldOfStudy}</span>
 
-                                  <span className="mb-4">
+                                  <span className="">
                                     <b>GPA - </b> {item.gpa}
                                   </span>
                                 </div>
@@ -335,13 +335,13 @@ export const Amsterdam = ({ componentRef }) => {
                           <div className="mx-10 flex flex-col mt-4">
                           {skills.length != 0 && (
                             <>
-                              <h4 className="font-bold tracking-[4px] heading">
+                              <h4 className="font-bold text-[16px]  tracking-[4px] heading">
                                 SKILLS
                               </h4>
                               <hr className="w-[100%] h-1 bg-black my-2" />
                               {skills.map((item) => (
                                 <>
-                                  <div className="flex justify-between">
+                                  <div className="flex justify-between text-[12px] ">
                                     <span
                                       className="font-semibold mt-1"
                                       key={item.name}
@@ -359,23 +359,23 @@ export const Amsterdam = ({ componentRef }) => {
                         </div>
                         )}
                         {awards && (
-                          <div className="mx-10 flex flex-col mt-4">
+                          <div className="mx-10 flex flex-col mt-4 ">
                           {awards.length != 0 && (
                             <>
-                              <h4 className="font-bold tracking-[4px] heading">
+                              <h4 className="font-bold tracking-[4px] heading text-[16px] ">
                                 AWARDS
                               </h4>
                               <hr className="w-[100%] h-1 bg-black my-2" />
                               {awards.map((item) => (
-                                <>
-                                  <span
-                                    className="font-semibold mt-1"
+                                <div className="text-[12px] ">
+                                  <p
+                                    className="font-semibold mt-1 "
                                     key={item.name}
                                   >
-                                    {item.name}({item.date})
-                                  </span>
+                                    {item.name}({item.date.slice(0,4)})
+                                  </p>
                                   <span className="mb-3">{item.awarder}</span>
-                                </>
+                                </div>
                               ))}
                             </>
                           )}
@@ -384,19 +384,19 @@ export const Amsterdam = ({ componentRef }) => {
                         
 
                         {hobbies && (
-                          <div className="mx-10 flex flex-col mt-4">
+                          <div className="mx-10 flex flex-col mt-4 ">
                           {hobbies.length != 0 && (
                             <>
-                              <h4 className="font-bold tracking-[4px] heading">
+                              <h4 className="font-bold tracking-[4px] text-[16px]  heading">
                                 HOBBIES
                               </h4>
                               <hr className="w-[100%] h-1 bg-black my-2" />
                               {hobbies.map((item) => (
-                                <>
+                                <div className="text-[12px] ">
                                   <span className="font-semibold mt-1">
                                     {item.name}
                                   </span>
-                                </>
+                                </div>
                               ))}
                             </>
                           )}
@@ -408,19 +408,19 @@ export const Amsterdam = ({ componentRef }) => {
                           <div className="mx-10 flex flex-col mt-4">
                           {languages.length != 0 && (
                             <>
-                              <h4 className="font-bold tracking-[4px] heading">
+                              <h4 className="font-bold tracking-[4px] text-[16px]  heading">
                                 LANGUAGES
                               </h4>
                               <hr className="w-[100%] h-1 bg-black my-2" />
                               {languages.map((item) => (
-                                <>
+                                <div className="text-[12px] ">
                                   <span
                                     className="font-semibold mt-1"
                                     key={item.name}
                                   >
                                     {item.name}
                                   </span>
-                                </>
+                                </div>
                               ))}
                             </>
                           )}
@@ -447,18 +447,18 @@ export const Amsterdam = ({ componentRef }) => {
                           <div>
                             {projects.length != 0 && (
                           <>
-                            <h2 className="font-bold tracking-[4px] heading">
+                            <h2 className="font-bold tracking-[4px] text-[16px]  heading">
                               PROJECTS
                             </h2>
                             <hr className="w-[100%] h-1 bg-black my-1" />
 
                             {projects.map((item) => (
-                              <>
+                              <div className="text-[12px] ">
                                 <div className="my-4">
-                                  <span className="text-black font-bold mt-3">
+                                  <span className="text-black text-[16px]  font-bold mt-3">
                                     {item.name} ({" "}
                                     <span className="text-black font-semibold">
-                                      {item.from} to {item.to}
+                                      {item.from.slice(0,4)} to {item.to.slice(0,4)}
                                     </span>{" "}
                                     ){" "}
                                   </span>
@@ -467,7 +467,7 @@ export const Amsterdam = ({ componentRef }) => {
                                     {item.summary.data}
                                   </p>
                                 </div>
-                              </>
+                              </div>
                             ))}
                           </>
                         )}
@@ -478,22 +478,22 @@ export const Amsterdam = ({ componentRef }) => {
                           <div>
                             {work.length != 0 && (
                           <>
-                            <h2 className="font-bold tracking-[4px] heading">
+                            <h2 className="font-bold text-[16px]  tracking-[4px] heading">
                               WORK
                             </h2>
                             <hr className="w-[100%] h-1 bg-black my-1" />
                             {work.map((item) => (
-                              <>
+                              <div className="text-[12px] ">
                                 <div
                                   className="flex flex-col"
                                   key={item.company}
                                 >
                                   {/* <span className="text-black font-bold mt-3" >{item.name}</span> */}
 
-                                  <span className="text-black font-bold mt-3">
+                                  <span className="text-black text-[16px]  font-bold mt-3">
                                     {item.company}{" "}
                                     <span className="font-semibold">
-                                      ({item.from} to {item.to})
+                                      ({item.from.slice(0,4)} to {item.to.slice(0,4)})
                                     </span>
                                   </span>
                                   <span className="text-black font-semibold mx-4">
@@ -501,7 +501,7 @@ export const Amsterdam = ({ componentRef }) => {
                                   </span>
                                   <p className="ml-4">{item.summary.data}</p>
                                 </div>
-                              </>
+                              </div>
                             ))}
                           </>
                         )}
@@ -512,12 +512,12 @@ export const Amsterdam = ({ componentRef }) => {
                           <div>
                             {certifications.length != 0 && (
                           <>
-                            <h2 className="font-bold tracking-[4px] heading">
+                            <h2 className="font-bold tracking-[4px] text-[16px] mt-4 heading">
                               CERTIFICATIONS
                             </h2>
                             <hr className="w-[100%] h-1 bg-black my-1" />
                             {certifications.map((item) => (
-                              <>
+                              <div className="text-[12px] ">
                                 <div className="flex flex-col" key={item.title}>
                                   {/* <span className="text-black font-bold mt-3" >{item.name}</span> */}
 
@@ -532,7 +532,7 @@ export const Amsterdam = ({ componentRef }) => {
                                   </span>
                                   {/* <p className="ml-4">{item.summary.data}</p> */}
                                 </div>
-                              </>
+                              </div>
                             ))}
                           </>
                         )}
@@ -544,7 +544,7 @@ export const Amsterdam = ({ componentRef }) => {
                     </div>
                   </div>
 
-      </div>
+      {/* </div> */}
     </>
   );
 };

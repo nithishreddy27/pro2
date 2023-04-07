@@ -21,7 +21,7 @@ import { findUser } from "../../../../src/lib/user";
 import {Amsterdam} from "../../../../src/components/Resumes/Templates/Amsterdam";
 import {Blue} from "../../../../src/components/Resumes/Templates/Blue";
 import {Casual} from "../../../../src/components/Resumes/Templates/Casual";
-import { Morden } from "../../../../src/components/Resumes/Templates/Morden";
+import { Modren } from "../../../../src/components/Resumes/Templates/Modren";
 
 const Templates = {
   noncore: NonCore,
@@ -39,7 +39,7 @@ const Templates = {
   amsterdam:Amsterdam,
   blue:Blue,
   casual:Casual,
-  morden:Morden
+  modren:Modren
 };
 
 const ResumeSlug = ({ user, id }) => {

@@ -123,10 +123,10 @@ const templates = [
     heading: "Casual",
   },
   {
-    name: "morden",
+    name: "modren",
     category: "creative",
     image: "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676532396/my-uploads/kejobl0bix99ynkl8snb.jpg",
-    heading: "Morden",
+    heading: "Modren",
   },
 ];
 
