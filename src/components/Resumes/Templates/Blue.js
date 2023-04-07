@@ -365,7 +365,7 @@ export const Blue = ({ componentRef, filter = null }) => {
                 <div className="my-2">
                   {languages.map((item) => (
                     <>
-                      {item.enabled == true && (
+                      {item.enabled  && (
                         <div className="flex text-[12px]" key={item.name}>
                           <h1 className="">{item.name}</h1>
                         </div>
@@ -387,9 +387,13 @@ export const Blue = ({ componentRef, filter = null }) => {
                   </h1>
                   <div className="my-2">
                     {hobbies.map((item) => (
-                      <div className="flex text-[12px]  " key={item.name}>
+                      <>
+                      {item.enabled && (
+                        <div className="flex text-[12px]  " key={item.name}>
                         <h1 className="">{item.name}</h1>
                       </div>
+                      )}
+                      </>
                     ))}
                   </div>
                 </>
@@ -406,11 +410,15 @@ export const Blue = ({ componentRef, filter = null }) => {
                   </h1>
                   <div className="my-2 ">
                     {awards.map((item) => (
-                      <div className="flex text-[12px]" key={item.name}>
-                        <span className=" text-[15px] my-1">
-                          {item.name} <span className="text-[12px]">({item.date.slice(0,4)})</span>
-                        </span>
-                      </div>
+                      <>
+                        {item.enabled && (
+                          <div className="flex text-[12px]" key={item.name}>
+                          <span className=" text-[15px] my-1">
+                            {item.name} <span className="text-[12px]">({item.date})</span>
+                          </span>
+                        </div>
+                        )}
+                      </>
                     ))}
                   </div>
                 </>
@@ -476,7 +484,9 @@ export const Blue = ({ componentRef, filter = null }) => {
                       EDUCATION
                     </h1>
                     {education.map((item) => (
-                      <div className="mt-2 text-[12px]" key={item.institution}>
+                      <>
+                      {item.enabled && (
+                        <div className="mt-2 text-[12px]" key={item.institution}>
                         <h1 className="font-semibold">
                           {item.institution}{" "}
                           <span className="font-medium">
@@ -489,6 +499,8 @@ export const Blue = ({ componentRef, filter = null }) => {
                         <p className="ml-5 my-1">{item.summary.data}</p>
                         <p className="ml-5">GPA-{item.gpa}</p>
                       </div>
+                      )}
+                      </>
                     ))}
                   </>
                 )}
@@ -503,21 +515,25 @@ export const Blue = ({ componentRef, filter = null }) => {
                       INTERNSHIP
                     </h1>
                     {work.map((item) => (
-                      <div className="mt-2 text-[12px]" key={item.company}>
-                        <h1 className="font-semibold">
-                          {item.company}{" "}
-                          <span className="font-medium">
-                            ({item.from.slice(0, 10)}] - [{item.to.slice(0, 10)})
-                          </span>{" "}
-                        </h1>
-
-                        <span className="ml-5 tracking-wider font-semibold">
-                          {item.designation}
-                        </span>
-                        <span className="ml-5 text-sm">
-                          {item.summary.data}
-                        </span>
-                      </div>
+                     <>
+                      {item.enabled && (
+                         <div className="mt-2 text-[12px]" key={item.company}>
+                         <h1 className="font-semibold">
+                           {item.company}{" "}
+                           <span className="font-medium">
+                             ({item.from.slice(0, 4)}-{item.to.slice(0, 4)})
+                           </span>{" "}
+                         </h1>
+ 
+                         <span className="ml-5 tracking-wider font-semibold">
+                           {item.designation}
+                         </span>
+                         <span className="ml-5 text-sm">
+                           {item.summary.data}
+                         </span>
+                       </div>
+                      )}
+                      </>
                     ))}
                   </>
                 )}
@@ -532,22 +548,26 @@ export const Blue = ({ componentRef, filter = null }) => {
                       PROJECTS
                     </h1>
                     {projects.map((item) => (
-                      <div className="mt-2 text-[12px]" key={item.name}>
-                        {/* <Link href={item.website}> */}
-                        <h1 className="font-semibold">
-                          {item.name}{" "}
-                          <span className="font-medium">
-                            ({item.from.slice(0, 4)}-{item.to.slice(0, 4)})
-                          </span>{" "}
-                        </h1>{" "}
-                        {/* </Link> */}
-                        <span className="ml-5 tracking-wider font-semibold">
-                          {item.designation}
-                        </span>
-                        <span className="ml-5 text-sm">
-                          {item.summary.data}
-                        </span>
-                      </div>
+                      <>
+                        {item.enabled && (
+                          <div className="mt-2 text-[12px]" key={item.name}>
+                          {/* <Link href={item.website}> */}
+                          <h1 className="font-semibold">
+                            {item.name}{" "}
+                            <span className="font-medium">
+                              ({item.from.slice(0, 4)}-{item.to.slice(0, 4)})
+                            </span>{" "}
+                          </h1>{" "}
+                          {/* </Link> */}
+                          <span className="ml-5 tracking-wider font-semibold">
+                            {item.designation}
+                          </span>
+                          <span className="ml-5 text-sm">
+                            {item.summary.data}
+                          </span>
+                        </div>
+                        )}
+                      </>
                     ))}
                   </div>
                 )}

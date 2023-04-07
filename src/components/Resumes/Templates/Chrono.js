@@ -330,7 +330,6 @@ export const Chrono = ({ componentRef, filter = null }) => {
                     </div>
                  ))}
                 </div>
-              </div>
           )}
 
         <div className="col-span-3">
