@@ -41,7 +41,7 @@ export const Retro = ({ componentRef, filter = null }) => {
 
           {objective && (
             <div className="right-0 w-[80%]">
-              <p className=" text-black font-bold text-[16px] p-1 pt-3 pl-4 tracking-wide mt-1 heading ">
+              <p className=" text-black font-bold text-[16px] p-1   heading pt-3 pl-4 tracking-wide mt-1 heading ">
                 PROFILE
               </p>
               <p className="text-[12px] text-black p-2 pl-2 pt-1">
@@ -63,15 +63,16 @@ export const Retro = ({ componentRef, filter = null }) => {
         )}
 
         <div className="relative flex">
-          <div className="bg-gradient-to-t   from-gray-300 w-[40%]">
+          <div className=" bg-gradient-to-t  from-gray-300 w-[40%]">
             <div className=" ">
               <div className="flex px-3 py-1">
-                {/* skills */}
+                 <div className="">
+                   {/* skills */}
                 {skills?.filter((skill) => skill?.enabled).length > 0 && (
-                  <div className="">
+                <>
                     {skills.length != 0 && (
                       <div className="py-1">
-                        <p className="text-black px-2 font-bold tracking-wider text-[16px] heading">
+                        <p className="text-black px-2 font-bold  heading  tracking-wider text-[16px] heading">
                           SKILLS
                         </p>
                         {skills.map((item) => (
@@ -90,12 +91,15 @@ export const Retro = ({ componentRef, filter = null }) => {
                         ))}
                       </div>
                     )}
+                    </>
+                )}
+                    
                     {/* Languages */}
-                    {languages.length != 0 && (
+                    {languages?.filter((language)=>language?.enabled).length>0 && (
                       <div>
                         {languages.length != 0 && (
                           <div className="py-1">
-                            <p className="text-black px-2 font-bold tracking-wider text-[16px] heading">
+                            <p className="text-black px-2 font-bold  heading  tracking-wider text-[16px] heading">
                               LANGUAGES
                             </p>
                             {languages.map((item) => (
@@ -115,11 +119,11 @@ export const Retro = ({ componentRef, filter = null }) => {
                       </div>
                     )}
                     {/* awards */}
-                    {awards && (
+                    {awards?.filter((awards) => awards?.enabled).length > 0 && (
                       <div>
                         {awards.length != 0 && (
                           <div className="py-1">
-                            <p className="text-black px-2 font-bold tracking-wider text-[16px] heading">
+                            <p className="text-black px-2 font-bold   heading tracking-wider text-[16px] heading">
                               AWARDS
                             </p>
                             {awards.map((item) => (
@@ -158,11 +162,11 @@ export const Retro = ({ componentRef, filter = null }) => {
                     )}
 
                     {/* hobbies */}
-                    {hobbies && (
+                {hobbies?.filter((hobbies) => hobbies?.enabled).length > 0 && (
                       <div>
                         {hobbies.length != 0 && (
                           <div className="py-1">
-                            <p className="text-black  px-2 font-bold tracking-wider text-[16px]  heading">
+                            <p className="text-black  px-2 font-bold  heading  tracking-wider text-[16px]  heading">
                               HOBBIES
                             </p>
                             {hobbies.map((item) => (
@@ -181,11 +185,12 @@ export const Retro = ({ componentRef, filter = null }) => {
                     )}
 
                     {/* projects */}
-                    {projects && (
+                    {projects?.filter((projects) => projects?.enabled).length > 0 && (
+
                       <div>
                         {projects.length != 0 && (
                           <div className=" py-1">
-                            <p className="text-black  px-2 font-bold tracking-wider text-[16px]  heading  ">
+                            <p className="text-black  px-2 font-bold   heading tracking-wider text-[16px]  heading  ">
                               PROJECTS
                             </p>
 
@@ -223,17 +228,17 @@ export const Retro = ({ componentRef, filter = null }) => {
                       </div>
                     )}
                   </div>
-                )}
+                
               </div>
             </div>
           </div>
           <div className="w-[70%] py-2 px-3">
             {/* education */}
-            {education && (
+            {education?.filter((education) => education?.enabled).length > 0 && (
               <div>
                 {education.length != 0 && (
                   <div className="py-1 ">
-                    <p className=" text-black font-bold px-3 py-1 text-[16px] tracking-wide  heading">
+                    <p className=" text-black font-bold px-3 py-1 text-[16px]  heading  tracking-wide  heading">
                       EDUCATION
                     </p>
                     <hr></hr>
@@ -267,12 +272,12 @@ export const Retro = ({ componentRef, filter = null }) => {
             )}
 
             {/* internship */}
-            {work && (
+            {work?.filter((work) => work?.enabled).length > 0 && (
               <div>
                 {work.length != 0 && (
                   <>
                     <div className="py-1">
-                      <p className=" text-black font-bold px-3 py-1 text-[16px] tracking-wide heading">
+                      <p className=" text-black font-bold px-3 py-1 text-[16px]   heading tracking-wide heading">
                         INTERNSHIP
                       </p>
                       <hr></hr>
@@ -306,16 +311,18 @@ export const Retro = ({ componentRef, filter = null }) => {
             )}
             {/* certification */}
 
-            {certifications && (
+            {certifications?.filter((certifications) => certifications?.enabled).length > 0 && (
               <div>
                 {certifications.length != 0 && (
                   <>
                     <div className="py-1">
-                      <p className=" text-black font-bold px-3 py-1 text-[16px] tracking-wider heading">
+                      <p className=" text-black font-bold px-3 py-1 text-[16px]   heading tracking-wider heading">
                         CERTIFICATION
                       </p>
                       <hr className=""></hr>
                       {certifications.map((item) => (
+                        <>
+                         {item.enabled && (
                         <div
                           key={item.title}
                           className="text-[12px] p-2 text-black"
@@ -332,6 +339,8 @@ export const Retro = ({ componentRef, filter = null }) => {
                           <p>{item.summary.enabled}</p>
                           <p>{item.enabled}</p>
                         </div>
+                         )}
+                         </>
                       ))}
                     </div>
                   </>
@@ -339,44 +348,18 @@ export const Retro = ({ componentRef, filter = null }) => {
               </div>
             )}
 
-            {/* projects */}
-            {projects && (
-              <div>
-                {projects.length != 0 && (
-                  <div className="py-1">
-                    <p className="text-black font-bold tracking-wider  px-3 py-1 text-[16px]   ">
-                      PROJECTS
-                    </p>
-                    <hr></hr>
-                    {projects.map((item) => (
-                      <>
-                      {item.enabled && (
-                      <div className="text-[12px] p-2 text-black">
-                        <p className="relative font-semibold text-[14px]">
-                          {item.name}
-                          <span className="absolute right-0 font-normal text-[10px]">
-                            {" "}
-                            [{item.from.slice(0, 4)}-{item.to.slice(0, 4)}]
-                          </span>
-                        </p>
-                        <p href={item.website}>
-                          <p className="text-[12px]">{item.name}</p>
-                          <p className="text-[12px]">{item.summary.data}</p>
-                        </p>
-
-                        <p>{item.summary.enabled}</p>
-                        <p>{item.enabled}</p>
-                      </div>
-                      )}
-                      </>
-                    ))}
-                  </div>
-                )}
-              </div>
-            )}
+           
           </div>
         </div>
       </div>
+      <style jsx> 
+            {`
+              .heading{
+                color:rgba(${r},${g},${b},${a})
+              }
+            
+            `}
+    </style>
     </div>
     // </div>
   );

@@ -34,9 +34,10 @@ import { Stylish } from "../../../../src/components/Resumes/Templates/Stylish";
 import { Assymmetric } from "../../../../src/components/Resumes/Templates/Assymmetric";
 import { Amsterdam } from "../../../../src/components/Resumes/Templates/Amsterdam";
 import { Dublin } from "../../../../src/components/Resumes/Templates/Dublin";
-
-
-// import { Vertical } from "../../../../src/components/Resumes/Templates/Vertical";
+import { Square } from "../../../../src/components/Resumes/Templates/Square";
+import { Symmetric } from "../../../../src/components/Resumes/Templates/Symmetric";
+import { Professional } from "../../../../src/components/Resumes/Templates/Professional";
+import { Vertical } from "../../../../src/components/Resumes/Templates/Vertical";
 
 const Templates = {
   noncore: NonCore,
@@ -66,7 +67,10 @@ const Templates = {
   chrono: Chrono,
   assymmetric: Assymmetric,
   stylish: Stylish,
-  dublin:Dublin,
+  dublin: Dublin,
+  square: Square,
+  symmetric: Symmetric,
+  professional: Professional,
   // vertical:Vertical,
 };
 

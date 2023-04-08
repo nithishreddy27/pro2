@@ -10,13 +10,13 @@ export const Modren = ({ componentRef, filter = null }) => {
   const headingClass =
     "text-xl captialize font-bold text-gray-700 border-b-2 border-black mb-2 pb-1";
   return (
-    <div ref={componentRef} className='my-5 w-a4W bg-white mx-auto h-a4H'>
-      <div className='h-fullz relative' >
+    <div ref={componentRef} className='my-5 w-a4W bg-white mx-auto  border '>
+      <div className='h-a4H relative' >
         {/* {console.log("profile",social)} */}
             <div className=" flex">
-                        <div className="w-[35%] z-10 bg-slate-800 h-[100] p-2">
+                        <div className="w-[35%] z-10 h-a4H bg-slate-800  p-2">
                             <div className="mt-44">
-                            <h1 className="text-[16px]  tracking-[2px] text-white">
+                            <h1 className="text-[16px]  heading  tracking-[2px] text-white">
                                 CONTACT
                             </h1>
                             <hr className="h-[2px] bg-black my-2" />
@@ -24,9 +24,10 @@ export const Modren = ({ componentRef, filter = null }) => {
                                 <>
                                 <div className="flex">
                                 <span>
+                                
                                 <img
-                                    src={profile.image}
-                                    className="w-5 h-5"
+                                    src="https://www.freeiconspng.com/uploads/office-phone-icon--25.png"
+                                    className="w-5 h-4"
                                 />
                                 </span>
                                 <h1 className="mx-4  text-white text-[12px]">
@@ -80,16 +81,16 @@ export const Modren = ({ componentRef, filter = null }) => {
                             )}
 
 
-                            <h1 className="text-[16px] mt-4 tracking-[2px] text-white">
-                                SKILLS
-                            </h1>
-                            <hr className="h-[2px] bg-black my-2" />
 
-                            {skills && (
+                            {skills?.filter((skill)=>skill?.enabled).length >0 && (
                                 <div className="">
+                                    <h1 className="text-[16px] mt-4  heading tracking-[2px] text-white">
+                                        SKILLS
+                                    </h1>
+                                    <hr className="h-[2px] bg-black my-2" />
                                     {skills.length != 0 && (
                                 <div>
-                                {skills.map((item) => (
+                                {skills?.filter((skill)=>skill?.enabled === true).map((item)=>(
                                     <>
                                         {item.enabled && (
                                             <div className="flex" key={item.name}>
@@ -125,16 +126,17 @@ export const Modren = ({ componentRef, filter = null }) => {
                                 </div>
                             )}
 
-                            {hobbies && (
+{hobbies?.filter((hobby)=>hobby?.enabled).length >0 && (
                                 <div>
                                      
                             {hobbies.length != 0 && (
                                 <div className="mt-5">
-                                <h1 className="text-[16px]  text-white  tracking-[2px]">
+                                <h1 className="text-[16px]  text-white  heading  tracking-[2px]">
                                     HOBBIES
                                 </h1>
                                 <hr className="h-[2px] my-1" />
-                                {hobbies.map((item) => (
+  {hobbies?.filter((hobby)=>hobby?.enabled === true).map((item)=>(
+                                
                                     <>
                                         {item.enabled && (
                                             <p className="my-2 text-white text-[12px]" key={item.name}>
@@ -148,15 +150,17 @@ export const Modren = ({ componentRef, filter = null }) => {
                                 </div>
                             )}
 
-                            {languages && (
+{languages?.filter((language)=>language?.enabled).length >0 && (
+
                                 <div>
                                     {languages.length != 0 && (
                                 <div className="mt-5">
-                                <h1 className="text-[16px]  text-white  tracking-[2px]">
+                                <h1 className="text-[16px]  text-white  heading  tracking-[2px]">
                                     LANGUAGES
                                 </h1>
                                 <hr className="h-[2px] my-1" />
-                                {languages.map((item) => (
+                                {languages?.filter((language)=>language?.enabled === true).map((item)=>(
+
                                     <>
                                     {item.enabled && (
                                         <p className="my-2 text-white text-[12px]" key={item.name}>
@@ -170,16 +174,18 @@ export const Modren = ({ componentRef, filter = null }) => {
                                 </div>
                             )}
 
-                            {awards && (
+{awards?.filter((award)=>award?.enabled).length >0 && (
+
                                 <div>
                                     {awards.length != 0 && (
                                 <>
                                 {" "}
-                                <h1 className="text-[16px]  tracking-[2px] text-white mt-5">
+                                <h1 className="text-[16px]  tracking-[2px] heading  text-white mt-5">
                                     AWARADS
                                 </h1>
                                 <hr className="h-[2px] bg-black mt-1 mb-4 " />
-                                {awards.map((item) => (
+                                {awards?.filter((award)=>award?.enabled === true).map((item)=>(
+
                                     <>
                                     {item.enabled && (<div className="my-2 " key={item.name}>
                                     <span className="font-semibold text-[12px] text-white">
@@ -199,13 +205,13 @@ export const Modren = ({ componentRef, filter = null }) => {
                             </div>
                         </div>
 
-                        <div className="w-[65%] z-10 bg-slate-300 p-5">
+                        <div className="w-[65%] h-a4H z-10 bg-slate-300 p-5">
                             {objective && (
                                 <div>
                                     {objective.length != 0 && (
                             <div className="mt-48">
                                 <div className="flex mb-2">
-                                <h1 className="text-[16px] font-semibold tracking-[1px]">
+                                <h1 className="text-[16px] font-semibold heading  tracking-[1px]">
                                     OBJECTIVE
                                 </h1>
                                 <hr className=" h-[2px] w-[100%] ml-2 mt-3 bg-black" />
@@ -218,17 +224,17 @@ export const Modren = ({ componentRef, filter = null }) => {
                                 </div>
                             )}
 
-                            {work && (
+                          {work?.filter((wo)=>wo?.enabled).length >0 && (
                                 <div>
                                     {work.length != 0 && (
                             <div className="mt-5">
                                 <div className="flex">
-                                <h1 className="text-[16px] font-semibold tracking-[1px]">
+                                <h1 className="text-[16px] font-semibold heading  tracking-[1px]">
                                     WORK
                                 </h1>
                                 <hr className=" h-[2px] w-[100%] ml-2 mt-3 bg-black" />
                                 </div>
-                                {work.map((item) => (
+                                {work?.filter((wo)=>wo?.enabled === true).map((item)=>(
                                     <>
                                         {item.enabled && (<div className="mt-1 text-[12px]" key={item.company}>
                                     <h1 className="font-semibold">
@@ -249,17 +255,17 @@ export const Modren = ({ componentRef, filter = null }) => {
                                 </div>
                             )}
                             
-                            {education && (
+                            {education?.filter((edu)=>edu?.enabled).length >0 && (
                                 <div>
                                     {education.length != 0 && (
                             <div className="mt-5">
                                 <div className="flex">
-                                <h1 className="text-[16px] font-semibold tracking-[1px]">
+                                <h1 className="text-[16px] font-semibold heading  tracking-[1px]">
                                     EDUCATION
                                 </h1>
                                 <hr className=" h-[2px] w-[100%] ml-2 mt-3 bg-black" />
                                 </div>
-                                {education.map((item) => (
+                                {education?.filter((edu)=>edu?.enabled === true).map((item)=>(
                                 <>
                                     {item.enabled && (
                                         <div className="mt-1 text-[12px]" key={item.institution}>
@@ -285,17 +291,17 @@ export const Modren = ({ componentRef, filter = null }) => {
                             )}
 
                             
-                            {projects && (
+{projects?.filter((project)=>project?.enabled).length >0 && (
                                 <div>
                                     {projects.length != 0 && (
                             <div className="mt-5">
                                 <div className="flex mb-2">
-                                <h1 className="text-[16px] font-semibold tracking-[1px]">
+                                <h1 className="text-[16px] font-semibold heading  tracking-[1px]">
                                     PROJECTS
                                 </h1>
                                 <hr className=" h-[2px] w-[100%] ml-2 mt-3 bg-black" />
                                 </div>
-                                {projects.map((item) => (
+                                {projects?.filter((project)=>project?.enabled === true).map((item)=>(
                                     <>
                                         {item.enabled && (
                                             <div className="mt-1 text-[12px]" key={item.name}>
@@ -322,17 +328,17 @@ export const Modren = ({ componentRef, filter = null }) => {
                             )}
 
                             
-                            {certifications && (
+{certifications?.filter((certificate)=>certificate?.enabled).length >0 && (
                                 <div>
                                     {certifications.length != 0 && (
                             <div className="mt-2">
                                 <div className="flex mb-2">
-                                <h1 className="text-[16px] font-semibold tracking-[1px]">
+                                <h1 className="text-[16px] font-semibold  heading  tracking-[1px]">
                                     CERTIFICATIONS
                                 </h1>
                                 <hr className=" h-[2px] w-[100%] ml-2 mt-3 bg-black" />
                                 </div>
-                                {certifications.map((item) => (
+                            {certifications?.filter((certificate)=>certificate?.enabled === true).map((item)=>(
                                     <>
                                         {item.enabled && (
                                             <div className="flex justify-between" key={item.title}>
@@ -382,6 +388,14 @@ export const Modren = ({ componentRef, filter = null }) => {
                   )}
           
       </div>
+      <style jsx> 
+            {`
+              .heading{
+                color:rgba(${r},${g},${b},${a})
+              }
+            
+            `}
+    </style>
     </div>
   );
 };

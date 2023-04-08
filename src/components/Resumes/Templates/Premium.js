@@ -45,7 +45,7 @@ export const Premium = ({ componentRef }) => {
           <div className="bg-cyan-800 text-white">
             <div className="mt-64 mx-6">
               <div>
-                <h1 className="border-2 border-white mt-5 mb-2 text-[16px] flex justify-center align-middle py-2 text-white">
+                <h1 className="border-2 border-white mt-5 mb-2 heading  text-[16px] flex justify-center align-middle py-2 text-white">
                   CONTACTS
                 </h1>
                 <h1 className="text-white text-[12px]">{profile?.email}</h1>
@@ -61,7 +61,7 @@ export const Premium = ({ componentRef }) => {
               </div>
               {education?.filter((edu) => edu?.enabled)?.length > 0 && (
                 <div>
-                  <h1 className="border-2 text-white border-white text-[16px] mt-5 mb-3 flex justify-center align-middle py-2">
+                  <h1 className="border-2 text-white border-white heading  text-[16px] mt-5 mb-3 flex justify-center align-middle py-2">
                     EDUCATION
                   </h1>
                   {education
@@ -83,7 +83,7 @@ export const Premium = ({ componentRef }) => {
               )}
               {skills?.filter((skill) => skill?.enabled)?.length > 0 && (
                 <div>
-                  <h1 className="border-2 border-white text-white text-[16px] mt-5 mb-3 flex justify-center align-middle py-2">
+                  <h1 className="border-2 border-white text-white heading  text-[16px] mt-5 mb-3 flex justify-center align-middle py-2">
                     SKILLS
                   </h1>
                   {skills
@@ -100,7 +100,7 @@ export const Premium = ({ componentRef }) => {
               )}
               {awards?.filter((award) => award?.enabled)?.length > 0 && (
                 <div>
-                  <h1 className="border-2 text-white border-white text-[16px] mt-5 mb-3 flex justify-center align-middle py-2">
+                  <h1 className="border-2 text-white border-white heading  text-[16px] mt-5 mb-3 flex justify-center align-middle py-2">
                     AWARDS
                   </h1>
                   {awards
@@ -138,7 +138,7 @@ export const Premium = ({ componentRef }) => {
             <div className="mt-64 mx-6">
               {profile && (
                 <div>
-                  <h1 className="text-[16px] font-semibold border-b-2 border-black mb-3">
+                  <h1 className="text-[16px] font-semibold border-b-2 heading  border-black mb-3">
                     PROFILE
                   </h1>
                   <p className="text-[12px] font-semibold">{objective}</p>
@@ -146,7 +146,7 @@ export const Premium = ({ componentRef }) => {
               )}
               {work?.filter((work) => work?.enabled)?.length > 0 && (
                 <div>
-                  <h1 className="text-[16px] font-semibold border-b-2 border-black mb-2 mt-4">
+                  <h1 className="text-[16px] font-semibold border-b-2 heading  border-black mb-2 mt-4">
                     WORK EXPERIENCE
                   </h1>
                   {work
@@ -168,7 +168,7 @@ export const Premium = ({ componentRef }) => {
               )}
               {projects?.filter((pro) => pro?.enabled)?.length > 0 && (
                 <div>
-                  <h1 className="text-[16px] font-semibold border-b-2 border-black mb-2 mt-4">
+                  <h1 className="text-[16px] font-semibold border-b-2 heading  border-black mb-2 mt-4">
                     PROJECTS
                   </h1>
                   {projects
@@ -193,7 +193,7 @@ export const Premium = ({ componentRef }) => {
               )}
               {certifications?.filter((cer) => cer?.enabled)?.length > 0 && (
                 <div>
-                  <h1 className="text-[16px] font-semibold border-b-2 border-black mb-2 mt-4">
+                  <h1 className="text-[16px] font-semibold border-b-2 heading  border-black mb-2 mt-4">
                     CERTIFICATIONS
                   </h1>
                   {certifications
@@ -218,6 +218,14 @@ export const Premium = ({ componentRef }) => {
             </div>
           </div>
         </div>
+        <style jsx> 
+            {`
+              .heading{
+                color:rgba(${r},${g},${b},${a})
+              }
+            
+            `}
+    </style>
       </div>
     </>
   );

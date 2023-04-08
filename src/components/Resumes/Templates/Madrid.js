@@ -56,7 +56,7 @@ export const Madrid = ({ componentRef }) => {
 
             {work?.filter((work) => work?.enabled)?.length > 0 && (
               <div>
-                <h1 className="font-medium text-2xl ml-5 pt-4 mb-1 p-2">
+                <h1 className="font-medium text-2xl heading   ml-5 pt-4 mb-1 p-2">
                   Employement History
                 </h1>
                 {work
@@ -80,7 +80,7 @@ export const Madrid = ({ componentRef }) => {
             )}
             {certifications?.filter((cer) => cer?.enabled)?.length > 0 && (
               <div>
-                <h1 className="font-medium text-2xl ml-5 pt-2 mb-1 p-2">
+                <h1 className="font-medium text-2xl heading   ml-5 pt-2 mb-1 p-2">
                   Certifications
                 </h1>
                 {certifications
@@ -102,7 +102,7 @@ export const Madrid = ({ componentRef }) => {
             )}
             {awards?.filter((awa) => awa?.enabled)?.length > 0 && (
               <div>
-                <h1 className="font-medium text-2xl ml-5 pt-2 mb-1 p-2">
+                <h1 className="font-medium text-2xl heading   ml-5 pt-2 mb-1 p-2">
                   Awards
                 </h1>
                 {awards
@@ -124,7 +124,7 @@ export const Madrid = ({ componentRef }) => {
           <div className="col-span-3">
             {social?.filter((soc) => soc?.enabled)?.length > 0 && (
               <div className="bg-blue-800 h-52">
-                <h1 className="font-bold  text-lg ml-12 pt-4 p-2">
+                <h1 className="font-bold  text-lg heading   ml-12 pt-4 p-2">
                   Social Network
                 </h1>
                 {social
@@ -146,7 +146,7 @@ export const Madrid = ({ componentRef }) => {
             <div class="bg-gray-300 h-[88%]">
               {skills?.filter((skill) => skill?.enabled)?.length > 0 && (
                 <div className="p-2">
-                  <h1 className="font-bold text-lg ml-8 pt-4 p-2">skills</h1>
+                  <h1 className="font-bold text-lg ml-8 pt-4 heading   p-2">SKILLS</h1>
                   {skills
                     ?.filter((skill) => skill?.enabled === true)
                     .map((item) => (
@@ -161,7 +161,7 @@ export const Madrid = ({ componentRef }) => {
               )}
               {education?.filter((edu) => edu?.enabled)?.length > 0 && (
                 <div className="p-2 px-0">
-                  <h1 className="font-medium text-xl ml-6 mb-0 p-2">
+                  <h1 className="font-medium text-xl ml-6 heading   mb-0 p-2">
                     Education
                   </h1>
                   {education
@@ -183,7 +183,7 @@ export const Madrid = ({ componentRef }) => {
               )}
               {hobbies?.filter((hob) => hob?.enabled)?.length > 0 && (
                 <div className="p-2">
-                  <h1 className="font-medium text-xl ml-6 mb-0 p-2">
+                  <h1 className="font-medium text-xl heading  ml-6 mb-0 p-2">
                     {" "}
                     Hobbies
                   </h1>
@@ -198,7 +198,7 @@ export const Madrid = ({ componentRef }) => {
               )}
               {languages?.filter((lang) => lang?.enabled)?.length > 0 && (
                 <div className="p-2">
-                  <h1 className=" text-lg font-medium ml-6 mb-0 p-2">
+                  <h1 className=" text-lg font-medium heading   ml-6 mb-0 p-2">
                     Languages
                   </h1>
                   {languages
@@ -214,7 +214,7 @@ export const Madrid = ({ componentRef }) => {
               )}
               {projects?.filter((pro) => pro?.enabled)?.length > 0 && (
                 <div className="p-2">
-                  <h1 className=" text-lg font-medium ml-6 ">Projects</h1>
+                  <h1 className=" text-lg font-medium heading  ml-6 ">Projects</h1>
                   {projects
                     ?.filter((pro) => pro?.enabled === true)
                     .map((item) => (
@@ -230,6 +230,14 @@ export const Madrid = ({ componentRef }) => {
             </div>
           </div>
         </div>
+        <style jsx> 
+            {`
+              .heading{
+                color:rgba(${r},${g},${b},${a})
+              }
+            
+            `}
+    </style>
       </div>
     </>
   );

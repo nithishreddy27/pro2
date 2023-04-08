@@ -50,13 +50,13 @@ export const Tokyo = ({ componentRef }) => {
           <div className="col-span-2 h-[218mm] border-r-2 py-6 px-8">
             {objective && (
               <div>
-                <h1 className="text-[16px] font-bold">Profile</h1>
+                <h1 className="heading text-[16px] font-bold">Profile</h1>
                 <p className="text-[12px] font-semibold ml-2">{objective}</p>
               </div>
             )}
             {work?.filter((work) => work?.enabled)?.length > 0 && (
               <div>
-                <h1 className="text-[16px] font-bold mt-4 mb-1">
+                <h1 className="heading text-[16px] font-bold mt-4 mb-1">
                   Employment History
                 </h1>
                 {work
@@ -86,7 +86,7 @@ export const Tokyo = ({ componentRef }) => {
             {certifications?.filter((certifications) => certifications?.enabled)
               ?.length > 0 && (
               <div>
-                <h1 className="text-[16px] font-bold mt-4 mb-1">
+                <h1 className="heading text-[16px] font-bold mt-4 mb-1">
                   Certifications
                 </h1>
                 {certifications
@@ -113,7 +113,7 @@ export const Tokyo = ({ componentRef }) => {
             )}
             {projects?.filter((project) => project?.enabled)?.length > 0 && (
               <div>
-                <h1 className="text-[16px] font-bold mt-4 mb-1">Projects</h1>
+                <h1 className="heading text-[16px] font-bold mt-4 mb-1">Projects</h1>
                 {projects
                   ?.filter((project) => project?.enabled === true)
                   .map((item) => (
@@ -142,7 +142,7 @@ export const Tokyo = ({ componentRef }) => {
           <div className="py-6 px-4">
             {education?.filter((edu) => edu?.enabled)?.length > 0 && (
               <div>
-                <h1 className="text-[16px] font-bold ">Education</h1>
+                <h1 className="heading text-[16px] font-bold ">Education</h1>
                 {education
                   ?.filter((edu) => edu?.enabled === true)
                   .map((item) => (
@@ -166,7 +166,7 @@ export const Tokyo = ({ componentRef }) => {
             )}
             {skills?.filter((skill) => skill?.enabled)?.length > 0 && (
               <div>
-                <h1 className="text-[16px] font-bold mt-4 mb-1">Skills</h1>
+                <h1 className="heading text-[16px] font-bold mt-4 mb-1">Skills</h1>
                 {skills
                   ?.filter((skill) => skill?.enabled === true)
                   .map((item) => (
@@ -180,7 +180,7 @@ export const Tokyo = ({ componentRef }) => {
             )}
             {social?.filter((social) => social?.enabled)?.length > 0 && (
               <div>
-                <h1 className="text-[16px] font-bold mt-4 mb-1">Social</h1>
+                <h1 className="heading text-[16px] font-bold mt-4 mb-1">Social</h1>
                 {social
                   ?.filter((social) => social?.enabled === true)
                   .map((item) => (
@@ -194,7 +194,7 @@ export const Tokyo = ({ componentRef }) => {
             )}
             {awards?.filter((award) => award?.enabled)?.length > 0 && (
               <div>
-                <h1 className="text-[16px] font-bold mt-4 mb-1">Awards</h1>
+                <h1 className="heading text-[16px] font-bold mt-4 mb-1">Awards</h1>
                 <div className="ml-1">
                   {awards
                     ?.filter((award) => award?.enabled === true)
@@ -213,7 +213,7 @@ export const Tokyo = ({ componentRef }) => {
             )}
             {hobbies?.filter((hob) => hob?.enabled)?.length > 0 && (
               <div>
-                <h1 className="text-[16px] font-bold mt-4 mb-1">Hobbies</h1>
+                <h1 className="heading text-[16px] font-bold mt-4 mb-1">Hobbies</h1>
                 {hobbies
                   ?.filter((hob) => hob?.enabled === true)
                   .map((item) => (
@@ -227,7 +227,7 @@ export const Tokyo = ({ componentRef }) => {
             )}
             {languages?.filter((lang) => lang?.enabled)?.length > 0 && (
               <div>
-                <h1 className="text-[16px] font-bold mt-5 mb-1">Languages</h1>
+                <h1 className="heading text-[16px] font-bold mt-5 mb-1">Languages</h1>
                 {languages
                   ?.filter((lang) => lang?.enabled === true)
                   .map((item) => (
@@ -241,6 +241,14 @@ export const Tokyo = ({ componentRef }) => {
             )}
           </div>
         </div>
+        <style jsx> 
+            {`
+              .heading{
+                color:rgba(${r},${g},${b},${a})
+              }
+            
+            `}
+    </style>
       </div>
     </>
   );

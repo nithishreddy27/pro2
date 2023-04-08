@@ -108,13 +108,7 @@ const templates = [
       "https://res.cloudinary.com/de9q0s6tt/image/upload/v1655571130/stockholm_bzrpo0.png",
     heading: "Stockholm",
   },
-  {
-    name: "stockholm",
-    category: "creative",
-    image:
-      "https://res.cloudinary.com/de9q0s6tt/image/upload/v1655571130/stockholm_bzrpo0.png",
-    heading: "Stockholm",
-  },
+
   {
     name: "amsterdam",
     category: "simple",
@@ -223,18 +217,32 @@ const templates = [
     heading: "Retro",
   },
   {
-    name: "chrono",
+    name: "stylish",
     category: "creative",
     image: 
-      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531522/my-uploads/ycnqqobfpghxsxdwws9l.jpg",
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676532684/my-uploads/i9efo5q4s5fzot1u4e1a.jpg",
     heading: "Stylish",
   },
   {
     name: "assymmetric",
     category: "creative",
     image: 
-      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531522/my-uploads/ycnqqobfpghxsxdwws9l.jpg",
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676532091/my-uploads/uclaqvlnf5wwiiyxtm6c.jpg",
     heading: "Assymmetric",
+  },
+  {
+    name: "vertical",
+    category: "creative",
+    image: 
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531522/my-uploads/ycnqqobfpghxsxdwws9l.jpg",
+    heading: "Vertical",
+  },
+  {
+    name: "chrono",
+    category: "creative",
+    image: 
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531522/my-uploads/ycnqqobfpghxsxdwws9l.jpg",
+    heading: "Chrono",
   },
 
   //   image:

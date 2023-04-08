@@ -176,266 +176,147 @@ export const Casual = ({ componentRef, filter = null }) => {
 
 
 
-
-            <div className="grid grid-cols-3">
-                      <div>
-                        <div className="col-span-1 bg-gray-300 w-[68mm] h-[285mm]">
-                          {profile && (
-                            <>
-                            <div>
-                            <img
-                              className="rounded-full w-[119px] ml-10 pt-3"
-                              src={profile.image}
-                              alt="ProfilePhoto"
-                              />
-                          </div>
-
-                          <div>
-                            <h1 className="font-medium px-8 py-2 text-orange-800">
-                              Details
-                            </h1>
-                            <h2 className=" font-medium px-8  text-black">
-                              Phone
-                            </h2>
-                            <h6 className=" px-8 ">{profile.phone}</h6>
-                            <h2 className=" font-medium px-8  text-black">
-                                Email
-                            </h2>
-                            <h6 className=" px-8 ">{profile.email}</h6>
-                            {/* <h2 className=" font-medium px-8  text-black">
-                              Date Of Birth
-                              </h2>
-                            <h6 className=" px-8 ">{profile.dob}</h6> */}
-                          </div>
-
-                              </>
-                            )}
-
-
-
-                           {skills && (
-                            <>
-                                {skills.length != 0 && (
-                                <div>
-                                <h1 className="font-medium px-8 py-2 text-orange-800">
-                                    Skills
-                                </h1>
-                                {skills.map((item) => (
-                                    <div key={item.name}>
-                                    <h1 className="font-medium ml-8">
-                                        {item.name}
-                                    </h1>
-                                    <h2 className="ml-8">{item.level}</h2>
-                                    </div>
-                                ))}
-                                </div>
-                            )}
-                            </>
-                           )}
-                          {awards && (
-                            <div>
-                                {awards.length != 0 && (
-                            <div>
-                              <h1 className="font-medium px-8 py-2 text-orange-800">
-                                Awards
-                              </h1>
-                              {awards.map((item) => (
-                                <div key={item.name}>
-                                  <h1 className="font-medium ml-8">
-                                    {item.name} from {item.awarder}
-                                  </h1>
-                                </div>
-                              ))}
-                            </div>
-                          )}
-                            </div>
-                          )}
-                          {social && (
-                            <div>
-                                {social.length != 0 && (
-                            <div>
-                              <h1 className="font-medium px-8 py-2 text-orange-800">
-                                Social Network
-                              </h1>
-                              {social.map((item) => (
-                                <div
-                                  className="ml-8 my-4 flex"
-                                  key={item.network}
-                                >
-                                  <img
-                                    src={
-                                      "https://www." +
-                                      item.network +
-                                      ".com/favicon.ico"
-                                    }
-                                    alt=""
-                                    className="w-5 h-5"
-                                  />
-                                  <Link href={item.url}>
-                                    <h1 className="ml-4">{item.username}</h1>
-                                  </Link>
-                                </div>
-                              ))}
-                            </div>
-                          )}
-                            </div>
-                          )}
-                         {hobbies && (
-                            <div>
-                                 {hobbies.length != 0 && (
-                            <div>
-                              <h1 className="font-medium px-8 py-2 text-orange-800">
-                                Hobbies
-                              </h1>
-                              {hobbies.map((item) => (
-                                <div key={item.name}>
-                                  <h1 className="px-8">{item.name}</h1>
-                                </div>
-                              ))}
-                            </div>
-                          )}
-                            </div>
-                         )}
-
-
-                          {languages && (
-                            <>
-                                {languages.length != 0 && (
-                            <div>
-                              <h1 className="font-medium px-8 py-2 text-orange-800">
-                                Languages
-                              </h1>
-                              {languages.map((item) => (
-                                <div key={item.name}>
-                                  <h1 className="px-8">{item.name}</h1>
-                                </div>
-                              ))}
-                            </div>
-                          )}
-                            </>
-                          )}
-                        </div>
-                      </div>
-                      <div className="col-span-2 ">
-                       {profile && (
-                        <div>
-                             <h1 className="mt-12 text-2xl font-bold ">
-                          {profile.firstName}{" "}
-                          {profile.lastName}
-                            </h1>
-                            <h2 className="font-nomal mt-1 ">
-                            {profile.role}
-                            </h2>
-                        </div>
-                       )}
-
-
-
-                       {objective && (
-                        <div>
-                             {objective.length != 0 && (
-                          <div>
-                            <h1 className="font-medium text-orange-800 pt-10">
-                              Profile
-                            </h1>
-                            <p>{objective}</p>
-                          </div>
-                        )}
-                        </div>
-                       )}
-                        {work && (
-                            <div>
-                                {work.length != 0 && (
-                          <div>
-                            <h1 className="font-medium text-orange-800 pt-4">
-                              Employement History
-                            </h1>
-                            {work.map((item) => (
-                              <div key={item.company}>
-                                <h1 className="font-medium ">{item.company}</h1>
-                                <h2 className="font-extralight text-xs">
-                                  {item.from} - {item.to}
-                                </h2>
-                                <li className="ml-8 list-disc">
-                                  {item.designation}
-                                </li>
-                                <li className="ml-8 list-disc">
-                                  {item.website}
-                                </li>
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                            </div>
-                        )}
-
-
-                        {education && (
-                            <div>
-                                {education.length != 0 && (
-                          <div>
-                            <h1 className="font-medium text-orange-800 pt-4">
-                              Education
-                            </h1>
-                            {education.map((item) => (
-                              <div key={item.institution}>
-                                <h1 className="font-medium">
-                                  {item.institution}
-                                </h1>
-                                <h6 className="text-xs">
-                                  {item.startDate} - {item.endDate}
-                                </h6>
-                                <li className="px-8">{item.fieldOfStudy}</li>
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                            </div>
-                        )}
-
-
-                        {projects && (
-                            <div>
-                                {projects.length != 0 && (
-                          <div>
-                            <h1 className="font-medium text-orange-800 pt-4">
-                              Projects
-                            </h1>
-                            {projects.map((item) => (
-                              <div key={item.name}>
-                                <h2 className="font-medium">{item.name}</h2>
-                                <h6 className="text-xs">
-                                  {item.from} - {item.to}
-                                </h6>
-                                <li className="text-sm px-8">{item.website}</li>
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                            </div>
-                        )}
-                        {certifications && (
-                            <div>
-                                {certifications.length != 0 && (
-                          <div>
-                            <h1 className="font-medium text-orange-800 pt-4">
-                              certifications
-                            </h1>
-                            {certifications.map((item) => (
-                              <div key={item.title}>
-                                <h2 className="font-medium">
-                                  {item.title} from {item.issuer}
-                                </h2>
-                                <h6 className="text-xs">{item.date}</h6>
-                              </div>
-                            ))}
-                          </div>
-                        )}
-                            </div>
-                        )}
-                      </div>
+<div className="grid grid-cols-3">
+            <div>
+                <div className="col-span-1 bg-gray-300 h-[100%] w-[95%]">
+                    <div>
+                        <img
+                    className="rounded-full w-[119px] ml-10 pt-3"
+                    //src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpl60g6oKVerEKPde2ClN4-6ASK4Ds4KzlM0Y1N-K_bCgOCMBYZ019WUgRLOfNAqyyhnY&usqp=CAU"
+                    src={profile?.image}
+                    alt="ProfilePhoto"
+                  />
                     </div>
+               
+                  <div>
+                    <h1 className="font-medium mx-8 my-2  text-lg  text-orange-800 mt-5 text-[16px]">Details</h1>
+                    <h2 className=" font-medium mx-8  text-black text-[12px] ">Phone</h2>
+                    <h6 className=" px-8 text-[12px]">{profile?.phone}</h6>
+                    <h2 className=" font-medium px-8 text-[12px] text-black">Email</h2>
+                    <h6 className=" px-8 text-[12px]">{profile?.email}</h6>
+                    <h2 className=" font-medium px-8  text-black text-[12px]">Date Of Birth</h2>
+                    <h6 className=" px-8 text-[12px]">{profile?.dob}</h6>
+                  </div>
+                 {skills?.filter((skill)=>skill?.enabled)?.length>0&&(
+                   <div>
+                   <h1 className="font-medium mx-8 my-0 text-orange-800 text-lg pt-5 text-[16px]">Skills</h1>
+                   {skills?.filter(skill=>skill?.enabled===true).map((item)=>(
+                    <div>
+                    <h1 className="font-medium ml-8 text-[12px]">{item.name}</h1>
+                    <h2 className="ml-8 text-[12px]">{item.level}</h2>
+                </div>
+                   ))}
+                 </div>
+                 )}
+                  {social?.filter((social)=>social?.enabled)?.length>0 &&(
+                    <div>
+                    <h1 className="font-medium mx-8 my-0 text-orange-800 text-lg pt-5 text-[16px]">Social Network</h1>
+                  {social?.filter(social=>social?.enabled===true).map((item)=>(
+                     <div className="ml-8 my-4 flex text-[12px]">
+                     <img src={"https://www."+item.network+".com/favicon.ico"} alt=""  className="w-5 h-5"/>
+                     <Link href={item.url}><h1 className="ml-4 text-[12px]">{item.username}</h1></Link>
+                 </div>
+                  ))}
+                  </div>
+                  )}
+                 {hobbies?.filter((hobbies)=>hobbies?.enabled)?.length>0 &&(
+                   <div>
+                   <h1 className="font-medium mx-8 text-lg text-orange-800 pt-5 text-[16px]">Hobbies</h1>
+                   {hobbies?.filter(hobbies=>hobbies?.enabled===true).map((item)=>(
+                    <div>
+                    <h1 className="px-8 text-[12px]">{item.name}</h1>
+                </div>
+                   ))}
+                   </div>
+                 )}
+                  {languages?.filter((languages)=>languages?.enabled)?.length>0 &&(
+                    <div>
+                    <h1 className="font-medium px-8 text-lg text-orange-800 pt-5 text-[16px]">Languages</h1>
+                    {languages?.filter(languages=>languages?.enabled===true).map((item)=>(
+                      <div>
+                      <h1 className="px-8 text-[12px]">{item.name}</h1>
+                  </div>
+                    ))}
+                    </div>
+                  )}
+                 
+                  </div>
+                </div>
+                <div className="col-span-2 p-2 ">
+                    <h1 className="mt-12 text-5xl text-[25px] font-semi-bold ">{profile?.firstName} {profile?.lastName}</h1>
+                    <h2 className="font-medium mt-2 ">{profile?.role}</h2>
+                   {objective &&(
+                     <div>
+                        <h1 className="font-medium text-orange-800 text-lg text-[16px] pt-12">Profile</h1>
+                        <p className="text-[12px]">{objective}</p>
+                    </div>
+                   )}
+                   {work?.filter((work)=>work?.enabled)?.length>0&&(
+                     <div>
+                     <h1 className="font-medium text-orange-800 text-lg pt-4 text-[16px]">Employement History</h1>
+                    {work?.filter(work=>work?.enabled===true).map((item)=>(
+                       <div>
+                                 <h1 className="font-medium text-[12px]">{item.company}</h1>
+                                 <h2 className="font-semibold text-xs text-[12px]">{item.from.slice(0,8)} - {item.to.slice(0,8)}</h2>
+                                 <li className="ml-8 list-disc text-[12px]">{item.designation}</li>
+                                 <li className="ml-8 list-disc text-[12px]">{item. website}</li>
+                             </div>
+                    ))}
+
+                 </div>
+                   )}
+                   {education?.filter((education)=>education?.enabled)?.length>0 &&(
+                     <div>
+                     <h1 className="font-medium text-orange-800 text-lg pt-4 text-[16px]">Education</h1>
+                    {education?.filter(education=>education?.enabled===true).map((item)=>(
+                       <div>
+                       <h1 className="font-medium text-[12px]">{item.institution}</h1>
+                       <h6 className="text-xs font-semibold text-[12px]">{item.startDate.slice(0,8)} - {item.endDate.slice(0,8)}</h6>
+                       <li className="px-8 text-[12px]">{item.fieldOfStudy}</li>
+                   </div>
+                    ))}
+                 </div>
+                   )}
+                  {projects?.filter((projects)=>projects?.enabled)?.length>0 &&(
+                      <div>
+                      <h1 className="font-medium text-orange-800 text-lg pt-4 text-[16px]">Projects</h1>
+                     {projects?.filter(projects=>projects?.enabled===true).map((item)=>(
+                        <div>
+                        <h2 className="font-medium text-[12px]">{item.name}</h2>
+                        <h6 className="text-xs font-semibold     text-[12px]">{item.from.slice(0,4)} - {item.to.slice(0,4)}</h6>
+                        <li className="text-sm px-8 text-[12px]">{item.website}</li>
+
+                    </div>
+                     ))}
+                  </div>
+                  )}
+                    {certifications?.filter((certifications)=>certifications?.enabled)?.length>0 &&(
+                      <div>
+                      <h1 className="font-medium text-orange-800 text-lg pt-4 text-[16px]">Certifications</h1>
+                     {certifications?.filter(certifications=>certifications?.enabled===true).map((item)=>(
+                       <div>
+                       <h2 className="font-medium text-[12px]">{item.name}</h2>
+                       <h6 className="text-xs font-semibold text-[12px]">{item.from} - {item.to}</h6>
+                       <li className="text-sm px-8 text-[12px]">{item.website}</li>
+                      
+
+                   </div>
+                     ))}
+                  </div>
+                    )}
+
+                   
+                </div>
+            </div>
       </div>
+      <style jsx> 
+    {`
+      .heading{
+        color:rgba(${r},${g},${b},${a})
+      }
+    
+    `}
+    </style>
     </div>
   );
 };

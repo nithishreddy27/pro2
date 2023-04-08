@@ -24,6 +24,10 @@ import { Madrid } from "../../src/components/Resumes/Templates/Madrid";
 import { Chrono } from "../../src/components/Resumes/Templates/Chrono";
 import { Dublin } from "../../src/components/Resumes/Templates/Dublin";
 // import { Vertical } from "../../src/components/Resumes/Templates/Vertical";
+import { Assymmetric } from "../../src/components/Resumes/Templates/Assymmetric";
+import { Classic } from "../../src/components/Resumes/Templates/Classic";
+import { Retro } from "../../src/components/Resumes/Templates/Retro";
+import { Stylish } from "../../src/components/Resumes/Templates/Stylish";
 
 const Templates = {
   noncore: NonCore,
@@ -48,6 +52,10 @@ const Templates = {
   chrono: Chrono,
   // vertical: Vertical,
   dublin: Dublin,
+  stylish: Stylish,
+  assymmetric: Assymmetric,
+  classic: Classic,
+  retro: Retro,
 };
 
 const ViewResume = ({ id }) => {

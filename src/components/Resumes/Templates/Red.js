@@ -37,7 +37,7 @@ export const Red = ({ componentRef }) => {
                   src={profile?.image}
                   alt="ProfilePhoto"
                 />
-                <h1 className="text-red-700 text-[16px] font-semibold mt-3 mb-1">
+                <h1 className="text-red-700 text-[16px]  heading font-semibold mt-3 mb-1">
                   Personal Details
                 </h1>
                 <div>
@@ -60,7 +60,7 @@ export const Red = ({ componentRef }) => {
                 </div>
                 {social?.filter((social) => social?.enabled)?.length > 0 && (
                   <div>
-                    <h1 className="text-red-700 text-[16px] font-semibold mt-2 mb-1">
+                    <h1 className="text-red-700 text-[16px]  heading font-semibold mt-2 mb-1">
                       Social
                     </h1>
                     {social
@@ -75,7 +75,7 @@ export const Red = ({ componentRef }) => {
               </div>
               {skills?.filter((skill) => skill?.enabled)?.length > 0 && (
                 <div>
-                  <h1 className="text-red-700 text-[16px] font-semibold mt-2 mb-1">
+                  <h1 className="text-red-700 text-[16px]  heading font-semibold mt-2 mb-1">
                     Skills
                   </h1>
                   {skills
@@ -92,7 +92,7 @@ export const Red = ({ componentRef }) => {
               )}
               {awards?.filter((awa) => awa?.enabled)?.length > 0 && (
                 <div>
-                  <h1 className="text-red-700 text-[16px] font-semibold mt-2 mb-1">
+                  <h1 className="text-red-700 text-[16px]  heading font-semibold mt-2 mb-1">
                     Awards
                   </h1>
                   {awards
@@ -109,7 +109,7 @@ export const Red = ({ componentRef }) => {
               )}
               {languages?.filter((lang) => lang?.enabled)?.length > 0 && (
                 <div>
-                  <h1 className="text-red-700 text-[16px] font-semibold mt-2 mb-1">
+                  <h1 className="text-red-700 text-[16px]  heading font-semibold mt-2 mb-1">
                     Languages
                   </h1>
                   {languages
@@ -125,7 +125,7 @@ export const Red = ({ componentRef }) => {
               )}
               {hobbies?.filter((hob) => hob?.enabled)?.length > 0 && (
                 <div>
-                  <h1 className="text-red-700 text-[16px] font-semibold mt-2 mb-1">
+                  <h1 className="text-red-700 text-[16px]  heading font-semibold mt-2 mb-1">
                     Hobbies
                   </h1>
                   {hobbies
@@ -147,7 +147,7 @@ export const Red = ({ componentRef }) => {
             </h1>
             {objective && (
               <div>
-                <h1 className="text-red-700 text-[16px] font-semibold mt-4">
+                <h1 className="text-red-700 text-[16px]  heading font-semibold mt-4">
                   Profile
                 </h1>
                 <p className="text-[12px]">{objective}</p>
@@ -155,7 +155,7 @@ export const Red = ({ componentRef }) => {
             )}
             {work?.filter((work) => work?.enabled)?.length > 0 && (
               <div>
-                <h1 className="text-red-700 text-[16px] font-semibold mt-3 mb-1">
+                <h1 className="text-red-700 text-[16px]  heading font-semibold mt-3 mb-1">
                   Work
                 </h1>
                 {work
@@ -178,7 +178,7 @@ export const Red = ({ componentRef }) => {
             )}
             {education?.filter((edu) => edu?.enabled)?.length > 0 && (
               <div>
-                <h1 className="text-red-700 text-[16px] font-semibold mt-3 mb-1">
+                <h1 className="text-red-700 text-[16px] heading  font-semibold mt-3 mb-1">
                   Education
                 </h1>
                 {education
@@ -202,7 +202,7 @@ export const Red = ({ componentRef }) => {
             )}
             {projects?.filter((pro) => pro?.enabled)?.length > 0 && (
               <div>
-                <h1 className="text-red-700 text-[16px] font-semibold mt-3 mb-1">
+                <h1 className="text-red-700 text-[16px] heading  font-semibold mt-3 mb-1">
                   Projects
                 </h1>
                 {projects
@@ -225,7 +225,7 @@ export const Red = ({ componentRef }) => {
             )}
             {certifications?.filter((cer) => cer?.enabled)?.length > 0 && (
               <div>
-                <h1 className="text-red-700 text-[16px] font-semibold mt-3 mb-1">
+                <h1 className="text-red-700 text-[16px]  heading font-semibold mt-3 mb-1">
                   Certifications
                 </h1>
                 {certifications
@@ -246,6 +246,14 @@ export const Red = ({ componentRef }) => {
           </div>
         </div>
       </div>
+      <style jsx> 
+            {`
+              .heading{
+                color:rgba(${r},${g},${b},${a})
+              }
+            
+            `}
+    </style>
     </>
   );
 };
