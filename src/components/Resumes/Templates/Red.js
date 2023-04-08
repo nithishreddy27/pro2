@@ -28,10 +28,11 @@ export const Red = ({ componentRef }) => {
         className={`w-a4W bg-white mx-auto h-a4H my-5`}
       >
         <div className="grid grid-cols-3">
-          <div className=" bg-red-700 h-[296mm]">
-            <div className="ml-8 bg-gray-200 h-[296mm] p-4">
-              <div className="">
+          <div className=" bg-red-700 h-[297mm]">
+            <div className="ml-8 bg-gray-200 h-[297mm] p-4">
+              <div>
                 <img
+                  className=""
                   //   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpl60g6oKVerEKPde2ClN4-6ASK4Ds4KzlM0Y1N-K_bCgOCMBYZ019WUgRLOfNAqyyhnY&usqp=CAU"
                   src={profile?.image}
                   alt="ProfilePhoto"
@@ -55,12 +56,6 @@ export const Red = ({ componentRef }) => {
                   <i className="bx bxs-phone"></i>
                   <span class="text-[12px]  font-semibold m-0.5">
                     {profile?.phone}
-                  </span>
-                </div>
-                <div>
-                  <i className="bx bxs-calendar"></i>
-                  <span class="text-[12px]  font-semibold m-0.5">
-                    {profile?.dob}
                   </span>
                 </div>
                 {social?.filter((social) => social?.enabled)?.length > 0 && (
@@ -87,7 +82,7 @@ export const Red = ({ componentRef }) => {
                     ?.filter((skill) => skill?.enabled === true)
                     .map((item) => (
                       <div>
-                        <h1 className="text-[12px] font-semibold m-0.5">
+                        <h1 className="text-[12px] m-0.5">
                           <span className="font-bold">{item.name}</span> -{" "}
                           {item.level}
                         </h1>
@@ -104,12 +99,10 @@ export const Red = ({ componentRef }) => {
                     ?.filter((awa) => awa?.enabled === true)
                     .map((item) => (
                       <div className="py-1">
-                        <h1 className="text-[12px] font-bold relative m-0.5">
-                          {item.name}
+                        <h1 className="text-[12px] font-semibold relative m-0.5">
+                          {item.name} -{" "}
+                          <span className="font-normal">{item.awarder}</span>
                         </h1>
-                        <p className="text-[12px] font-semibold m-0.5">
-                          {item.awarder}
-                        </p>
                       </div>
                     ))}
                 </div>
@@ -124,8 +117,7 @@ export const Red = ({ componentRef }) => {
                     .map((item) => (
                       <div>
                         <h1 className="text-[12px] font-semibold m-0.5">
-                          <span className="font-bold">{item.name}</span> -{" "}
-                          {item.fluency}
+                          <span className="font-bold">{item.name}</span>
                         </h1>
                       </div>
                     ))}
@@ -150,7 +142,7 @@ export const Red = ({ componentRef }) => {
             </div>
           </div>
           <div className="col-span-2 p-6">
-            <h1 className="text-red-700 text-[25px] font-">
+            <h1 className="text-red-700 text-[30px] font-">
               {profile?.firstName} {profile?.lastName}
             </h1>
             {objective && (
@@ -173,7 +165,7 @@ export const Red = ({ componentRef }) => {
                       <h1 className="text-[12px] font-bold relative">
                         {item.company}
                         <span className="text-[12px] text-red-700 absolute right-0">
-                          {item.from} - {item.to}
+                          {item.from.slice(0, 10)} - {item.to.slice(0, 10)}
                         </span>
                       </h1>
                       <p className="text-[12px] font-semibold">
@@ -196,7 +188,8 @@ export const Red = ({ componentRef }) => {
                       <h1 className="text-[12px] font-bold relative">
                         {item.institution}
                         <span className="text-[12px] text-red-700 absolute right-0">
-                          {item.startDate} - {item.endDate}
+                          {item.startDate.slice(0, 4)} -{" "}
+                          {item.endDate.slice(0, 4)}
                         </span>
                       </h1>
                       <p className="text-[12px] font-semibold">
@@ -219,7 +212,7 @@ export const Red = ({ componentRef }) => {
                       <h1 className="text-[12px] font-bold relative">
                         {item.name}
                         <span className="text-[12px] text-red-700 absolute right-0">
-                          {item.from} - {item.to}
+                          {item.from.slice(0, 10)} - {item.to.slice(0, 10)}
                         </span>
                       </h1>
                       <p className="text-[12px] font-semibold">

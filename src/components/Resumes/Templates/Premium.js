@@ -29,7 +29,7 @@ export const Premium = ({ componentRef }) => {
       >
         <div className="absolute mt-10 z-10 w-[210mm] flex bg-gradient-to-r from-gray-300 to-slate-50">
           <img
-            className="rounded-full ml-10 border-[12px] border-cyan-800 w-48"
+            className="rounded-full ml-10 border-[12px] border-cyan-800 w-48 h-48"
             // src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpl60g6oKVerEKPde2ClN4-6ASK4Ds4KzlM0Y1N-K_bCgOCMBYZ019WUgRLOfNAqyyhnY&usqp=CAU"
             alt="ProfilePhoto"
             src={profile?.image}

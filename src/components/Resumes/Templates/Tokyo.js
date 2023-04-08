@@ -29,7 +29,7 @@ export const Tokyo = ({ componentRef }) => {
       >
         <div className="flex bg-red-700">
           <img
-            className="rounded-full p-6 w-48"
+            className="rounded-full p-6 w-48 h-48"
             // src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpl60g6oKVerEKPde2ClN4-6ASK4Ds4KzlM0Y1N-K_bCgOCMBYZ019WUgRLOfNAqyyhnY&usqp=CAU"
             src={profile?.image}
             alt="ProfilePhoto"
@@ -38,7 +38,7 @@ export const Tokyo = ({ componentRef }) => {
             <h1 className="text-3xl text-white font-semibold m-1">
               {profile?.firstName} {profile?.lastName}
             </h1>
-            <h1 className="text-sm text-white m-1">{profile.role}</h1>
+            <h1 className="text-sm text-white m-1">{profile?.role}</h1>
           </div>
         </div>
         <div className="flex justify-around p-3 border-b-2">
@@ -47,7 +47,7 @@ export const Tokyo = ({ componentRef }) => {
           <div className="text-[12px] font-semibold">{profile?.dob}</div>
         </div>
         <div className="grid grid-cols-3">
-          <div className="col-span-2 h-[230mm] border-r-2 py-6 px-8">
+          <div className="col-span-2 h-[218mm] border-r-2 py-6 px-8">
             {objective && (
               <div>
                 <h1 className="text-[16px] font-bold">Profile</h1>

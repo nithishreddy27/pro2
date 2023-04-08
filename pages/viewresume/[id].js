@@ -14,7 +14,7 @@ import { Stockholm } from "../../src/components/Resumes/Templates/Stockholm";
 import { TAdigital } from "../../src/components/Resumes/Templates/TAdigital";
 import { useResumeContext } from "../../src/context/ResumeContext";
 import { useResume } from "../../src/hooks/useResume";
-import Amsterdam from "../../src/components/Resumes/Templates/Amsterdam";
+import { Amsterdam } from "../../src/components/Resumes/Templates/Amsterdam";
 import { Berlin } from "../../src/components/Resumes/Templates/Berlin";
 import { Tokyo } from "../../src/components/Resumes/Templates/Tokyo";
 import { Premium } from "../../src/components/Resumes/Templates/Premium";
@@ -22,10 +22,8 @@ import { Red } from "../../src/components/Resumes/Templates/Red";
 import { Dynamo } from "../../src/components/Resumes/Templates/dynamo";
 import { Madrid } from "../../src/components/Resumes/Templates/Madrid";
 import { Chrono } from "../../src/components/Resumes/Templates/Chrono";
-import { Vertical } from "../../src/components/Resumes/Templates/Vertical";
-
-
-
+import { Dublin } from "../../src/components/Resumes/Templates/Dublin";
+// import { Vertical } from "../../src/components/Resumes/Templates/Vertical";
 
 const Templates = {
   noncore: NonCore,
@@ -47,8 +45,9 @@ const Templates = {
   red: Red,
   dynamo: Dynamo,
   madrid: Madrid,
-  chrono:Chrono,
-  vertical:Vertical,
+  chrono: Chrono,
+  // vertical: Vertical,
+  dublin: Dublin,
 };
 
 const ViewResume = ({ id }) => {

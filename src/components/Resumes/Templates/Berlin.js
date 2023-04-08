@@ -40,7 +40,7 @@ export const Berlin = ({ componentRef }) => {
           )}
         </div>
         <div className="grid grid-cols-3 mt-6">
-          <div className="border-r-4 h-[242mm] pr-8">
+          <div className="border-r-4 h-[245mm] pr-8">
             <div>
               <h1 className="text-[16px] font-semibold">DETAILS</h1>
               <hr className="w-[15%] h-1 bg-black"></hr>
@@ -166,9 +166,7 @@ export const Berlin = ({ componentRef }) => {
               <div>
                 <h1 className="text-[16px] font-semibold">PROFILE</h1>
                 <hr className="w-[7%] h-1 bg-black"></hr>
-                <p className="text-[12px] text-black font-semibold py-3">
-                  {objective}
-                </p>
+                <p className="text-[12px] text-black py-3">{objective}</p>
               </div>
             )}
             {work?.filter((work) => work?.enabled)?.length > 0 && (
