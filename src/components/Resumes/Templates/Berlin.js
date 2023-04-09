@@ -43,14 +43,16 @@ export const Berlin = ({ componentRef }) => {
           <div className="border-r-4 h-[245mm] pr-8">
             <div>
               <h1 className="text-[16px] font-semibold">DETAILS</h1>
-              <hr className="w-[15%] h-1 bg-black"></hr>
-              <h1 className="text-[12px] font-semibold pt-3">
-                DOB
-                <span className="text-[12px] text-gray-600">
-                  {" : "}
-                  {profile?.dob}
-                </span>
-              </h1>
+              <hr className="w-[15%] h-1 bg-black mb-2"></hr>
+              {profile?.dob && (
+                <h1 className="text-[12px] font-semibold pt-1">
+                  DOB
+                  <span className="text-[12px] text-gray-600">
+                    {" : "}
+                    {profile?.dob}
+                  </span>
+                </h1>
+              )}
               <h1 className="text-[12px] font-semibold pt-1">
                 PHONE
                 <span className="text-[12px] text-gray-600">
@@ -81,16 +83,17 @@ export const Berlin = ({ componentRef }) => {
                   ?.filter((edu) => edu?.enabled === true)
                   .map((item) => (
                     <div className="mt-1">
-                      <span className="text-[12px] font-bold">
+                      <span className="text-[13px] font-bold">
                         {item.institution}
                       </span>
-                      <p className="text-[12px] pt-1 font-semibold text-gray-600">
+                      <p className="text-[12px]  font-semibold text-gray-600">
                         {item.fieldOfStudy}{" "}
                         <span className="text-[12px] font-semibold text-gray-600">
                           ({item.startDate.slice(0, 4)} -
                           {item.endDate.slice(0, 4)})
                         </span>
                       </p>
+                      <h1 className="text-[12px]">{item.summary.data}</h1>
                     </div>
                   ))}
               </div>
@@ -103,7 +106,7 @@ export const Berlin = ({ componentRef }) => {
                   ?.filter((skill) => skill?.enabled === true)
                   .map((item) => (
                     <div className="mt-1" key={item?._id}>
-                      <h1 className="text-[12px] text-black pt-1 flex justify-between">
+                      <h1 className="text-[12px] text-black pt-0.5 flex justify-between">
                         <div className="font-semibold">{item.name} </div>
                         <div>{item.level}</div>
                       </h1>
@@ -119,7 +122,7 @@ export const Berlin = ({ componentRef }) => {
                   ?.filter((award) => award?.enabled === true)
                   .map((item) => (
                     <div className="mt-1">
-                      <span className="text-[12px] font-bold">{item.name}</span>
+                      <span className="text-[13px] font-bold">{item.name}</span>
                       <p className="text-[12px] pt-1 font-semibold text-gray-600">
                         {item.awarder}{" "}
                         <span className="text-[12px] font-semibold text-gray-600">
@@ -166,7 +169,7 @@ export const Berlin = ({ componentRef }) => {
               <div>
                 <h1 className="text-[16px] font-semibold">PROFILE</h1>
                 <hr className="w-[7%] h-1 bg-black"></hr>
-                <p className="text-[12px] text-black py-3">{objective}</p>
+                <p className="text-[13px] text-black py-3">{objective}</p>
               </div>
             )}
             {work?.filter((work) => work?.enabled)?.length > 0 && (
@@ -180,7 +183,7 @@ export const Berlin = ({ componentRef }) => {
                   .map((item) => (
                     <div className="pb-3">
                       <div className="flex justify-between">
-                        <span className="text-[12px] font-bold mt-1">
+                        <span className="text-[13px] font-bold mt-1">
                           {item.company}
                           {" - "}
                           <span className="text-[12px] font-bold mt-1">
@@ -191,7 +194,7 @@ export const Berlin = ({ componentRef }) => {
                           ({item.from.slice(0, 4)} - {item.to.slice(0, 4)})
                         </p>
                       </div>
-                      <p class="text-[12px] text-gray-600">
+                      <p className="text-[12px] text-gray-600">
                         {item.summary.data}
                       </p>
                     </div>
@@ -209,14 +212,14 @@ export const Berlin = ({ componentRef }) => {
                   .map((item) => (
                     <div className="pb-3">
                       <div className="flex justify-between">
-                        <div className="text-[12px] font-bold mt-1">
+                        <div className="text-[13px] font-bold mt-1">
                           <a href="{item.website}">{item.name}</a>
                         </div>
                         <div className="text-[12px] py-1 font-semibold text-gray-600">
                           ({item.from.slice(0, 4)} to {item.to.slice(0, 4)})
                         </div>
                       </div>
-                      <p class="text-[12px] text-gray-600">
+                      <p className="text-[12px] text-gray-600">
                         {item.summary.data}
                       </p>
                     </div>
@@ -234,14 +237,14 @@ export const Berlin = ({ componentRef }) => {
                   .map((item) => (
                     <div className="pb-2">
                       <div className="flex justify-between">
-                        <div className="text-[12px] font-bold mt-1">
+                        <div className="text-[13px] font-bold mt-1">
                           <a href="{item.website}">{item.title}</a>
                         </div>
                         <div className="text-[12px] py-1 font-semibold text-gray-600">
                           ({item.date.slice(0, 4)})
                         </div>
                       </div>
-                      <p class="text-[12px] text-gray-600">
+                      <p className="text-[12px] text-gray-600">
                         {item.summary.data}
                       </p>
                     </div>
@@ -250,14 +253,13 @@ export const Berlin = ({ componentRef }) => {
             )}
           </div>
         </div>
-        <style jsx> 
-    {`
-      .heading{
-        color:rgba(${r},${g},${b},${a})
-      }
-    
-    `}
-    </style>
+        <style jsx>
+          {`
+            .heading {
+              color: rgba(${r}, ${g}, ${b}, ${a});
+            }
+          `}
+        </style>
       </div>
     </>
   );
