@@ -91,8 +91,8 @@ export const Square = React.forwardRef(function NonCore({ componentRef }) {
               ?.filter((edu) => edu?.enabled === true)
               .map((item) => (
                 <p className="pl-10 pr-5 pt-2 text-sm">
-                  <MdSchool className=" inline text-lg relative right-1 bottom-[2px]"></MdSchool>
-                  <span className="font-medium">{item.institution}</span> in{" "}
+                  {/* <MdSchool className=" inline text-lg relative right-1 bottom-[2px]"></MdSchool> */}
+                  <span className="font-medium">➣ {item.institution}</span> in{" "}
                   <span className="font-medium">
                     {item.fieldOfStudy}
                     <br />({item.startDate.slice(0,4)} - {item.endDate.slice(0,4)})
@@ -113,9 +113,9 @@ export const Square = React.forwardRef(function NonCore({ componentRef }) {
               ?.filter((cert) => cert?.enabled === true)
               .map((item) => (
                 <p className="pl-10 pr-5 pt-3 text-sm">
-                  <FaSquareFull className="inline text-[10px] relative right-1 bottom-[2px]"></FaSquareFull>
+                  {/* <FaSquareFull className="inline text-[10px] relative right-1 bottom-[2px]"></FaSquareFull> */}
                   
-                  {item.title} from {item.issuer}
+                  ➣ {item.title} from {item.issuer}
                 </p>
               ))}
           </div>
@@ -180,9 +180,9 @@ export const Square = React.forwardRef(function NonCore({ componentRef }) {
             </h2>
             {work?.filter(wor=>wor?.enabled===true).map((item) => (
               <p className="pl-10 pr-5 pt-2 text-sm">
-                <MdWork className="inline relative bottom-[2px] right-1 text-zinc-700"></MdWork>
+                {/* <MdWork className="inline relative bottom-[2px] right-1 text-zinc-700"></MdWork> */}
                 <span className="font-medium text-sm pr-3">
-                  {item.designation} in {item.company}
+                ➣ {item.designation} in {item.company}
                 </span>
                 ({item.from.slice(0,4)}-{item.to.slice(0,4)})<br />
                 <Link href={item.website}>{item.website}</Link>
@@ -199,8 +199,8 @@ export const Square = React.forwardRef(function NonCore({ componentRef }) {
             </h2>
             {projects?.filter(pro=>pro?.enabled===true).map((item) => (
               <p className="pl-10 pr-5 pt-2 text-sm">
-                <FaSquareFull className="inline text-zinc-700 text-[10px] relative right-1 bottom-[2px]"></FaSquareFull>
-                <span className="font-medium text-lg pr-3">{item.name}</span> 
+                {/* <FaSquareFull className="inline text-zinc-700 text-[10px] relative right-1 bottom-[2px]"></FaSquareFull> */}
+                <span className="font-medium  pr-3">➣ {item.name}</span> 
                 ({item.from.slice(0,4)} - {item.to.slice(0,4)})<br />
                 <Link href={item.website}>{item.website}</Link>
                 <br></br>
@@ -217,8 +217,8 @@ export const Square = React.forwardRef(function NonCore({ componentRef }) {
           </h2>
           {awards?.filter(awa=>awa?.enabled===true).map((item) => (
             <p className="pl-10 pr-5 pt-3 text-sm">
-              <BsFillAwardFill className="inline relative right-1 bottom-[2px] text-zinc-700"></BsFillAwardFill>
-              <span className="font-medium">{item.name}</span> from{" "}
+              {/* <BsFillAwardFill className="inline relative right-1 bottom-[2px] text-zinc-700"></BsFillAwardFill> */}
+              <span className="font-medium">➣ {item.name}</span> from{" "}
               {item.awarder}
             </p>
           ))}
