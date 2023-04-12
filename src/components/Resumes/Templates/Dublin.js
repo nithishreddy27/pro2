@@ -90,7 +90,7 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
               </div>
               {education?.filter(edu=>edu?.enabled)?.length>0 && (
                 <div className="education">
-                <h2 className="text-center text-base heading font-sans font-bold text-zinc-200">
+                <h2 className="text-center text-base  font-sans font-bold text-zinc-200">
                   E D U C A T I O N
                 </h2>
                 {education?.filter(edu=>edu?.enabled===true).map(item=>(
@@ -119,7 +119,7 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
               )}
               {certifications?.filter(cert=>cert?.enabled)?.length>0 && (
                 <div className="certifications">
-                <h2 className="text-center text-base heading font-sans font-bold pt-3 text-zinc-200 ">
+                <h2 className="text-center text-base font-sans font-bold pt-3 text-zinc-200 ">
                   C E R T I F I C A T I O N S
                 </h2>
                 {certifications?.filter(cert=>cert?.enabled===true).map((item) => (
@@ -135,7 +135,7 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
               {skills?.filter(skill=>skill?.enabled)?.length>0 && (
                 <div className="skills">
                 <div className="pl-10">
-                  <h2 className="text-center text-base heading font-sans font-bold pt-5 pb-1 text-zinc-300">
+                  <h2 className="text-center text-base  font-sans font-bold pt-5 pb-1 text-zinc-300">
                     S K I L L S
                   </h2>
                   {skills?.filter(skill=>skill?.enabled===true).map(item=>(
@@ -149,7 +149,7 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
               {hobbies?.filter(hob=>hob?.enabled)?.length>0 && (
                 <div className="hobbies">
                 <div className="pl-10">
-                  <h2 className="text-center text-base heading font-sans font-bold pt-5 pb-1 text-zinc-300">
+                  <h2 className="text-center text-base  font-sans font-bold pt-5 pb-1 text-zinc-300">
                     H O B B I E S
                   </h2>
                   {hobbies?.filter(hob=>hob?.enabled===true).map((item) => (
@@ -163,7 +163,7 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
               {languages?.filter(lang=>lang?.enabled)?.length>0 && (
                 <div className="languages">
                 <div className="pl-10">
-                  <h2 className="text-center text-base heading font-sans font-bold pt-5 pb-1 text-zinc-300">
+                  <h2 className="text-center text-base  font-sans font-bold pt-5 pb-1 text-zinc-300">
                     L A N G U A G E S
                   </h2>
                   {languages?.filter(lang=>lang?.enabled===true).map((item) => (
@@ -179,8 +179,8 @@ export const Dublin = React.forwardRef(function NonCore({ componentRef }) {
           <div className="second bg-emerald-100 w-[125mm] h-[297mm]">
             <div className="name">
               <div className="text-lg mx-20 mt-10 font-semibold border-b-[1px] border-gray-600 font-serif">
-                <h1>{profile?.firstName}</h1>
-                <h1>{profile?.lastName}</h1>
+                <h1>{profile?.firstName.toUpperCase()}</h1>
+                <h1>{profile?.lastName.toUpperCase()}</h1>
                 <h2 className="text-base font-normal py-3">
                   {profile?.role}
                 </h2>

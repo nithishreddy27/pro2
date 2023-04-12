@@ -39,8 +39,8 @@ export const Symmetric = React.forwardRef(function NonCore({ componentRef }) {
         <div className="first w-a4W h-[30mm] bg-zinc-300 flex">
           <div className="name font-serif">
             <h1 className="text-lg font-semibold px-10 pt-5">
-              {profile?.firstName}
-              <span className="font-normal pl-2"> {profile?.lastName}</span>
+              {profile?.firstName.toUpperCase()}
+              <span className="font-normal pl-2"> {profile?.lastName.toUpperCase()}</span>
             </h1>
             <div className="flex">
             <h2 className="text-base px-10 pt-5 font-sans font-medium">
