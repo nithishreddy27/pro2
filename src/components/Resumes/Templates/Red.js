@@ -44,7 +44,8 @@ export const Red = ({ componentRef }) => {
                 </h1>
                 <div>
                   <h1 className="text-[12px] font-semibold ">
-                    {profile?.firstName} {profile?.lastName}
+                    {profile?.firstName.toUpperCase()}{" "}
+                    {profile?.lastName.toUpperCase()}
                   </h1>
                 </div>
                 <div>

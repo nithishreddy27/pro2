@@ -39,7 +39,8 @@ export const Tokyo = ({ componentRef }) => {
           />
           <div className="m-1 py-12">
             <h1 className="text-3xl text-white font-semibold m-1">
-              {profile?.firstName} {profile?.lastName}
+              {profile?.firstName.toUpperCase()}{" "}
+              {profile?.lastName.toUpperCase()}
             </h1>
             <h1 className="text-sm text-white m-1">{profile?.role}</h1>
           </div>

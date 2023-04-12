@@ -29,7 +29,7 @@ export const Premium = ({ componentRef }) => {
       >
         <div className="absolute mt-10 z-10 w-[210mm] flex bg-gradient-to-r from-gray-200 to-white">
           <img
-            className="rounded-full ml-10 border-[12px] border-cyan-800 w-48 h-48"
+            className="rounded-full ml-10 border-[7px] border-cyan-800 w-48 h-48"
             style={{
               borderColor: `rgba(${r}, ${g}, ${b}, ${a})`,
             }}
@@ -39,7 +39,8 @@ export const Premium = ({ componentRef }) => {
           />
           <div className="m-14">
             <h1 className="text-[25px] font-semibold text-cyan-900 heading">
-              {profile?.firstName} {profile?.lastName}
+              {profile?.firstName.toUpperCase()}{" "}
+              {profile?.lastName.toUpperCase()}
             </h1>
             <h1 className="text-cyan-900 heading">{profile?.role}</h1>
           </div>

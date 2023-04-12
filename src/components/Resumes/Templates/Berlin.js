@@ -31,7 +31,8 @@ export const Berlin = ({ componentRef }) => {
           {profile && (
             <div>
               <h1 className="text-[25px] font-sans font-semibold">
-                {profile?.firstName} {profile?.lastName}
+                {profile?.firstName.toUpperCase()}{" "}
+                {profile?.lastName.toUpperCase()}
               </h1>
               <h1 className="text-[16px] text-gray-500 font-semibold mt-2">
                 {profile?.role}
