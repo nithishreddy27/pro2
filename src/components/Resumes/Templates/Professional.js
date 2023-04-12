@@ -8,7 +8,7 @@ import {VscDebugBreakpointLog} from "react-icons/vsc";
 import {MdSchool} from "react-icons/md";
 import {FaSquareFull} from "react-icons/fa";
 import {BsFillAwardFill} from "react-icons/bs";
-import {MdWork} from "react-icons/md"
+import {MdWork} from "react-icons/md";
 import { useResumeContext } from "../../../context/ResumeContext";
 import { months, rename } from "../../../lib/helper";
 import { MarkdownRenderer } from "../../../lib/MarkdownRenderer";
@@ -40,9 +40,9 @@ export const Professional = React.forwardRef(function NonCore({ componentRef }) 
             <div className="w-[150mm] h-[130px] bg-black ml-[60mm] mt-[50px]">
               <div className="name text-white bg-black">
                 <h1 className="pl-[100px] pt-[20px] text-lg font-bold text-white bg-black">
-                  {profile?.firstName}
+                  {profile?.firstName.toUpperCase()}
                   <span className="pl-4 font-medium text-white bg-black">
-                    {profile?.lastName}
+                    {profile?.lastName.toUpperCase()}
                   </span>
                 </h1>
                 <h2 className="text-white pl-[100px] pt-2 text-base bg-black">

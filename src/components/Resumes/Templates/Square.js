@@ -160,8 +160,8 @@ export const Square = React.forwardRef(function NonCore({ componentRef }) {
       <div className="second bg-slate-100 w-[125mm] h-[297mm]">
         <div className="name">
           <div className="text-lg mx-20 mt-10 font-semibold border-b-[1px] border-gray-600">
-            <h1>{profile?.firstName}</h1>
-            <h1>{profile?.lastName}</h1>
+            <h1>{profile?.firstName.toUpperCase()}</h1>
+            <h1>{profile?.lastName.toUpperCase()}</h1>
             <h2 className="text-base font-normal py-3">
               {profile?.role}
             </h2>
