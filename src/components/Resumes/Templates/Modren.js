@@ -383,7 +383,9 @@ export const Modren = ({ componentRef, filter = null }) => {
               {
                 <>
                   <h1 className="text-3xl mt-7 ml-24 font-semibold tracking-widest text-white ">
-                    {profile.firstName.concat("  " + profile.lastName)}
+                    {profile.firstName
+                      .toUpperCase()
+                      .concat("  " + profile.lastName.toUpperCase())}
                   </h1>
                   <p className="mt-2 ml-36 tracking-widest text-white">
                     {profile.role}
