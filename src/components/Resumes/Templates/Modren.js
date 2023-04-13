@@ -5,25 +5,13 @@ import { MarkdownRenderer } from "../../../lib/MarkdownRenderer";
 import Link from "next/link";
 
 export const Modren = ({ componentRef, filter = null }) => {
-  const {
-    profile,
-    objective,
-    education,
-    work,
-    skills,
-    languages,
-    projects,
-    certifications,
-    social,
-    layout,
-    hobbies,
-    awards,
-  } = useResumeContext();
+  const { profile, objective, education, work, skills, languages,projects,certifications, social,layout,hobbies,awards,setdesign } = useResumeContext();
   const { r, g, b, a } = layout?.color || { r: "0", g: "0", b: "0", a: "0" };
-  const headingClass =
-    "text-xl captialize font-bold text-gray-700 border-b-2 border-black mb-2 pb-1";
+  const headingClass = "text-xl captialize font-bold text-gray-700 border-b-2 border-black mb-2 pb-1";
+  const templateRef = document.getElementById("template");
+  setdesign(templateRef)
   return (
-    <div ref={componentRef} className="my-5 w-a4W bg-white mx-auto  border ">
+    <div ref={componentRef} className="my-5 w-a4W bg-white mx-auto  border " id="template">
       <div className="h-a4H relative">
         {/* {console.log("profile",social)} */}
         <div className=" flex">

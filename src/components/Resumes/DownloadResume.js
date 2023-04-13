@@ -13,7 +13,7 @@ import { TAdigital } from "./Templates/TAdigital";
 
 export const DownloadResumes = ({ students, setDownloadOpen }) => {
   const componentRef = useRef();
-  const { setResume } = useResumeContext();
+  const { setResume,design } = useResumeContext();
   const [template, setTemplate] = useState();
   const [student, setStudent] = useState();
   const [pdf, setPdf] = useState(null);
@@ -52,16 +52,12 @@ export const DownloadResumes = ({ students, setDownloadOpen }) => {
   return (
     <div className="bg-gray-800 py-10">
       <button
-        onClick={() =>
-          pdf.exportComponentAsPDF(componentRef, {
-            fileName: `${student?.profile?.firstName}${student?.profile?.lastName}_${student.rollNumber.value}}`,
-            pdfOptions: {
-              unit: "cm",
-              w: 21.0,
-              h: 29.7,
-            },
-          })
+        onClick={() =>{
+          document.body.innerHTML = design.innerHTML;
+          window.print()
+          console.log("inside")
         }
+      }
         className="pdfb block px-4 py-2 text-sm uppercase w-full text-left font-semibold"
       >
         As PDF
