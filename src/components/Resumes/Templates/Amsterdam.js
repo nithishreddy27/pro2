@@ -35,7 +35,8 @@ export const Amsterdam = ({ componentRef }) => {
           {profile && (
             <>
               <h1 className="mt-8 font-extrabold text-2xl tracking-[3px]">
-                {profile.firstName} {profile.lastName}
+                {profile.firstName.toUpperCase()}{" "}
+                {profile.lastName.toUpperCase()}
               </h1>
               <h1 className="mt-3">{profile.role}</h1>
             </>

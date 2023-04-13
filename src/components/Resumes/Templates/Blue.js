@@ -227,7 +227,8 @@ export const Blue = ({ componentRef, filter = null }) => {
         {profile && (
           <>
             <h1 className="text-3xl ml-[50%] font-bold tracking-widest">
-              {profile.firstName} <span>{profile.lastName}</span>
+              {profile.firstName.toUpperCase()}{" "}
+              <span>{profile.lastName.toUpperCase()}</span>
             </h1>
             <h1 className="ml-[58%] my-2 tracking-widest">{profile.role}</h1>
           </>
