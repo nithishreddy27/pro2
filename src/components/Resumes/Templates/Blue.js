@@ -18,17 +18,22 @@ export const Blue = ({ componentRef, filter = null }) => {
     hobbies,
     languages,
     layout,
+    setdesign
   } = useResumeContext();
   const { r, g, b, a } = layout?.color || { r: "0", g: "0", b: "0", a: "0" };
   const headingClass =
     "text-lg text-center capitalize font-bold text-gray-700 mb-2 pb-1";
+
+  const templateRef = document.getElementById("template");
+  setdesign(templateRef)
   return (
-    <div ref={componentRef} className="w-a4W bg-white mx-auto h-a4H my-5 relative">
+    <div ref={componentRef} className="w-a4W bg-white mx-auto h-a4H my-5 relative" id="template">
       
 
       
         <div
           className={`h-[95%] w-[35%] bg-sky-200 absolute left-10 rounded-b-full p-5 z-10`}
+          style={{ backgroundColor: `rgba(${r}, ${g}, ${b}, 0.4)` }}
         >
           {profile && (
             <>
@@ -221,11 +226,12 @@ export const Blue = ({ componentRef, filter = null }) => {
         </div>
         <div
           className={`w-[100%] h-36 bg-sky-100 top-10 relative z-1 rounded-l-full  p-10`}
+          style={{ backgroundColor: `rgba(${r}, ${g}, ${b}, 0.2)` }}
         >
           {profile && (
             <>
               <h1 className="text-3xl ml-[50%] font-bold tracking-widest">
-                {profile.firstName} <span>{profile.lastName}</span>
+                {profile.firstName.toUpperCase()} <span>{profile.lastName.toUpperCase()}</span>
               </h1>
               <h1 className="ml-[58%] my-2 tracking-widest">{profile.role}</h1>
             </>
@@ -252,14 +258,18 @@ export const Blue = ({ componentRef, filter = null }) => {
                               <hr className="w-[100%] h-1 bg-black my-2" />
 
                               {education?.filter((edu)=>edu?.enabled === true).map((item)=>(
-                                <div className="mt-2 text-[12px]" key={item.institution}>
+                                <div className="mt-2 text-[12px] pr-2" key={item.institution}>
+                                  <div className="flex justify-between">
                                 <h1 className="font-semibold">
                                   {item.institution}{" "}
-                                  <span className="font-medium">
-                                    ({item.startDate.slice(0, 4)}-
-                                    {item.endDate.slice(0, 4)})
-                                  </span>{" "}
+                                 
                                 </h1>
+
+                                <h1 className="font-medium">
+                                    {item.startDate.slice(0, 4)}-
+                                    {item.endDate.slice(0, 4)}
+                                  </h1>{" "}
+                                  </div>
 
                                 <p className="ml-5">{item.typeOfDegree}</p>
                                 <p className="ml-5 my-1">{item.summary.data}</p>
@@ -287,16 +297,19 @@ export const Blue = ({ componentRef, filter = null }) => {
                      <>
                       {item.enabled && (
                          <div className="mt-2 text-[12px]" key={item.company}>
+                          <div className="flex justify-between pr-2  ">
+
                          <h1 className="font-semibold">
                            {item.company}{" "}
-                           <span className="font-medium">
-                             ({item.from.slice(0, 4)}-{item.to.slice(0, 4)})
-                           </span>{" "}
+                          
                          </h1>
- 
-                         <span className="ml-5 tracking-wider font-semibold">
+                         <h1 className="font-medium">
+                             {item.from.slice(0, 4)}-{item.to.slice(0, 4)}
+                           </h1>{" "}
+                          </div>
+                         <p className="ml-5 tracking-wider font-semibold">
                            {item.designation}
-                         </span>
+                         </p>
                          <span className="ml-5 text-sm">
                            {item.summary.data}
                          </span>

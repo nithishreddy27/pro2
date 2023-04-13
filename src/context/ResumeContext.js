@@ -20,7 +20,9 @@ export function ResumeContextProvider({ children }) {
   const [template, setTemplate] = useState(null);
   const [layout, setLayout] = useState(null);
   const [structure, setStructure] = useState(editorStructure);
-
+  const [design, setdesign] = useState(null)
+  
+  // const [template, settemplate] = useState(second)
   const debounceUpdateResume = useMemo(() => {
     return debounce(async (res) => {
       const { data } = await axios.put(
@@ -78,6 +80,8 @@ export function ResumeContextProvider({ children }) {
     setLayout,
     structure,
     setStructure,
+    design,
+    setdesign
   };
   return <ResumeContext.Provider value={state}>{children}</ResumeContext.Provider>;
 }

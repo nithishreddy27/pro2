@@ -5,18 +5,18 @@ import { MarkdownRenderer } from "../../../lib/MarkdownRenderer";
 import Link from "next/link";
 
 export const Modren = ({ componentRef, filter = null }) => {
-  const { profile, objective, education, work, skills, languages,projects,certifications, social,layout,hobbies,awards } = useResumeContext();
+  const { profile, objective, education, work, skills, languages,projects,certifications, social,layout,hobbies,awards,setdesign } = useResumeContext();
   const { r, g, b, a } = layout?.color || { r: "0", g: "0", b: "0", a: "0" };
-  const headingClass =
-    "text-xl captialize font-bold text-gray-700 border-b-2 border-black mb-2 pb-1";
+  const headingClass = "text-xl captialize font-bold text-gray-700 border-b-2 border-black mb-2 pb-1";
+  const templateRef = document.getElementById("template");
+  setdesign(templateRef)
   return (
-    <div ref={componentRef} className='my-5 w-a4W bg-white mx-auto  border '>
+    <div ref={componentRef} className='my-5 w-a4W bg-white mx-auto  border ' id="template">
       <div className='h-a4H relative' >
-        {/* {console.log("profile",social)} */}
             <div className=" flex">
                         <div className="w-[35%] z-10 h-a4H bg-slate-800  p-2">
                             <div className="mt-44">
-                            <h1 className="text-[16px]  heading  tracking-[2px] text-white">
+                            <h1 className="text-[16px]    tracking-[2px] text-white">
                                 CONTACT
                             </h1>
                             <hr className="h-[2px] bg-black my-2" />
@@ -84,7 +84,7 @@ export const Modren = ({ componentRef, filter = null }) => {
 
                             {skills?.filter((skill)=>skill?.enabled).length >0 && (
                                 <div className="">
-                                    <h1 className="text-[16px] mt-4  heading tracking-[2px] text-white">
+                                    <h1 className="text-[16px] mt-4   tracking-[2px] text-white">
                                         SKILLS
                                     </h1>
                                     <hr className="h-[2px] bg-black my-2" />
@@ -131,7 +131,7 @@ export const Modren = ({ componentRef, filter = null }) => {
                                      
                             {hobbies.length != 0 && (
                                 <div className="mt-5">
-                                <h1 className="text-[16px]  text-white  heading  tracking-[2px]">
+                                <h1 className="text-[16px]  text-white    tracking-[2px]">
                                     HOBBIES
                                 </h1>
                                 <hr className="h-[2px] my-1" />
@@ -155,7 +155,7 @@ export const Modren = ({ componentRef, filter = null }) => {
                                 <div>
                                     {languages.length != 0 && (
                                 <div className="mt-5">
-                                <h1 className="text-[16px]  text-white  heading  tracking-[2px]">
+                                <h1 className="text-[16px]  text-white    tracking-[2px]">
                                     LANGUAGES
                                 </h1>
                                 <hr className="h-[2px] my-1" />
@@ -180,7 +180,7 @@ export const Modren = ({ componentRef, filter = null }) => {
                                     {awards.length != 0 && (
                                 <>
                                 {" "}
-                                <h1 className="text-[16px]  tracking-[2px] heading  text-white mt-5">
+                                <h1 className="text-[16px]  tracking-[2px]   text-white mt-5">
                                     AWARADS
                                 </h1>
                                 <hr className="h-[2px] bg-black mt-1 mb-4 " />
@@ -366,8 +366,8 @@ export const Modren = ({ componentRef, filter = null }) => {
                         {
                           <>
                             <h1 className="text-3xl mt-7 ml-24 font-semibold tracking-widest text-white ">
-                              {profile.firstName.concat(
-                                "  " + profile.lastName
+                              {profile.firstName.toUpperCase().concat(
+                                "  " + profile.lastName.toUpperCase()
                               )}
                             </h1>
                             <p className="mt-2 ml-36 tracking-widest text-white">

@@ -1,6 +1,6 @@
 import { Menu, Transition } from "@headlessui/react";
 import cryptoRandomString from "crypto-random-string";
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useContext, useEffect, useState } from "react";
 import { VscLock } from "react-icons/vsc";
 import { useModelContext } from "../../../../context/ModalContext";
 import { useResumeContext } from "../../../../context/ResumeContext";
@@ -9,17 +9,20 @@ import { intialResume } from "../../../../data/initalResume";
 import { trim_json } from "../../../../lib/helper";
 import { useUser } from "../../../../lib/hooks";
 import { Loading } from "../../../Reusables/Loading";
+import { useRouter } from "next/router";
+
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+// const { template } = useResumeContext();
 export const RightCard = React.forwardRef(function RightCard({
   heading,
   description,
   button,
   checkPlan,
-  componentRef = "",
+  componentRef = "",  
 }) {
   const user = useUser();
   const [pdf, setPdf] = useState(null);
@@ -30,7 +33,9 @@ export const RightCard = React.forwardRef(function RightCard({
   }, []);
 
   const [loading, setLoading] = useState(false);
-  const { debounceUpdateResume, resume } = useResumeContext();
+  const { debounceUpdateResume, resume,design } = useResumeContext();
+  const router = useRouter()
+
   const handleLoadDemodata = () => {
     setLoading(true);
     debounceUpdateResume(demoResume(user));
@@ -152,16 +157,13 @@ export const RightCard = React.forwardRef(function RightCard({
                 </Menu.Item>
                 <Menu.Item>
                   {({ active }) => (
-                    <button
-                      onClick={() =>
-                        pdf.exportComponentAsPDF(componentRef, {
-                          fileName: `${user?.profile?.firstName}${user?.profile?.lastName}`,
-                          pdfOptions: {
-                            unit: "cm",
-                            w: 21.0,
-                            h: 29.7,
-                          },
-                        })
+                    <button 
+                      onClick={() =>{
+                        document.body.innerHTML = design.innerHTML;
+                        window.print();
+                        router.reload()
+                      }
+                        
                       }
                       className={classNames(
                         active ? "bg-gray-100 text-gray-900" : "text-gray-700",

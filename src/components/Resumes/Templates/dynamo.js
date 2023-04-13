@@ -152,10 +152,10 @@ export const Dynamo = ({ componentRef }) => {
         <div className=" w-[70%] pt-10 px-5 ">
           <div>
             <h1 className="text-[25px] font-semibold tracking-wider">
-              {profile?.firstName}
+              {profile?.firstName.toUpperCase()}
             </h1>
             <h1 className="text-[25px]  tracking-[4px] mt-2">
-              {profile?.lastName}
+              {profile?.lastName.toUpperCase()}
             </h1>
             <h1 className="text-[20px]  tracking-[4px] mt-2">
               {profile?.role}

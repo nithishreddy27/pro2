@@ -24,10 +24,6 @@ export const Amsterdam = ({ componentRef }) => {
   const { r, g, b, a } = layout?.color || { r: "0", g: "0", b: "0", a: "0" };
 
 
-
- 
-
-
   return (
     <>
       <div
@@ -44,7 +40,7 @@ export const Amsterdam = ({ componentRef }) => {
           {profile && (
             <>
               <h1 className="mt-8 font-extrabold text-2xl tracking-[3px]">
-                {profile.firstName} {profile.lastName}
+                {profile.firstName.toUpperCase()} {profile.lastName.toUpperCase()}
               </h1>
               <h1 className="mt-3">{profile.role}</h1>
             </>
@@ -97,7 +93,7 @@ export const Amsterdam = ({ componentRef }) => {
 
 
                           
-{education?.filter((edu)=>edu?.enabled).length >0 && (
+        {education?.filter((edu)=>edu?.enabled).length >0 && (
                             <>
                               <h4 className="font-bold tracking-[4px] text-[16px]  mt-4 heading">
                                 EDUCATION
