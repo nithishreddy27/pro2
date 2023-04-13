@@ -230,6 +230,20 @@ const templates = [
       "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676532091/my-uploads/uclaqvlnf5wwiiyxtm6c.jpg",
     heading: "Assymmetric",
   },
+  {
+    name: "vertical",
+    category: "creative",
+    image: 
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531522/my-uploads/ycnqqobfpghxsxdwws9l.jpg",
+    heading: "Vertical",
+  },
+  {
+    name: "chrono",
+    category: "creative",
+    image: 
+      "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531522/my-uploads/ycnqqobfpghxsxdwws9l.jpg",
+    heading: "Chrono",
+  },
 
   //   image:
   //     "https://res.cloudinary.com/dhqhq0szn/image/upload/v1676531522/my-uploads/ycnqqobfpghxsxdwws9l.jpg",

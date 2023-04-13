@@ -193,7 +193,6 @@ export const Classic = ({ componentRef, filter = null }) => {
                   </div>
                 )}
               </div>
-
               {/* projects */}
               {projects?.filter((project) => project?.enabled).length > 0 && (
                 <div>

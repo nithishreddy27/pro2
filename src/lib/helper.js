@@ -1134,6 +1134,44 @@ export const editorStructure = {
     "languages",
     "layout",
   ],
+  chrono: [
+   "profile",
+   "skills",
+   "social",
+   "languages",
+   "objective",
+   "education",
+   "work",
+   "certifications",
+   "awards",
+    "layout",
+  ],
+  vertical: [
+    "profile",
+    "social",
+    "objective",
+    "education",
+    "awards",
+   "work",
+    "skills",
+   "hobbies",
+    "layout",
+   ],
+   casual:[
+    "profile",
+    "skills",
+    "social",
+    "languages",
+    "objective",
+    "education",
+    "work",
+    "certifications",
+    "awards",
+     "layout",
+   ]
+  
+   
+
 };
 
 export const company = [
