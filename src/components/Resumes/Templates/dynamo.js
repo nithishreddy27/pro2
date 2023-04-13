@@ -19,15 +19,21 @@ export const Dynamo = ({ componentRef }) => {
     certifications,
     languages,
     layout,
+    setdesign
   } = useResumeContext();
   const { r, g, b, a } = layout?.color || { r: "0", g: "0", b: "0", a: "0" };
+
+  const templateRef = document.getElementById("template");
+  setdesign(templateRef)
   return (
     <>
       <div
         ref={componentRef}
         style={{ fontFamily: layout?.font }}
         className={`w-a4W bg-white mx-auto h-a4H my-5 flex`}
+        id="template"
       >
+        <div className="flex">
         <div className=" w-[35%] bg-gray-200 p-6 relative">
           <div className="bg-slate-800 w-36 h-[200px] absolute top-0 left-0">
             <img
@@ -240,15 +246,21 @@ export const Dynamo = ({ componentRef }) => {
             )}
           </div>
         </div>
+      </div>
+      </div>
         <style jsx> 
             {`
               .heading{
                 color:rgba(${r},${g},${b},${a})
               }
-            
+              @media print {
+                #template {
+                  margin:10cm ;
+                }
+              }
             `}
     </style>
-      </div>
+
     </>
   );
 };

@@ -18,19 +18,24 @@ export const Amsterdam = ({ componentRef }) => {
     social,
     awards,
     layout,
+    setdesign
+
   } = useResumeContext();
   console.log(profile);
 
   const { r, g, b, a } = layout?.color || { r: "0", g: "0", b: "0", a: "0" };
-
+  const templateRef = document.getElementById("template");
+  setdesign(templateRef)
   return (
     <>
       <div
         ref={componentRef}
         style={{ fontFamily: layout?.font }}
         className={`w-a4W bg-white mx-auto h-a4H my-5 relative`}
+      id="template"
+
       >
-        <div>{console.log("inside")}</div>
+      
         <div className="absolute left-44 top-5 border-[3px] border-gray-500 h-40 w-96 bg-white text-center">
           {profile && (
             <>
