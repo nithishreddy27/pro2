@@ -21,7 +21,7 @@ export function ResumeContextProvider({ children }) {
   const [layout, setLayout] = useState(null);
   const [structure, setStructure] = useState(editorStructure);
   const [design, setdesign] = useState(null)
-  
+  const [count, setcount] = useState(0)
   // const [template, settemplate] = useState(second)
   const debounceUpdateResume = useMemo(() => {
     return debounce(async (res) => {
@@ -81,7 +81,9 @@ export function ResumeContextProvider({ children }) {
     structure,
     setStructure,
     design,
-    setdesign
+    setdesign,
+    count,
+    setcount
   };
   return <ResumeContext.Provider value={state}>{children}</ResumeContext.Provider>;
 }
