@@ -41,25 +41,25 @@ export const Red = ({ componentRef }) => {
                 </h1>
                 <div>
                   <i className="bx bxs-user"></i>
-                  <span class="text-[12px] font-semibold ">
+                  <span className="text-[12px] font-semibold ">
                     {profile?.firstName} {profile?.lastName}
                   </span>
                 </div>
                 <div>
                   <i className="bx bxs-mail"></i>
-                  <span class="text-[12px]  font-semibold m-0.5">
+                  <span className="text-[12px]  font-semibold m-0.5">
                     {profile?.email}
                   </span>
                 </div>
                 <div>
                   <i className="bx bxs-phone"></i>
-                  <span class="text-[12px]  font-semibold m-0.5">
+                  <span className="text-[12px]  font-semibold m-0.5">
                     {profile?.phone}
                   </span>
                 </div>
                 <div>
                   <i className="bx bxs-calendar"></i>
-                  <span class="text-[12px]  font-semibold m-0.5">
+                  <span className="text-[12px]  font-semibold m-0.5">
                     {profile?.dob}
                   </span>
                 </div>
@@ -173,13 +173,13 @@ export const Red = ({ componentRef }) => {
                       <h1 className="text-[12px] font-bold relative">
                         {item.company}
                         <span className="text-[12px] text-red-700 absolute right-0">
-                          {item.from} - {item.to}
+                          {item.from.slice(0,4)} - present
                         </span>
                       </h1>
                       <p className="text-[12px] font-semibold">
                         {item.designation}
                       </p>
-                      <p class="text-[12px]">{item.summary.data}</p>
+                      <p className="text-[12px]">{item.summary.data}</p>
                     </div>
                   ))}
               </div>
@@ -196,13 +196,13 @@ export const Red = ({ componentRef }) => {
                       <h1 className="text-[12px] font-bold relative">
                         {item.institution}
                         <span className="text-[12px] text-red-700 absolute right-0">
-                          {item.startDate} - {item.endDate}
+                          {item.startDate.slice(0,4)} - {item.endDate.slice(0,4)}
                         </span>
                       </h1>
                       <p className="text-[12px] font-semibold">
                         {item.fieldOfStudy}
                       </p>
-                      <p class="text-[12px]">{item.summary.data}</p>
+                      <p className="text-[12px]">{item.summary.data}</p>
                     </div>
                   ))}
               </div>
@@ -219,13 +219,13 @@ export const Red = ({ componentRef }) => {
                       <h1 className="text-[12px] font-bold relative">
                         {item.name}
                         <span className="text-[12px] text-red-700 absolute right-0">
-                          {item.from} - {item.to}
+                         {item.from.slice(0,4)} - {item.to.slice(0,4)}
                         </span>
                       </h1>
                       <p className="text-[12px] font-semibold">
                         {item.website}
                       </p>
-                      <p class="text-[12px]">{item.summary.data}</p>
+                      <p className="text-[12px]">{item.summary.data}</p>
                     </div>
                   ))}
               </div>

@@ -178,7 +178,7 @@ export const Casual = ({ componentRef, filter = null }) => {
 
 <div className="grid grid-cols-3">
             <div>
-                <div className="col-span-1 bg-gray-300 h-[100%] w-[95%]">
+                <div className="col-span-1 bg-gray-300 h-[294mm] w-[95%]">
                     <div>
                         <img
                     className="rounded-full w-[119px] ml-10 pt-3"
