@@ -18,13 +18,16 @@ export const Retro = ({ componentRef, filter = null }) => {
     hobbies,
     languages,
     layout,
+    setdesign
   } = useResumeContext();
   const { r, g, b, a } = layout?.color || { r: "0", g: "0", b: "0", a: "0" };
   const headingClass =
     "text-lg text-center capitalize font-bold text-gray-700 mb-2 pb-1";
-  return (
+    const templateRef = document.getElementById("template");
+    setdesign(templateRef)
+    return (
     <div
-      ref={componentRef}
+      ref={componentRef} id="template"
       className="w-a4W bg-white mx-auto h-a4H my-5 relative"
     >
       <div className="">

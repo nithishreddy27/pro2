@@ -18,12 +18,15 @@ export const Classic = ({ componentRef, filter = null }) => {
     hobbies,
     languages,
     layout,
+    setdesign
   } = useResumeContext();
   const { r, g, b, a } = layout?.color || { r: "0", g: "0", b: "0", a: "0" };
   const headingClass =
     "text-lg text-center capitalize font-bold text-gray-700 mb-2 pb-1";
-  return (
-    <div ref={componentRef} className="w-a4W bg-gray-200 mx-auto h-a4H my-5">
+    const templateRef = document.getElementById("template");
+    setdesign(templateRef)
+    return (
+    <div ref={componentRef} id="template" className="w-a4W bg-gray-200 mx-auto h-a4H my-5">
       
 
       <div className="p-4">
