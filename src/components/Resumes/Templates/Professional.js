@@ -8,7 +8,7 @@ import {VscDebugBreakpointLog} from "react-icons/vsc";
 import {MdSchool} from "react-icons/md";
 import {FaSquareFull} from "react-icons/fa";
 import {BsFillAwardFill} from "react-icons/bs";
-import {MdWork} from "react-icons/md"
+import {MdWork} from "react-icons/md";
 import { useResumeContext } from "../../../context/ResumeContext";
 import { months, rename } from "../../../lib/helper";
 import { MarkdownRenderer } from "../../../lib/MarkdownRenderer";
@@ -40,9 +40,9 @@ export const Professional = React.forwardRef(function NonCore({ componentRef }) 
             <div className="w-[150mm] h-[130px] bg-black ml-[60mm] mt-[50px]">
               <div className="name text-white bg-black">
                 <h1 className="pl-[100px] pt-[20px] text-lg font-bold text-white bg-black">
-                  {profile?.firstName}
+                  {profile?.firstName.toUpperCase()}
                   <span className="pl-4 font-medium text-white bg-black">
-                    {profile?.lastName}
+                    {profile?.lastName.toUpperCase()}
                   </span>
                 </h1>
                 <h2 className="text-white pl-[100px] pt-2 text-base bg-black">
@@ -111,8 +111,8 @@ export const Professional = React.forwardRef(function NonCore({ componentRef }) 
                   <div className="py-2">
                   {education?.filter(edu=>edu?.enabled===true).map((item) => (
                     <p className="pl-5 pr-5 pt-2 text-sm">
-                        <MdSchool className="inline text-lg relative right-1 bottom-[2px]"></MdSchool>
-                      <span className="font-medium">{item.institution}</span> in{" "}
+                        {/* <MdSchool className="inline text-lg relative right-1 bottom-[2px]"></MdSchool> */}
+                      <span className="font-medium">➣ {item.institution}</span> in{" "}
                       <span className="font-medium">
                         {item.fieldOfStudy}
                         <br />({item.startDate.slice(0,4)} - {item.endDate.slice(0,4)})
@@ -135,9 +135,9 @@ export const Professional = React.forwardRef(function NonCore({ componentRef }) 
                   <div className="py-2">
                   {certifications?.filter(cert=>cert?.enabled===true).map((item) => (
                     <p className="pl-5 pr-2 pt-2 text-sm">
-                        <FaSquareFull className="inline text-[10px] relative right-1 bottom-[2px]"></FaSquareFull>
+                        {/* <FaSquareFull className="inline text-[10px] relative right-1 bottom-[2px]"></FaSquareFull> */}
                       <i className="bx bxs-square text-xs pr-3"></i>
-                      {item.title} from {item.issuer}
+                      ➣ {item.title} from {item.issuer}
                     </p>
                   ))}
                   </div>
@@ -182,9 +182,9 @@ export const Professional = React.forwardRef(function NonCore({ componentRef }) 
                 <div className="pb-1 py-2">
                   {work?.filter(wor=>wor?.enabled===true).map((item) => (
                     <p className="pl-10 pr-5 pt-1 text-sm">
-                        <MdWork className="inline relative bottom-[2px] right-1"></MdWork>
+                        {/* <MdWork className="inline relative bottom-[2px] right-1"></MdWork> */}
                       <span className="font-medium  pr-3">
-                        {item.designation} in {item.company}
+                      ➣ {item.designation} in {item.company}
                       </span>
                       <br></br>({item.from.slice(0,4)} - {item.to.slice(0,4)})<br />
                       <Link href={item.website}>{item.website}</Link>
@@ -203,8 +203,8 @@ export const Professional = React.forwardRef(function NonCore({ componentRef }) 
                 <div className="py-2">
                   {projects?.filter(pro=>pro?.enabled===true).map((item) => (
                     <p className="pl-10 pr-5 text-sm pt-1">
-                        <FaSquareFull className="inline text-[10px] relative right-1 bottom-[2px]"></FaSquareFull>
-                      <span className="font-medium pr-3">{item.name}</span> (
+                        {/* <FaSquareFull className="inline text-[10px] relative right-1 bottom-[2px]"></FaSquareFull> */}
+                      <span className="font-medium pr-3">➣ {item.name}</span> (
                       {item.from.slice(0,4)} - {item.to.slice(0,4)})<br />
                       <Link href={item.website}>{item.website}</Link>
                       <br></br>
@@ -221,9 +221,9 @@ export const Professional = React.forwardRef(function NonCore({ componentRef }) 
                 </h2>
                 {awards?.filter(awa=>awa?.enabled===true).map((item) => (
                   <p className="pl-10 pr-5 py-2 text-sm">
-                    <BsFillAwardFill className="inline relative right-1 bottom-[2px] "></BsFillAwardFill>
+                    {/* <BsFillAwardFill className="inline relative right-1 bottom-[2px] "></BsFillAwardFill> */}
                     <i className="bx bxs-award pr-1"></i>
-                    <span className="font-medium">{item.name}</span> from{" "}
+                    <span className="font-medium">➣ {item.name}</span> from{" "}
                     {item.awarder}
                   </p>
                 ))}

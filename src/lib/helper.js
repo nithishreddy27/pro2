@@ -1016,7 +1016,6 @@ export const editorStructure = {
     "work",
     "skills",
     "hobbies",
-    "languages",
   ],
   stylish: [
     "profile",

@@ -27,25 +27,32 @@ export const Premium = ({ componentRef }) => {
         style={{ fontFamily: layout?.font }}
         className={`w-a4W bg-white mx-auto h-a4H my-5 relative`}
       >
-        <div className="absolute mt-10 z-10 w-[210mm] flex bg-gradient-to-r from-gray-300 to-slate-50">
+        <div className="absolute mt-10 z-10 w-[210mm] flex bg-gradient-to-r from-gray-200 to-white">
           <img
-            className="rounded-full ml-10 border-[12px] border-cyan-800 w-48"
+            className="rounded-full ml-10 border-[7px] border-cyan-800 w-48 h-48"
+            style={{
+              borderColor: `rgba(${r}, ${g}, ${b}, ${a})`,
+            }}
             // src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpl60g6oKVerEKPde2ClN4-6ASK4Ds4KzlM0Y1N-K_bCgOCMBYZ019WUgRLOfNAqyyhnY&usqp=CAU"
             alt="ProfilePhoto"
             src={profile?.image}
           />
           <div className="m-14">
-            <h1 className="text-[25px] font-semibold text-cyan-900">
-              {profile?.firstName} {profile?.lastName}
+            <h1 className="text-[25px] font-semibold text-cyan-900 heading">
+              {profile?.firstName.toUpperCase()}{" "}
+              {profile?.lastName.toUpperCase()}
             </h1>
-            <h1 className="text-cyan-900">{profile?.role}</h1>
+            <h1 className="text-cyan-900 heading">{profile?.role}</h1>
           </div>
         </div>
         <div className="grid grid-cols-3 z-0 h-[297mm]">
-          <div className="bg-cyan-800 text-white">
+          <div
+            className="bg-cyan-800 text-white"
+            style={{ backgroundColor: `rgba(${r}, ${g}, ${b}, ${a})` }}
+          >
             <div className="mt-64 mx-6">
               <div>
-                <h1 className="border-2 border-white mt-5 mb-2 heading  text-[16px] flex justify-center align-middle py-2 text-white">
+                <h1 className="border-2 border-white mt-5 mb-2 text-[16px] flex justify-center align-middle py-2 text-white">
                   CONTACTS
                 </h1>
                 <h1 className="text-white text-[12px]">{profile?.email}</h1>
@@ -61,7 +68,7 @@ export const Premium = ({ componentRef }) => {
               </div>
               {education?.filter((edu) => edu?.enabled)?.length > 0 && (
                 <div>
-                  <h1 className="border-2 text-white border-white heading  text-[16px] mt-5 mb-3 flex justify-center align-middle py-2">
+                  <h1 className="border-2 text-white border-white text-[16px] mt-5 mb-3 flex justify-center align-middle py-2">
                     EDUCATION
                   </h1>
                   {education
@@ -83,7 +90,7 @@ export const Premium = ({ componentRef }) => {
               )}
               {skills?.filter((skill) => skill?.enabled)?.length > 0 && (
                 <div>
-                  <h1 className="border-2 border-white text-white heading  text-[16px] mt-5 mb-3 flex justify-center align-middle py-2">
+                  <h1 className="border-2 border-white text-white text-[16px] mt-5 mb-3 flex justify-center align-middle py-2">
                     SKILLS
                   </h1>
                   {skills
@@ -100,7 +107,7 @@ export const Premium = ({ componentRef }) => {
               )}
               {awards?.filter((award) => award?.enabled)?.length > 0 && (
                 <div>
-                  <h1 className="border-2 text-white border-white heading  text-[16px] mt-5 mb-3 flex justify-center align-middle py-2">
+                  <h1 className="border-2 text-white border-white text-[16px] mt-5 mb-3 flex justify-center align-middle py-2">
                     AWARDS
                   </h1>
                   {awards
@@ -218,14 +225,13 @@ export const Premium = ({ componentRef }) => {
             </div>
           </div>
         </div>
-        <style jsx> 
-            {`
-              .heading{
-                color:rgba(${r},${g},${b},${a})
-              }
-            
-            `}
-    </style>
+        <style jsx>
+          {`
+            .heading {
+              color: rgba(${r}, ${g}, ${b}, ${a});
+            }
+          `}
+        </style>
       </div>
     </>
   );

@@ -19,12 +19,18 @@ export const Madrid = ({ componentRef }) => {
     certifications,
     languages,
     layout,
+    setdesign
   } = useResumeContext();
   const { r, g, b, a } = layout?.color || { r: "0", g: "0", b: "0", a: "0" };
+  const headingClass =
+  "text-lg text-center capitalize font-bold text-gray-700 mb-2 pb-1";
+  const templateRef = document.getElementById("template");
+  setdesign(templateRef)
   return (
     <>
       <div
         ref={componentRef}
+        id="template"
         style={{ fontFamily: layout?.font }}
         className={`w-a4W bg-white mx-auto h-a4H my-5`}
       >

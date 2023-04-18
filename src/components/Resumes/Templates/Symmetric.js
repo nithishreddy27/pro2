@@ -36,11 +36,11 @@ export const Symmetric = React.forwardRef(function NonCore({ componentRef }) {
       className="flex my-5 w-a4W bg-white mx-auto h-a4H"
     >
       <div>
-        <div className="first w-[210mm] h-[30mm] bg-zinc-300 flex">
+        <div className="first w-a4W h-[30mm] bg-zinc-300 flex">
           <div className="name font-serif">
             <h1 className="text-lg font-semibold px-10 pt-5">
-              {profile?.firstName}
-              <span className="font-normal pl-2"> {profile?.lastName}</span>
+              {profile?.firstName.toUpperCase()}
+              <span className="font-normal pl-2"> {profile?.lastName.toUpperCase()}</span>
             </h1>
             <div className="flex">
             <h2 className="text-base px-10 pt-5 font-sans font-medium">
@@ -79,7 +79,7 @@ export const Symmetric = React.forwardRef(function NonCore({ componentRef }) {
             </div>
           </div>
         </div>
-        <div className="second flex">
+        <div className="second flex px-3">
           <div className="side1 border-r-2 border-gray-500 w-[78.5mm] mt-2 ml-2 h-[260mm]">
             <div className="contact  border-b-2  border-gray-500 px-6 mt-2">
               <div className="dob pt-2 text-sm">
@@ -107,8 +107,8 @@ export const Symmetric = React.forwardRef(function NonCore({ componentRef }) {
                     ?.filter((edu) => edu?.enabled === true)
                     .map((item) => (
                       <p className=" pr-2 pt-2 text-sm">
-                        <MdSchool className=" inline text-lg relative right-1 bottom-[2px]"></MdSchool>
-                        <span className="font-medium">{item.institution}</span>{" "}
+                        {/* <MdSchool className=" inline text-lg relative right-1 bottom-[2px]"></MdSchool> */}
+                        ➣ <span className="font-medium">{item.institution}</span>{" "}
                         in{" "}
                         <span className="font-medium">
                           {item.fieldOfStudy}
@@ -133,9 +133,9 @@ export const Symmetric = React.forwardRef(function NonCore({ componentRef }) {
                     ?.filter((cert) => cert?.enabled === true)
                     .map((item) => (
                       <p className=" pr-2 pb-1 text-sm">
-                        <FaSquareFull className="inline  text-[10px] relative right-1 bottom-[2px]"></FaSquareFull>
-                        <i className="bx bxs-square text-xs pr-3"></i>
-                        {item.title} from {item.issuer}
+                        {/* <FaSquareFull className="inline  text-[10px] relative right-1 bottom-[2px]"></FaSquareFull> */}
+                        {/* <i className="bx bxs-square text-xs pr-3"></i> */}
+                        ➣ {item.title} from {item.issuer}
                       </p>
                     ))}
                 </div>
@@ -167,9 +167,9 @@ export const Symmetric = React.forwardRef(function NonCore({ componentRef }) {
                     ?.filter((awa) => awa?.enabled === true)
                     .map((item) => (
                       <p className="pr-2 pb-1 text-sm">
-                        <BsFillAwardFill className="inline relative right-1 bottom-[2px] text-zinc-700"></BsFillAwardFill>
+                        {/* <BsFillAwardFill className="inline relative right-1 bottom-[2px] text-zinc-700"></BsFillAwardFill> */}
                         <span className="font-medium">
-                          {item.name}
+                        ➣  {item.name}
                         </span> from {item.awarder}
                       </p>
                     ))}
@@ -192,7 +192,7 @@ export const Symmetric = React.forwardRef(function NonCore({ componentRef }) {
               </div>
             )}
           </div>
-          <div className="side2 w-[132mm]">
+          <div className="side2 w-[128mm]">
             <div className="career-objective border-b-2 border-gray-500 pl-[-24px] mr-5">
               <h2 className="text-center text-base font-serif font-bold heading underline pt-[85px]">
                 C A R E E R O B J E C T I V E
@@ -210,9 +210,9 @@ export const Symmetric = React.forwardRef(function NonCore({ componentRef }) {
                     ?.filter((wor) => wor?.enabled === true)
                     .map((item) => (
                       <p className="pl-10 pr-5 pt-2 text-sm">
-                        <MdWork className="inline relative bottom-[2px] right-1"></MdWork>
+                        {/* <MdWork className="inline relative bottom-[2px] right-1"></MdWork> */}
                         <span class="font-medium  pr-3">
-                          {item.designation} in {item.company}
+                        ➣ {item.designation} in {item.company}
                         </span>
                         <br></br>({item.from.slice(0,4)} - {item.to.slice(0,4)})<br />
                         <Link href={item.website}>{item.website}</Link>
@@ -234,8 +234,8 @@ export const Symmetric = React.forwardRef(function NonCore({ componentRef }) {
                     ?.filter((pro) => pro?.enabled === true)
                     .map((item) => (
                       <p className="pl-10 pr-5 pt-3 text-sm">
-                        <FaSquareFull className="inline text-[10px] relative right-1 bottom-[2px]"></FaSquareFull>
-                        <span className="font-medium pr-3">{item.name}</span> (
+                        {/* <FaSquareFull className="inline text-[10px] relative right-1 bottom-[2px]"></FaSquareFull> */}
+                        <span className="font-medium pr-3">➣ {item.name}</span> (
                         {item.from.slice(0,4)} - {item.to.slice(0,4)})<br />
                         <Link href={item.website}>{item.website}</Link>
                         <br></br>
@@ -251,7 +251,7 @@ export const Symmetric = React.forwardRef(function NonCore({ componentRef }) {
                 <h2 className="text-center text-base font-serif font-bold heading underline pt-1">
                   H O B B I E S
                 </h2>
-                <div className="pl-10">
+                <div className="pl-10 pt-1">
                   {hobbies
                     ?.filter((hob) => hob?.enabled === true)
                     .map((item) => (

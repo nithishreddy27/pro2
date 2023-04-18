@@ -1,17 +1,28 @@
+import { useState } from "react";
 import { useResumeContext } from "../../../context/ResumeContext";
 import { MarkdownSupporter } from "../MarkdownSupporter";
 
 export const ObjectiveDisplay = () => {
   const { resume, objective, setObjective, debounceUpdateResume } = useResumeContext();
+  const [count, setcount] = useState(0)
+  
   return (
     <div id="objective" className="text-white py-10 border-b-2 border-gray-600">
       <h2 className="mb-5 text-2xl">Objective</h2>
-      <label
+      {/* <label
         htmlFor="summary"
         className="block uppercase tracking-wider text-[10px] font-medium text-gray-400"
       >
-        Summary
-      </label>
+        Summary  <p className="font-normal text-gray-400">
+                    {count}/250 characters
+                  </p>
+      </label> */}
+      <div className="flex justify-between">
+        <p className="block uppercase tracking-wider text-[10px] font-medium text-gray-400">Summary</p>
+        <p className="block uppercase tracking-wider text-[10px] font-medium text-gray-400">
+                    {count}/250 characters
+                  </p>
+      </div>
       <div className="mt-1 flex rounded-md shadow-sm">
         <textarea
           type="markdown"
@@ -19,7 +30,9 @@ export const ObjectiveDisplay = () => {
           name="summary"
           id="summary"
           value={objective || ""}
+          maxLength={250}
           onChange={(e) => {
+            setcount(e.target.value.length)
             setObjective(e.target.value);
             debounceUpdateResume({ ...resume, objective: e.target.value });
           }}
